@@ -1,0 +1,156 @@
+[
+    {
+        "id": 1,
+        "categoryId": 1,
+        "name": "Samsung Galaxy S23 Ultra",
+        "description": "Samsung Galaxy S23 Ultra 5G 256GB",
+        "price": 1250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fsamsung-galaxy-s23-ultra.png?alt=media&token=64c9c470-e5b9-44d0-939e-38bad88555c5",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "tags": [
+            "samsung",
+            "galaxy",
+            "s23",
+            "ultra",
+            "5g",
+            "256gb"
+        ],
+        "features": [
+            "6.8-inch Dynamic AMOLED 2X display",
+            "Snapdragon 888 chipset",
+            "12GB RAM",
+            "256GB storage",
+            "108MP+10MP+10MP+12MP quad rear cameras",
+            "40MP front camera",
+            "5000mAh battery"
+        ],
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 2,
+        "categoryId": 1,
+        "name": "Iphone 14 Pro Max",
+        "description": "Iphone 14 Pro Max 256GB",
+        "price": 1500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fiphone-14-pro-max.png?alt=media&token=313523a6-6c31-42c6-9034-7cb32b7c56a1",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "tags": [
+            "iphone",
+            "14",
+            "pro",
+            "max",
+            "256gb"
+        ],
+        "features": [
+            "6.7-inch Super Retina XDR display",
+            "A15 Bionic chipset",
+            "6GB RAM",
+            "256GB storage",
+            "12MP+12MP+12MP triple rear cameras",
+            "12MP front camera",
+            "5000mAh battery"
+        ],
+        "rating": 4.5,
+        "stock": 6
+    },
+    {
+        "id": 3,
+        "categoryId": 2,
+        "name": "Macbook Pro 2023 M2",
+        "description": "Macbook Pro 2023 M2 2TB",
+        "price": 3500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fmacbook-pro-m2.png?alt=media&token=a2fdd760-b7ff-4458-ae7f-4543bcea974d",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "tags": [
+            "macbook",
+            "pro",
+            "2023",
+            "m2",
+            "2tb"
+        ],
+        "features": [
+            "16-inch Retina display",
+            "Apple M2 chipset",
+            "32GB RAM",
+            "2TB storage",
+            "16GB AMD Radeon Pro 6700M graphics"
+        ],
+        "rating": 5,
+        "stock": 1
+    },
+    {
+        "id": 4,
+        "categoryId": 3,
+        "name": "Tribute Lounge Chair",
+        "description": "For the home owner looking for the perfect dash of uniqueness, the colorful Tribute leather chairs will speak volumes of its owner's sense of style.",
+        "price": 550,
+        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Ftribute-lounge-chair.png?alt=media&token=fc252570-6ab9-4d10-a680-96f10f5a2eb5",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "tags": [
+            "tribute",
+            "lounge",
+            "chair"
+        ],
+        "features": [
+            "Material: Leather",
+            "Color: Brown",
+            "Dimensions: 30 x 30 x 30 inches"
+        ],
+        "rating": 4.5,
+        "stock": 5
+    },
+    {
+        "id": 5,
+        "categoryId": 4,
+        "name": "Samsung Galaxy Tab S8 Ultra",
+        "description": "Samsung Galaxy Tab S8 Ultra 512GB",
+        "price": 1350,
+        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fsamsung-galaxy-tab-s8-ultra.png?alt=media&token=491df109-7db9-40cb-9599-3252e99ed081",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "tags": [
+            "samsung",
+            "galaxy",
+            "tab",
+            "s8",
+            "ultra",
+            "512gb"
+        ],
+        "features": [
+            "14.6-inch Super AMOLED display",
+            "Snapdragon 888 chipset",
+            "12GB RAM",
+            "512GB storage",
+            "12MP+12MP dual rear cameras",
+            "8MP front camera",
+            "10000mAh battery"
+        ],
+        "rating": 4,
+        "stock": 20
+    }
+]
