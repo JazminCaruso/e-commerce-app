@@ -1,4 +1,4 @@
-import { View, Text, Button, TouchableOpacity, FlatList, Image } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, ImageBackground } from "react-native";
 import { styles } from "./styles";
 import { Input } from '../../components/components'
 import { useState } from "react";
@@ -64,13 +64,22 @@ function Products ({ onHandlerGoBack, categorySelected }) {
                 contentContainerStyle={styles.productsContainer}
                 data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
                 renderItem={({ item }) => (
-                    <View style={[styles.productContainer, { backgroundColor: categorySelected.categoryColor } ]}>
-                        <Image source={{ uri: item.image }} style={styles.productImage} />
-                        <Text style={styles.productText}>{item.name}</Text>
-                    </View>
+                    <TouchableOpacity oonPress={() => null}style={styles.productContainer}>
+                        <ImageBackground 
+                            resizeMethod="resize"
+                            resizeMode="contain"
+                            source={{ uri: item.image }} 
+                            style={[styles.productImage, , { backgroundColor: categorySelected.categoryColor } ]} 
+                        />
+                        <View style={styles.productDetail}>
+                            <Text style={styles.productName} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
+                            <Text style={styles.productPrice}>{`${item.currency.code} ${item.price}`}</Text>
+                        </View>
+                    </TouchableOpacity>
                 )}
                 keyExtractor={(item) => item.id.toString()}
                 numColumns={2}
+                showsVerticalScrollIndicator={false}
             />
             {filteredProducts.length == 0 && search.length > 0 && (
                 <View style={styles.notFound}>

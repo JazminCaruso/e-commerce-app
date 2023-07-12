@@ -45,8 +45,6 @@ export const styles = StyleSheet.create({
         paddingVertical: 30,
     },
     productContainer: {
-        paddingVertical: 20,
-        paddingHorizontal: 10,
         backgroundColor: COLORS.background,
         borderRadius: 10,
         width: '45%',
@@ -54,9 +52,19 @@ export const styles = StyleSheet.create({
     },
     productImage: {
         width: '100%',
-        height: 120,
+        height: 140,
     },
-    productText: {
+    productDetail: {
+        padding: 5,
+        justifyContent: 'center',
+        gap: 5,
+    },
+    productName: {
         color: COLORS.primary,
+        fontSize: 16,
+    },
+    productPrice: {
+        color: COLORS.primary,
+        fontWeight: 'bold',
     },
 })
