@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, View, Text, Button } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { Header } from './components/components';
 import { Categories, Products } from './screens/screens'
 import { useState } from 'react';
