@@ -1,9 +1,8 @@
-import { StyleSheet, StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
 import { COLORS, FONTS } from '../../themes/themes'
 
 export const styles = StyleSheet.create({
     container: {
-        marginTop: StatusBar.currentHeight,
         backgroundColor: '#FFF',
         height: 60,
         justifyContent: 'center', 
@@ -18,7 +17,7 @@ export const styles = StyleSheet.create({
         elevation: 4,
     },
     title: {
-        fontSize: 34,
+        fontSize: 30,
         color: COLORS.text,
         textShadowColor: 'rgba(0,0,0,0.25)',
         textShadowOffset: {width: -1, height: 1},

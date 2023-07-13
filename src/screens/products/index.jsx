@@ -10,10 +10,10 @@ function Products ({ onHandlerGoBack, categorySelected }) {
 
     const [search, setSearch] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const [borderColor, setBorderColor] = useState(COLORS.primary)
+    const [borderColor, setBorderColor] = useState("#acacac")
 
     const onHandlerFocus = () => {
-        setBorderColor("#683257");
+        setBorderColor(COLORS.primary);
     };
     
     const onHandlerBlur = () => {
@@ -48,7 +48,7 @@ function Products ({ onHandlerGoBack, categorySelected }) {
         <View style={styles.container}>
             <View style={styles.headerInput}>
                 <Input
-                    placeholder='Search'
+                    placeholder='Buscar'
                     onHandleFocus={onHandlerFocus}
                     onHandleBlur={onHandlerBlur}
                     onHandleChangeText={onHandlerChangeText}
@@ -66,7 +66,6 @@ function Products ({ onHandlerGoBack, categorySelected }) {
                 )}
             </View>
             <FlatList
-                style={styles.productsList}
                 contentContainerStyle={styles.productsContainer}
                 data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
                 renderItem={({ item }) => (
@@ -89,7 +88,7 @@ function Products ({ onHandlerGoBack, categorySelected }) {
             />
             {filteredProducts.length == 0 && search.length > 0 && (
                 <View style={styles.notFound}>
-                    <Text style={styles.notFoundText}>No products found</Text>
+                    <Text style={styles.notFoundText}>Lo sentimos, todavía no contamos con ese libro</Text>
                 </View>
             )}
             <TouchableOpacity style={styles.goBack} onPress={onHandlerGoBack}>
@@ -98,7 +97,7 @@ function Products ({ onHandlerGoBack, categorySelected }) {
                     size={24} 
                     color={COLORS.primary} 
                 />
-                <Text style={styles.goBackText}>Go back</Text>
+                <Text style={styles.goBackText}>Volver</Text>
             </TouchableOpacity>
         </View>
     )

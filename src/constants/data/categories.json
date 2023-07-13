@@ -13,13 +13,19 @@
     },
     {
         "id": 3,
-        "name": "Autoayuda",
+        "name": "Crec. personal",
         "backgroundColor": "#ddd8e8",
-        "backgroundImage": "https://storage.googleapis.com/e-commercelibros.appspot.com/categories/autoayuda.png?GoogleAccessId=service-407432317767@gcp-sa-firebasestorage.iam.gserviceaccount.com&Expires=1689210037&Signature=eXEOTBjNIt0eOjNAHIdsGGaX4lMOUbD6jTbpaH6fIEronLEqetz1wy9XB2QLCoxjIta4IJIesX0jw4IU9NtIVG0IVXwBv4/tOVlJ4/7K1YN9Zhgj8YFlMyHfCudtDwxLQqhm9xONOMcW%2BhKS05OJLLL3kqtZL1LHG4w30800ZCOajdXLnBwv3Wpz4yImWXvcJB32SFZBVyjuvQdL85bTTX22Xmvu49XdJtkdggBj8NuG2YN0tgtZy10NLv1HZX2oZgEFiO8HUiLs1mRtI8B2O6ACtw/0364B1PWRQnprUtVEpTJvcvXwGzk4ex5v3s%2B/SuWk%2B3/vaPIs0uYSdcCm5A%3D%3D"
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Fautoayuda.png?alt=media&token=aff48116-a572-4817-b65e-5d196f4f3cca"
     },
     {
         "id": 4,
-        "name": "Infantil",
+        "name": "Computación",
+        "backgroundColor": "#d8ecfd",
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Fcomputacion.png?alt=media&token=234c9362-fc15-4592-becb-8d9aec0cd6f6"
+    },
+    {
+        "id": 5,
+        "name": "Infantes",
         "backgroundColor": "#fbdfb2",
         "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Finfantil.png?alt=media&token=f5307f8e-9aa7-4806-8fb6-70d08d39982a"
     }

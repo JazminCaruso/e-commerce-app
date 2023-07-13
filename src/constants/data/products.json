@@ -49,7 +49,7 @@
         "categoryId": 1,
         "name": "El camino del amor",
         "price": 3000,
-        "image": "https://storage.googleapis.com/e-commercelibros.appspot.com/categories/libroAmor4.jpg?GoogleAccessId=service-407432317767@gcp-sa-firebasestorage.iam.gserviceaccount.com&Expires=1689208540&Signature=mCI55l7/4/R2bJ0SIRT06kseKYWUlXUWbFSItqbUxxaWKbhJ7/RUB%2BEfu1THHcE6VPzGB6U4Ib%2B6JbdQDoPWK3uPDnVgM9Z/eyNA5yCrNkTcXqFCteLkX19bKnM5T6kCJ29XNOExRzmo5KuQkDQXQL48ZEmavp%2BWSnc%2BE%2BBULNuYf%2BpxtRaV3M2xDqp3lpW13BVRWQRuPWM4K9U1U4xi4bUQAdQfnhLt4IGGrzZdll0/kuM3pwLOsBTeZ/NXmgZykvUabscrUiHG5DLeT7mh/OA0QwZxK78yxOws3tUbJtrPdBvBfUPSOSSKmNKYMul%2BTES5lPCwU73Q60C/oIqCPw%3D%3D",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor4.jpg?alt=media&token=d06d400e-8d59-4e0c-9f34-599bccf14e3f",
         "currency": {
             "symbol": "$",
             "code": "USD",
@@ -64,7 +64,7 @@
         "categoryId": 1,
         "name": "Antes de ti",
         "price": 5250,
-        "image": "https://storage.googleapis.com/e-commercelibros.appspot.com/categories/libroAmor5.jpg?GoogleAccessId=service-407432317767@gcp-sa-firebasestorage.iam.gserviceaccount.com&Expires=1689208562&Signature=xRMHX7bi8l8lRyzW3SRV878v8OMobVn7TUxQZBE82jxPvwlppQhYQp5JO6Pi0hfdAUvIbgMlxuvALAkk5fZS7wZdg51jmmAdv3QdqXCOxLwh%2Bjxzx1DYlE65nIdwFl0zQ59Obdew%2Bt3STdxSVo5O%2B6PWTWlFzlKFUMik1FVzzWSZm/acyJVWHv2I0y1/4BHUWxuftl/suOhO/LTr%2B6szC6PUClu%2BmkdY1fLQrJvE56QWRh%2BfrGdXJkF5EkAqRG7d8u/Ti2G9sLrFvA4hamXWG4XSx%2BPSjzBhNyvarcjgLDZvsAGKVG6chhNYNkiYoGxGMeUCZLTr5C4Wl8aMWOhSsA%3D%3D",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor5.jpg?alt=media&token=c13f9053-5875-481e-b8cb-528822ea5667",
         "currency": {
             "symbol": "$",
             "code": "USD",
@@ -225,8 +225,38 @@
         "stock": 10
     },
     {
+        "id": 20,
+        "categoryId": 3,
+        "name": "El monje que vendió su ferrari",
+        "price": 3250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda7.png?alt=media&token=17d00a7e-814b-472c-b2ef-08f91a97afa8",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 21,
+        "categoryId": 3,
+        "name": "La magia del orden",
+        "price": 3250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda8.jpg?alt=media&token=cbc8c97f-d759-424b-be44-65afa8f3f2dd",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
         "id": 16,
-        "categoryId": 4,
+        "categoryId": 5,
         "name": "Los compas y la cámara del tiempo",
         "price": 3500,
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil1.jpg?alt=media&token=0d9e7bbe-4f6e-4653-8d22-8752a402f170",
@@ -241,7 +271,7 @@
     },
     {
         "id": 17,
-        "categoryId": 4,
+        "categoryId": 5,
         "name": "YOLO aventuras: la mansión de las pesadillas",
         "price": 3250,
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil2.jpg?alt=media&token=7b7f6bae-237c-4acf-b842-8638ff3ffe56",
@@ -256,7 +286,7 @@
     },
     {
         "id": 18,
-        "categoryId": 4,
+        "categoryId": 5,
         "name": "¡Resuelve el misterio!",
         "price": 2100,
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil3.jpg?alt=media&token=6af22315-2827-44d6-932e-d779b1f68c8d",
@@ -271,10 +301,55 @@
     },
     {
         "id": 19,
-        "categoryId": 4,
+        "categoryId": 5,
         "name": "Los cinco: aventura otonial",
         "price": 2700,
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil4.jpg?alt=media&token=64e7057f-c2f3-4cf5-b9df-372130291206",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 22,
+        "categoryId": 4,
+        "name": "Diseño digital",
+        "price": 8700,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion1.jpg?alt=media&token=be6d6a51-d009-4d72-a23e-34eb36ee1afe",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 23,
+        "categoryId": 4,
+        "name": "Thinking functionally with Haskell",
+        "price": 13000,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion2.jpg?alt=media&token=28d92406-997b-4f4d-8bc3-a6795d85cbd0",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 24,
+        "categoryId": 4,
+        "name": "Introduction to Computation and Programming using Python",
+        "price": 7500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion3.jpg?alt=media&token=652a9338-93f5-45b4-84de-4aaa98734020",
         "currency": {
             "symbol": "$",
             "code": "USD",

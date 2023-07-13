@@ -8,14 +8,16 @@ export const styles = StyleSheet.create({
             width: 0,
             height: 2,
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.2,
         shadowRadius: 3.84,
-        elevation: 5,
+        elevation: 3,
         borderRadius: 10,
+        paddingVertical: 10,
+        marginBottom: 10,
     },
     imageBackground:{
         width: '120%',
-        height: 120,
+        height: 100,
         justifyContent: 'flex-end'
     },
     categoryName: {

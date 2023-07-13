@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
     notFoundText: {
         color: COLORS.primary,
         fontSize: 16,
+        
     },
     clearIcon: {
         position:'absolute',

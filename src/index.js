@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font';
-import { ActivityIndicator, SafeAreaView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, SafeAreaView, StyleSheet, View, Text, Platform, StatusBar } from 'react-native';
 import { Header } from './components/components';
 import { Categories, Products } from './screens/screens'
 import { useState } from 'react';
@@ -8,6 +8,7 @@ import { COLORS, FONTS } from './themes/themes';
 const categoryDefault = {
   categoryId: null,
   categoryColor: COLORS.background,
+  categoryName: null,
 };
 
 export default function App() {
@@ -22,8 +23,8 @@ export default function App() {
   const [isCategorySelected, setIsCategorySelected] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(categoryDefault);
 
-  const onHandlerSelectCategory = ({ categoryId, categoryColor }) => {
-    setSelectedCategory({ categoryId, categoryColor });
+  const onHandlerSelectCategory = ({ categoryId, categoryColor, categoryName }) => {
+    setSelectedCategory({ categoryId, categoryColor, categoryName });
     setIsCategorySelected(!isCategorySelected);
   }
 
@@ -32,7 +33,7 @@ export default function App() {
     setSelectedCategory(categoryDefault);
   }
 
-  const headerTitle = isCategorySelected ? 'Books' : 'Categories';
+  const headerTitle = isCategorySelected ? `Libros de ${selectedCategory.categoryName}` : 'Categorías';
 
   if(!loaded) {
     return (
@@ -45,6 +46,12 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
+        {!isCategorySelected && 
+          <View>
+            <Text style={styles.principalText}>LibrApp</Text>
+            <Text style={styles.subtitleText}>Descubre, elige y disfruta de los mejores libros</Text>
+          </View>
+        }
         <Header 
           title={headerTitle}
           style={{ backgroundColor: selectedCategory.categoryColor }}
@@ -64,10 +71,26 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: Platform.OS === 'ios'? 0 : StatusBar.currentHeight,
   },
   loaderContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  principalText: {
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: FONTS.bold,
+    fontSize: 32,
+    color: COLORS.primary,
+  }, 
+  subtitleText: {
+    marginHorizontal: 10,
+    marginBottom: 15,
+    textAlign: 'center',
+    fontFamily: FONTS.italic,
+    fontSize: 20,
+    color: COLORS.primary,
+  },
 });
