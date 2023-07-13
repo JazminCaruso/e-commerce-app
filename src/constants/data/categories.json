@@ -6,12 +6,6 @@
         "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Famor.png?alt=media&token=39c6d580-9934-4cd4-aba5-f8ac6588aa4c"
     },
     {
-        "id": 2,
-        "name": "Nutrición",
-        "backgroundColor": "#d2f6cb",
-        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Fnutricion.png?alt=media&token=d61502f3-45d4-406d-86ec-81612fbbef42"
-    },
-    {
         "id": 3,
         "name": "Crec. personal",
         "backgroundColor": "#ddd8e8",
@@ -28,5 +22,11 @@
         "name": "Infantes",
         "backgroundColor": "#fbdfb2",
         "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Finfantil.png?alt=media&token=f5307f8e-9aa7-4806-8fb6-70d08d39982a"
+    },
+    {
+        "id": 2,
+        "name": "Nutrición",
+        "backgroundColor": "#d2f6cb",
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Fnutricion.png?alt=media&token=d61502f3-45d4-406d-86ec-81612fbbef42"
     }
 ]
