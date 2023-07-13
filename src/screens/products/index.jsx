@@ -12,8 +12,14 @@ function Products ({ onHandlerGoBack, categorySelected }) {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [borderColor, setBorderColor] = useState(COLORS.primary)
 
-    const onHandlerFocus = () => {};
-    const onHandlerBlur = () => {};
+    const onHandlerFocus = () => {
+        setBorderColor("#683257");
+    };
+    
+    const onHandlerBlur = () => {
+        setBorderColor("#acacac");
+    };
+
     const onHandlerChangeText = (text) => {
         setSearch(text);
         filteredProductsBySearch(text);
@@ -73,7 +79,7 @@ function Products ({ onHandlerGoBack, categorySelected }) {
                         />
                         <View style={styles.productDetail}>
                             <Text style={styles.productName} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
-                            <Text style={styles.productPrice}>{`${item.currency.code} ${item.price}`}</Text>
+                            <Text style={styles.productPrice}>{`${item.currency.symbol} ${item.price}`}</Text>
                         </View>
                     </TouchableOpacity>
                 )}

@@ -2,155 +2,286 @@
     {
         "id": 1,
         "categoryId": 1,
-        "name": "Samsung Galaxy S23 Ultra",
-        "description": "Samsung Galaxy S23 Ultra 5G 256GB",
-        "price": 1250,
-        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fsamsung-galaxy-s23-ultra.png?alt=media&token=64c9c470-e5b9-44d0-939e-38bad88555c5",
+        "name": "La historia de amor más bonita del mundo",
+        "price": 4750,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor1.jpg?alt=media&token=b212997a-c1fd-412d-878a-4f61925f0810",
         "currency": {
             "symbol": "$",
             "code": "USD",
             "name": "US Dollar"
         },
         "quantity": 1,
-        "tags": [
-            "samsung",
-            "galaxy",
-            "s23",
-            "ultra",
-            "5g",
-            "256gb"
-        ],
-        "features": [
-            "6.8-inch Dynamic AMOLED 2X display",
-            "Snapdragon 888 chipset",
-            "12GB RAM",
-            "256GB storage",
-            "108MP+10MP+10MP+12MP quad rear cameras",
-            "40MP front camera",
-            "5000mAh battery"
-        ],
         "rating": 5,
         "stock": 10
     },
     {
         "id": 2,
         "categoryId": 1,
-        "name": "Iphone 14 Pro Max",
-        "description": "Iphone 14 Pro Max 256GB",
-        "price": 1500,
-        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fiphone-14-pro-max.png?alt=media&token=313523a6-6c31-42c6-9034-7cb32b7c56a1",
+        "name": "Mientras te olvido",
+        "price": 5500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor2.jpg?alt=media&token=03bba763-e92e-4d68-9fb7-d2e7a07b3f57",
         "currency": {
             "symbol": "$",
             "code": "USD",
             "name": "US Dollar"
         },
         "quantity": 1,
-        "tags": [
-            "iphone",
-            "14",
-            "pro",
-            "max",
-            "256gb"
-        ],
-        "features": [
-            "6.7-inch Super Retina XDR display",
-            "A15 Bionic chipset",
-            "6GB RAM",
-            "256GB storage",
-            "12MP+12MP+12MP triple rear cameras",
-            "12MP front camera",
-            "5000mAh battery"
-        ],
-        "rating": 4.5,
-        "stock": 6
+        "rating": 5,
+        "stock": 10
     },
     {
         "id": 3,
-        "categoryId": 2,
-        "name": "Macbook Pro 2023 M2",
-        "description": "Macbook Pro 2023 M2 2TB",
+        "categoryId": 1,
+        "name": "Desde la primera vez",
         "price": 3500,
-        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fmacbook-pro-m2.png?alt=media&token=a2fdd760-b7ff-4458-ae7f-4543bcea974d",
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor3.png?alt=media&token=f30fa662-0993-4e09-9c48-e656b98aa646",
         "currency": {
             "symbol": "$",
             "code": "USD",
             "name": "US Dollar"
         },
         "quantity": 1,
-        "tags": [
-            "macbook",
-            "pro",
-            "2023",
-            "m2",
-            "2tb"
-        ],
-        "features": [
-            "16-inch Retina display",
-            "Apple M2 chipset",
-            "32GB RAM",
-            "2TB storage",
-            "16GB AMD Radeon Pro 6700M graphics"
-        ],
         "rating": 5,
-        "stock": 1
+        "stock": 10
     },
     {
         "id": 4,
-        "categoryId": 3,
-        "name": "Tribute Lounge Chair",
-        "description": "For the home owner looking for the perfect dash of uniqueness, the colorful Tribute leather chairs will speak volumes of its owner's sense of style.",
-        "price": 550,
-        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Ftribute-lounge-chair.png?alt=media&token=fc252570-6ab9-4d10-a680-96f10f5a2eb5",
+        "categoryId": 1,
+        "name": "El camino del amor",
+        "price": 3000,
+        "image": "https://storage.googleapis.com/e-commercelibros.appspot.com/categories/libroAmor4.jpg?GoogleAccessId=service-407432317767@gcp-sa-firebasestorage.iam.gserviceaccount.com&Expires=1689208540&Signature=mCI55l7/4/R2bJ0SIRT06kseKYWUlXUWbFSItqbUxxaWKbhJ7/RUB%2BEfu1THHcE6VPzGB6U4Ib%2B6JbdQDoPWK3uPDnVgM9Z/eyNA5yCrNkTcXqFCteLkX19bKnM5T6kCJ29XNOExRzmo5KuQkDQXQL48ZEmavp%2BWSnc%2BE%2BBULNuYf%2BpxtRaV3M2xDqp3lpW13BVRWQRuPWM4K9U1U4xi4bUQAdQfnhLt4IGGrzZdll0/kuM3pwLOsBTeZ/NXmgZykvUabscrUiHG5DLeT7mh/OA0QwZxK78yxOws3tUbJtrPdBvBfUPSOSSKmNKYMul%2BTES5lPCwU73Q60C/oIqCPw%3D%3D",
         "currency": {
             "symbol": "$",
             "code": "USD",
             "name": "US Dollar"
         },
         "quantity": 1,
-        "tags": [
-            "tribute",
-            "lounge",
-            "chair"
-        ],
-        "features": [
-            "Material: Leather",
-            "Color: Brown",
-            "Dimensions: 30 x 30 x 30 inches"
-        ],
-        "rating": 4.5,
-        "stock": 5
+        "rating": 5,
+        "stock": 10
     },
     {
         "id": 5,
-        "categoryId": 4,
-        "name": "Samsung Galaxy Tab S8 Ultra",
-        "description": "Samsung Galaxy Tab S8 Ultra 512GB",
-        "price": 1350,
-        "image": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/products%2Fsamsung-galaxy-tab-s8-ultra.png?alt=media&token=491df109-7db9-40cb-9599-3252e99ed081",
+        "categoryId": 1,
+        "name": "Antes de ti",
+        "price": 5250,
+        "image": "https://storage.googleapis.com/e-commercelibros.appspot.com/categories/libroAmor5.jpg?GoogleAccessId=service-407432317767@gcp-sa-firebasestorage.iam.gserviceaccount.com&Expires=1689208562&Signature=xRMHX7bi8l8lRyzW3SRV878v8OMobVn7TUxQZBE82jxPvwlppQhYQp5JO6Pi0hfdAUvIbgMlxuvALAkk5fZS7wZdg51jmmAdv3QdqXCOxLwh%2Bjxzx1DYlE65nIdwFl0zQ59Obdew%2Bt3STdxSVo5O%2B6PWTWlFzlKFUMik1FVzzWSZm/acyJVWHv2I0y1/4BHUWxuftl/suOhO/LTr%2B6szC6PUClu%2BmkdY1fLQrJvE56QWRh%2BfrGdXJkF5EkAqRG7d8u/Ti2G9sLrFvA4hamXWG4XSx%2BPSjzBhNyvarcjgLDZvsAGKVG6chhNYNkiYoGxGMeUCZLTr5C4Wl8aMWOhSsA%3D%3D",
         "currency": {
             "symbol": "$",
             "code": "USD",
             "name": "US Dollar"
         },
         "quantity": 1,
-        "tags": [
-            "samsung",
-            "galaxy",
-            "tab",
-            "s8",
-            "ultra",
-            "512gb"
-        ],
-        "features": [
-            "14.6-inch Super AMOLED display",
-            "Snapdragon 888 chipset",
-            "12GB RAM",
-            "512GB storage",
-            "12MP+12MP dual rear cameras",
-            "8MP front camera",
-            "10000mAh battery"
-        ],
-        "rating": 4,
-        "stock": 20
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 6,
+        "categoryId": 2,
+        "name": "Nutrición y dietética",
+        "price": 5000,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion1.jpg?alt=media&token=d65bb447-1ef9-4d1d-b93a-039b992b95b2",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 7,
+        "categoryId": 2,
+        "name": "Nutrición holística",
+        "price": 5500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion2.jpg?alt=media&token=e8bfd1cf-5e42-4baa-9ae3-2a06268e40df",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 8,
+        "categoryId": 2,
+        "name": "Mis recetas anticáncer",
+        "price": 3000,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion3.jpg?alt=media&token=e6582347-febd-4fdb-bff1-3465ab43a061",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 9,
+        "categoryId": 2,
+        "name": "Vegetarianos con ciencia",
+        "price": 3250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion4.jpg?alt=media&token=36a15fb6-54b9-4c03-b2b1-64f7b178b283",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 10,
+        "categoryId": 3,
+        "name": "El poder de confiar en ti",
+        "price": 4500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda1.jpg?alt=media&token=c1a5acaa-2e23-4033-9ae4-cb371609a5ff",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 11,
+        "categoryId": 3,
+        "name": "Tus zonas erróneas",
+        "price": 5900,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda2.jpg?alt=media&token=4c53ab23-8d61-4a18-ae1c-dcc38f419887",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 12,
+        "categoryId": 3,
+        "name": "Controle su destino",
+        "price": 2800,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda3.jpg?alt=media&token=42fb6709-6027-4ab6-9bf6-d668fd3170e2",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 13,
+        "categoryId": 3,
+        "name": "Como un hombre piensa",
+        "price": 3000,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda4.jpg?alt=media&token=cd71ac1d-11e5-40e2-b25b-95b9f2a05368",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 14,
+        "categoryId": 3,
+        "name": "El poder del ahora",
+        "price": 6000,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda5.jpg?alt=media&token=02590448-2241-46a8-aec3-46841207b123",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 15,
+        "categoryId": 3,
+        "name": "El fin de la ansiedad",
+        "price": 3250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda6.jpg?alt=media&token=6565f4fe-19ce-40d6-8922-2df34056afff",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 16,
+        "categoryId": 4,
+        "name": "Los compas y la cámara del tiempo",
+        "price": 3500,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil1.jpg?alt=media&token=0d9e7bbe-4f6e-4653-8d22-8752a402f170",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 17,
+        "categoryId": 4,
+        "name": "YOLO aventuras: la mansión de las pesadillas",
+        "price": 3250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil2.jpg?alt=media&token=7b7f6bae-237c-4acf-b842-8638ff3ffe56",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 18,
+        "categoryId": 4,
+        "name": "¡Resuelve el misterio!",
+        "price": 2100,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil3.jpg?alt=media&token=6af22315-2827-44d6-932e-d779b1f68c8d",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 19,
+        "categoryId": 4,
+        "name": "Los cinco: aventura otonial",
+        "price": 2700,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil4.jpg?alt=media&token=64e7057f-c2f3-4cf5-b9df-372130291206",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
     }
 ]

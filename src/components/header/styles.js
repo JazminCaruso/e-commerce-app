@@ -4,7 +4,7 @@ import { COLORS, FONTS } from '../../themes/themes'
 export const styles = StyleSheet.create({
     container: {
         marginTop: StatusBar.currentHeight,
-        backgroundColor: COLORS.background,
+        backgroundColor: '#FFF',
         height: 60,
         justifyContent: 'center', 
         alignItems: 'center',
@@ -18,11 +18,11 @@ export const styles = StyleSheet.create({
         elevation: 4,
     },
     title: {
-        fontSize: 24,
-        color: COLORS.white,
-        textShadowColor: 'rgba(0,0,0,0.75)',
+        fontSize: 34,
+        color: COLORS.text,
+        textShadowColor: 'rgba(0,0,0,0.25)',
         textShadowOffset: {width: -1, height: 1},
         textShadowRadius: 6,
-        fontFamily:FONTS.bold,
+        fontFamily:FONTS.italic,
     },
 })

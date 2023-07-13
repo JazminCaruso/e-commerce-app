@@ -7,16 +7,16 @@ import { COLORS, FONTS } from './themes/themes';
 
 const categoryDefault = {
   categoryId: null,
-  categoryColor: COLORS.secondary,
+  categoryColor: COLORS.background,
 };
 
 export default function App() {
 
   const [loaded] = useFonts({
-    [FONTS.bold]: require('../assets/fonts/Inter-Bold.ttf'),
-    [FONTS.light]: require('../assets/fonts/Inter-Light.ttf'),
-    [FONTS.medium]: require('../assets/fonts/Inter-Medium.ttf'),
-    [FONTS.regular]: require('../assets/fonts/Inter-Regular.ttf'),
+    [FONTS.bold]: require('../assets/fonts/YsabeauInfant-Bold.ttf'),
+    [FONTS.light]: require('../assets/fonts/YsabeauInfant-Light.ttf'),
+    [FONTS.medium]: require('../assets/fonts/YsabeauInfant-Medium.ttf'),
+    [FONTS.regular]: require('../assets/fonts/YsabeauInfant-Regular.ttf'),
   })
 
   const [isCategorySelected, setIsCategorySelected] = useState(false);
@@ -32,7 +32,7 @@ export default function App() {
     setSelectedCategory(categoryDefault);
   }
 
-  const headerTitle = isCategorySelected ? 'Products' : 'Categories';
+  const headerTitle = isCategorySelected ? 'Books' : 'Categories';
 
   if(!loaded) {
     return (

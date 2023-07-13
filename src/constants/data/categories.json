@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "name": "Smartphones",
-        "backgroundColor": "#6D6AA0",
-        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/smartphones.png?alt=media&token=e2b564ea-5a7d-4fcc-be49-4e3cc25c1d5e"
+        "name": "Amor",
+        "backgroundColor": "#f5cac3",
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Famor.png?alt=media&token=39c6d580-9934-4cd4-aba5-f8ac6588aa4c"
     },
     {
         "id": 2,
-        "name": "Laptops",
-        "backgroundColor": "#3EC2CC",
-        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/laptops.png?alt=media&token=9f59e3e3-5377-43a6-87b1-874d939915a2"
+        "name": "Nutrición",
+        "backgroundColor": "#d2f6cb",
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Fnutricion.png?alt=media&token=d61502f3-45d4-406d-86ec-81612fbbef42"
     },
     {
         "id": 3,
-        "name": "Furniture",
-        "backgroundColor": "#0DAB6C",
-        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/furniture.png?alt=media&token=445f15ed-29bc-400f-ba5e-a9a2c9d404f8"
+        "name": "Autoayuda",
+        "backgroundColor": "#ddd8e8",
+        "backgroundImage": "https://storage.googleapis.com/e-commercelibros.appspot.com/categories/autoayuda.png?GoogleAccessId=service-407432317767@gcp-sa-firebasestorage.iam.gserviceaccount.com&Expires=1689210037&Signature=eXEOTBjNIt0eOjNAHIdsGGaX4lMOUbD6jTbpaH6fIEronLEqetz1wy9XB2QLCoxjIta4IJIesX0jw4IU9NtIVG0IVXwBv4/tOVlJ4/7K1YN9Zhgj8YFlMyHfCudtDwxLQqhm9xONOMcW%2BhKS05OJLLL3kqtZL1LHG4w30800ZCOajdXLnBwv3Wpz4yImWXvcJB32SFZBVyjuvQdL85bTTX22Xmvu49XdJtkdggBj8NuG2YN0tgtZy10NLv1HZX2oZgEFiO8HUiLs1mRtI8B2O6ACtw/0364B1PWRQnprUtVEpTJvcvXwGzk4ex5v3s%2B/SuWk%2B3/vaPIs0uYSdcCm5A%3D%3D"
     },
     {
         "id": 4,
-        "name": "Tablets",
-        "backgroundColor": "#EC5B67",
-        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/ecommerce-app-c91d9.appspot.com/o/tablets.png?alt=media&token=12713ac6-9e97-4569-9db0-382cbd9aa3ea"
+        "name": "Infantil",
+        "backgroundColor": "#fbdfb2",
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2Finfantil.png?alt=media&token=f5307f8e-9aa7-4806-8fb6-70d08d39982a"
     }
 ]

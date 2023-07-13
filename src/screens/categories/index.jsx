@@ -7,7 +7,7 @@ function Categories({ onSelectCategory }) {
   
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.container}>
+      <View style={styles.containerHeader}>
         <FlatList
             data={CATEGORIES}
             style={styles.listContainer}

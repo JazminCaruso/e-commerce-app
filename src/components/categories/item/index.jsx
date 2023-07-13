@@ -11,7 +11,7 @@ const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCate
             <ImageBackground 
                 source={{ uri: backgroundImage }} 
                 style={styles.imageBackground}
-                resizeMode="cover">
+                resizeMode="contain">
                 <Text style={styles.categoryName}>{name}</Text>
             </ImageBackground>
         </TouchableHighlight>

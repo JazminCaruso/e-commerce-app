@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes/colors";
+import { COLORS, FONTS } from "../../themes/themes";
 
 export const styles = StyleSheet.create({
     container: {
@@ -61,10 +61,12 @@ export const styles = StyleSheet.create({
     },
     productName: {
         color: COLORS.primary,
-        fontSize: 16,
+        fontSize: 20,
+        fontFamily: FONTS.italic,
     },
     productPrice: {
         color: COLORS.primary,
         fontWeight: 'bold',
+        fontSize: 15,
     },
 })

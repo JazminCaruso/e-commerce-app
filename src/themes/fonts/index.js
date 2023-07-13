@@ -1,6 +1,8 @@
 export const FONTS = {
-    bold: 'Inter-Bold',
-    light: 'Inter-Light',
-    medium: 'Inter-Medium',
-    regular: 'Inter-Regular',
+    bold: 'YsabeauInfant-Bold',
+    boldItalic: 'YsabeauInfant-BoldItalic',
+    italic: 'YsabeauInfant-Bold',
+    light: 'YsabeauInfant-Light',
+    medium: 'YsabeauInfant-Medium',
+    regular: 'YsabeauInfant-Regular',
 }
