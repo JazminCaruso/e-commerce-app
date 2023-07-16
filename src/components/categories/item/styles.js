@@ -15,10 +15,15 @@ export const styles = StyleSheet.create({
         paddingVertical: 10,
         marginBottom: 10,
     },
-    imageBackground:{
+    imageBackground: {
         width: '120%',
         height: 100,
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-start'
+    },
+    imageBackgroundTablet: {
+        width: '120%',
+        height: 200,
+        justifyContent: 'flex-start',
     },
     categoryName: {
         fontSize: 28,
@@ -29,4 +34,13 @@ export const styles = StyleSheet.create({
         textShadowRadius: 6,
         fontFamily:FONTS.bold,
     },
+    categoryNameTablet: {
+        fontSize: 38,
+        color: COLORS.text,
+        padding: 40,
+        textShadowColor: 'rgba(0,0,0,0.45)',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowRadius: 6,
+        fontFamily:FONTS.bold,
+    }
 });

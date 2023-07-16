@@ -1,8 +1,11 @@
-import { TouchableHighlight, ImageBackground, Text } from "react-native";
+import { TouchableHighlight, ImageBackground, Text, useWindowDimensions } from "react-native";
 import { styles } from "./styles";
 import { COLORS } from "../../../themes/colors";
 
 const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCategory}) => {
+    const { width, height } = useWindowDimensions();
+    const isTablet = width >= 650;
+    console.warn({ width, height });
     return (
         <TouchableHighlight 
             onPress={() => onSelectCategory(id)} 
@@ -10,9 +13,9 @@ const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCate
             underlayColor={COLORS.background}>
             <ImageBackground 
                 source={{ uri: backgroundImage }} 
-                style={styles.imageBackground}
+                style={ isTablet ? styles.imageBackgroundTablet : styles.imageBackground}
                 resizeMode="contain">
-                <Text style={styles.categoryName}>{name}</Text>
+                <Text style={ isTablet ? styles.categoryNameTablet : styles.categoryName}>{name}</Text>
             </ImageBackground>
         </TouchableHighlight>
     )
