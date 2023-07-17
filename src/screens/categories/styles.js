@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes/themes";
 
 export const styles = StyleSheet.create({
     container: {
@@ -14,6 +13,9 @@ export const styles = StyleSheet.create({
     },
     itemContainer: {
       gap: 10,
+    },
+    categoryItemLandscape: {
+      height: 20,
     },
   });
 
