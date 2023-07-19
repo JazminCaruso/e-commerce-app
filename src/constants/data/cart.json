@@ -1,0 +1,32 @@
+[
+    {
+        "id": 17,
+        "categoryId": 5,
+        "name": "YOLO aventuras: la mansión de las pesadillas",
+        "price": 3250,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil2.jpg?alt=media&token=7b7f6bae-237c-4acf-b842-8638ff3ffe56",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    },
+    {
+        "id": 22,
+        "categoryId": 4,
+        "name": "Diseño digital",
+        "price": 8700,
+        "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion1.jpg?alt=media&token=be6d6a51-d009-4d72-a23e-34eb36ee1afe",
+        "currency": {
+            "symbol": "$",
+            "code": "USD",
+            "name": "US Dollar"
+        },
+        "quantity": 1,
+        "rating": 5,
+        "stock": 10
+    }
+]
