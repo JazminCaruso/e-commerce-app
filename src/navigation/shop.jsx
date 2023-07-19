@@ -1,13 +1,62 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Categories, Products } from '../screens/screens'
+import { Categories, Products, ProductDetails } from '../screens/screens';
+import { COLORS } from "../themes/colors";
+import { FONTS } from "../themes/fonts";
+import { TouchableOpacity } from "react-native";
+import { Ionicons } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
 
 function ShopNavigator() {
     return (
-        <Stack.Navigator initialRouteName="Categories">
-            <Stack.Screen name="Categories" component={Categories} />
-            <Stack.Screen name="Products" component={Products} />
+        <Stack.Navigator 
+            initialRouteName="Categories"
+            screenOptions={{
+                headerStyle: {
+                    backgroundColor: COLORS.background,
+                },
+                headerTitleStyle: {
+                    fontFamily: FONTS.bold,
+                    fontSize: 28,
+                },
+                animation: 'fade',
+                presentation: 'card',
+            }}
+        >
+            <Stack.Screen 
+                name="Categories" 
+                component={Categories}
+            />
+            <Stack.Screen 
+                name="Products" 
+                component={Products} 
+                options={({ navigation, route }) => ({
+                    headerStyle: {
+                        backgroundColor: route.params.categoryColor,
+                    },
+                    title: route.params.categoryName,
+                    headerLeft: () => (
+                        <TouchableOpacity onPress={() => navigation.goBack()}>
+                            <Ionicons name="arrow-back" size={30} />
+                        </TouchableOpacity>
+                    ),
+                })}
+            />
+            <Stack.Screen
+                name="ProductDetails"
+                component={ProductDetails}
+                options={({ navigation, route }) => ({
+                    headerStyle: {
+                      backgroundColor: route.params.categoryColor,
+                    },
+                    title: 'Libro',
+                    headerLeft: () => (
+                      <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Ionicons name="arrow-back" size={30} />
+                      </TouchableOpacity>
+                    ),
+                  })}
+            />
         </Stack.Navigator>
     );
 }

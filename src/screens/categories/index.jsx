@@ -5,9 +5,13 @@ import CATEGORIES from '../../constants/data/categories.json';
 import { ORIENTATION } from '../../constants/orientation';
 import useOrientation from '../../hooks/useOrientation';
 
-function Categories({ onSelectCategory }) {
+function Categories({ navigation }) {
 
-  const orientation = useOrientation()
+  const orientation = useOrientation();
+
+  const onSelectCategory = ({ categoryId, categoryColor, categoryName }) => {
+    navigation.navigate('Products', { categoryId, categoryColor, categoryName })
+  };
   
   return (
     <SafeAreaView style={styles.container}>

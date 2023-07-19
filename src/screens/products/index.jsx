@@ -6,7 +6,9 @@ import { COLORS } from "../../themes/colors";
 import { Ionicons } from '@expo/vector-icons'; 
 import PRODUCTS from '../../constants/data/products.json';
 
-function Products ({ onHandlerGoBack, categorySelected }) {
+function Products ({ navigation, route }) {
+
+    const { categoryId, categoryColor } = route.params;
 
     const [search, setSearch] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
@@ -26,7 +28,7 @@ function Products ({ onHandlerGoBack, categorySelected }) {
     };
 
     const filteredProductsByCategory = PRODUCTS.filter(
-        (product) => product.categoryId === categorySelected.categoryId
+        (product) => product.categoryId === categoryId
     );
 
     const filteredProductsBySearch = (query) => {
@@ -42,6 +44,10 @@ function Products ({ onHandlerGoBack, categorySelected }) {
     const clearSearch = () => {
         setSearch('');
         setFilteredProducts([]);
+    }
+
+    const onSelectProduct = ({ productId, productName }) => {
+        navigation.navigate('ProductDetails', { productId, categoryColor, productName });
     }
  
     return (
@@ -69,12 +75,12 @@ function Products ({ onHandlerGoBack, categorySelected }) {
                 contentContainerStyle={styles.productsContainer}
                 data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
                 renderItem={({ item }) => (
-                    <TouchableOpacity oonPress={() => null}style={styles.productContainer}>
+                    <TouchableOpacity onPress={() => onSelectProduct({ productId: item.id, productName: item.name })} style={styles.productContainer}>
                         <ImageBackground 
                             resizeMethod="resize"
                             resizeMode="contain"
                             source={{ uri: item.image }} 
-                            style={[styles.productImage, , { backgroundColor: categorySelected.categoryColor } ]} 
+                            style={[styles.productImage, , { backgroundColor: categoryColor } ]} 
                         />
                         <View style={styles.productDetail}>
                             <Text style={styles.productName} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
@@ -91,14 +97,6 @@ function Products ({ onHandlerGoBack, categorySelected }) {
                     <Text style={styles.notFoundText}>Lo sentimos, todavía no contamos con ese libro</Text>
                 </View>
             )}
-            <TouchableOpacity style={styles.goBack} onPress={onHandlerGoBack}>
-                <Ionicons 
-                    name="arrow-back-circle" 
-                    size={24} 
-                    color={COLORS.primary} 
-                />
-                <Text style={styles.goBackText}>Volver</Text>
-            </TouchableOpacity>
         </View>
     )
 }

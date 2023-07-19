@@ -1,9 +1,7 @@
 import { useFonts } from 'expo-font';
 import { ActivityIndicator, SafeAreaView, StyleSheet, View, Platform, StatusBar } from 'react-native';
-
 import { COLORS, FONTS } from './themes/themes';
 import RootNavigator from './navigation/index'
-
 
 export default function App() {
 
