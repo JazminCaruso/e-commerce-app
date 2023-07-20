@@ -1,4 +1,4 @@
-import { TextInput, View } from "react-native";
+import { TextInput, View, useWindowDimensions } from "react-native";
 import { styles } from "./styles";
 
 const Input = ({ 
@@ -7,11 +7,15 @@ const Input = ({
     onHandleBlur, 
     onHandleChangeText, 
     ...props }) => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
+
     return (
       <View style={styles.container}>
         <TextInput
           {...props}
-          style={[styles.input, { borderColor }]}
+          style={[ isTablet ? styles.inputTablet : styles.input, { borderColor }]}
           onFocus={onHandleFocus}
           onBlur={onHandleBlur}
           onChangeText={onHandleChangeText}

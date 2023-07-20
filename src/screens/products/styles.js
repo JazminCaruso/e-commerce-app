@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.background,
-        
     },
     headerInput: {
         flexDirection: 'row',
@@ -25,7 +24,10 @@ export const styles = StyleSheet.create({
     notFoundText: {
         color: COLORS.primary,
         fontSize: 16,
-        
+    },
+    notFoundTextTablet: {
+        color: COLORS.primary,
+        fontSize: 22,
     },
     clearIcon: {
         position:'absolute',
@@ -45,9 +47,19 @@ export const styles = StyleSheet.create({
         width: '45%',
         marginHorizontal: 10,
     },
+    productContainerTablet: {
+        backgroundColor: COLORS.background,
+        borderRadius: 10,
+        width: '30%',
+        marginHorizontal: 10,
+    },
     productImage: {
         width: '100%',
         height: 140,
+    },
+    productImageTablet: {
+        width: '100%',
+        height: 200,
     },
     productDetail: {
         padding: 5,
@@ -60,9 +72,19 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: FONTS.italic,
     },
+    productNameTablet: {
+        color: COLORS.primary,
+        fontSize: 24,
+        fontFamily: FONTS.italic,
+    },
     productPrice: {
         color: COLORS.primary,
         fontWeight: 'bold',
         fontSize: 15,
+    },
+    productPriceTablet: {
+        color: COLORS.primary,
+        fontWeight: 'bold',
+        fontSize: 18,
     },
 })

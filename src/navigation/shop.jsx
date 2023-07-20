@@ -2,12 +2,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Categories, Products, ProductDetails } from '../screens/screens';
 import { COLORS } from "../themes/colors";
 import { FONTS } from "../themes/fonts";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, useWindowDimensions } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 
 const Stack = createNativeStackNavigator();
 
 function ShopNavigator() {
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
     return (
         <Stack.Navigator 
             initialRouteName="Categories"
@@ -17,7 +19,7 @@ function ShopNavigator() {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
-                    fontSize: 28,
+                    fontSize: isTablet? 40 : 28,
                 },
                 animation: 'fade',
                 presentation: 'card',

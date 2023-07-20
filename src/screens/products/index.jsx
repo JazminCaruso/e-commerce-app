@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, FlatList, ImageBackground } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, ImageBackground, useWindowDimensions } from "react-native";
 import { styles } from "./styles";
 import { Input } from '../../components/components'
 import { useState } from "react";
@@ -7,6 +7,9 @@ import { Ionicons } from '@expo/vector-icons';
 import PRODUCTS from '../../constants/data/products.json';
 
 function Products ({ navigation, route }) {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
 
     const { categoryId, categoryColor } = route.params;
 
@@ -75,26 +78,26 @@ function Products ({ navigation, route }) {
                 contentContainerStyle={styles.productsContainer}
                 data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
                 renderItem={({ item }) => (
-                    <TouchableOpacity onPress={() => onSelectProduct({ productId: item.id, productName: item.name })} style={styles.productContainer}>
+                    <TouchableOpacity onPress={() => onSelectProduct({ productId: item.id, productName: item.name })} style={isTablet? styles.productContainerTablet : styles.productContainer}>
                         <ImageBackground 
                             resizeMethod="resize"
                             resizeMode="contain"
                             source={{ uri: item.image }} 
-                            style={[styles.productImage, , { backgroundColor: categoryColor } ]} 
+                            style={[isTablet ? styles.productImageTablet : styles.productImage, , { backgroundColor: categoryColor } ]} 
                         />
                         <View style={styles.productDetail}>
-                            <Text style={styles.productName} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
-                            <Text style={styles.productPrice}>{`${item.currency.symbol} ${item.price}`}</Text>
+                            <Text style={isTablet ? styles.productNameTablet : styles.productName} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
+                            <Text style={isTablet ? styles.productPriceTablet : styles.productPrice}>{`${item.currency.symbol} ${item.price}`}</Text>
                         </View>
                     </TouchableOpacity>
                 )}
                 keyExtractor={(item) => item.id.toString()}
-                numColumns={2}
+                numColumns={ isTablet? 3 : 2}
                 showsVerticalScrollIndicator={false}
             />
             {filteredProducts.length == 0 && search.length > 0 && (
                 <View style={styles.notFound}>
-                    <Text style={styles.notFoundText}>Lo sentimos, todavía no contamos con ese libro</Text>
+                    <Text style={isTablet ? styles.notFoundTextTablet : styles.notFoundText}>Lo sentimos, todavía no contamos con ese libro</Text>
                 </View>
             )}
         </View>

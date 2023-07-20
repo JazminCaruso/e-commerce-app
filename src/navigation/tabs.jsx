@@ -4,10 +4,15 @@ import CartNavigator from "./cart";
 import OrdersNavigator from "./orders";
 import { FONTS, COLORS } from "../themes/themes";
 import { Ionicons } from "@expo/vector-icons";
+import { useWindowDimensions } from "react-native";
 
 const BottomTab = createBottomTabNavigator();
 
 const TabsNavigator = () => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
+
     return (
         <BottomTab.Navigator 
             initialRouteName="ShopTab"
@@ -15,16 +20,13 @@ const TabsNavigator = () => {
                 headerShown: false,
                 tabBarLabelStyle: {
                     fontFamily: FONTS.regular,
-                    fontSize: 12,
+                    fontSize: isTablet ? 22 : 12,
                 },
                 tabBarStyle: {
                     backgroundColor: COLORS.white,
                 },
                 tabBarActiveTintColor: COLORS.primary,
                 tabBarInactiveTintColor: '#cccccc',
-                tabBarIconStyle: {
-                    fontSize: 22,
-                }
             }}
         >
             <BottomTab.Screen 
@@ -33,7 +35,7 @@ const TabsNavigator = () => {
                 options={{
                     tabBarLabel: 'Tienda',
                     tabBarIcon: ({ focused, color }) => (
-                        <Ionicons name={focused ? 'home' : 'home-outline'} size={20} color={color} />
+                        <Ionicons name={focused ? 'home' : 'home-outline'} size={isTablet ? 26 : 20} color={color} />
                     )
                 }}
             />
@@ -43,7 +45,7 @@ const TabsNavigator = () => {
                 options={{
                     tabBarLabel: 'Carrito',
                     tabBarIcon: ({ focused, color }) => (
-                        <Ionicons name={focused ? 'cart' : 'cart-outline'} size={20} color={color} />
+                        <Ionicons name={focused ? 'cart' : 'cart-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
                     tabBarBadge: 2,
                     tabBarBadgeStyle: {
@@ -60,7 +62,7 @@ const TabsNavigator = () => {
                 options={{
                     tabBarLabel: 'Mis compras',
                     tabBarIcon: ({ focused, color }) => (
-                        <Ionicons name={focused ? 'receipt' : 'receipt-outline'} size={20} color={color} />
+                        <Ionicons name={focused ? 'receipt' : 'receipt-outline'} size={isTablet ? 26 : 20} color={color} />
                     )
                 }}
             />

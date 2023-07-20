@@ -13,4 +13,12 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         height: 40,
     },
+    inputTablet: {
+        borderWidth: 1,
+        borderRadius: 10,
+        paddingHorizontal: 10,
+        color: COLORS.primary,
+        fontSize: 22,
+        height: 50,
+    },
 });
