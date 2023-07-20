@@ -11,7 +11,7 @@ const OrdersNavigator = () => {
             initialRouteName="Orders"
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: COLORS.background,
+                    backgroundColor: COLORS.secondary,
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
@@ -21,7 +21,7 @@ const OrdersNavigator = () => {
                 presentation: 'card',
             }}
         >
-            <Stack.Screen name="Orders" component={Orders}/>
+            <Stack.Screen name="Mis compras" component={Orders}/>
         </Stack.Navigator>
     );
 };

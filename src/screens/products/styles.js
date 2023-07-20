@@ -4,7 +4,8 @@ import { COLORS, FONTS } from "../../themes/themes";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: 20,
+        backgroundColor: COLORS.background,
+        
     },
     headerInput: {
         flexDirection: 'row',
@@ -12,16 +13,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         gap: 15,
         paddingTop: 30,
-    },
-    goBack: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingVertical: 10,
-    },
-    goBackText: {
-        fontSize: 16,
-        color: COLORS.primary,
+        paddingHorizontal: 20,
     },
     listProducts: {
         flex: 1,
@@ -38,12 +30,14 @@ export const styles = StyleSheet.create({
     clearIcon: {
         position:'absolute',
         zIndex: 2,
-        right: 5,
+        right: 25,
         paddingTop:30,
     },
     productsContainer: {
         gap: 10,
         paddingVertical: 30,
+        paddingHorizontal: 10,
+        
     },
     productContainer: {
         backgroundColor: COLORS.background,
@@ -59,6 +53,7 @@ export const styles = StyleSheet.create({
         padding: 5,
         justifyContent: 'center',
         gap: 5,
+        backgroundColor: COLORS.white,
     },
     productName: {
         color: COLORS.primary,

@@ -11,7 +11,7 @@ const CartNavigator = () => {
             initialRouteName="Cart"
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: COLORS.background,
+                    backgroundColor: COLORS.secondary,
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
@@ -21,7 +21,7 @@ const CartNavigator = () => {
                 presentation: 'card',
             }}
         >
-            <Stack.Screen name="Cart" component={Cart} />
+            <Stack.Screen name="Carrito" component={Cart} />
         </Stack.Navigator>
     );
 };

@@ -13,7 +13,7 @@ function ShopNavigator() {
             initialRouteName="Categories"
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: COLORS.background,
+                    backgroundColor: COLORS.secondary,
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
@@ -24,7 +24,7 @@ function ShopNavigator() {
             }}
         >
             <Stack.Screen 
-                name="Categories" 
+                name="Categorias" 
                 component={Categories}
             />
             <Stack.Screen 

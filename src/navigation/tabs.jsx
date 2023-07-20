@@ -58,9 +58,9 @@ const TabsNavigator = () => {
                 name="OrdersTab" 
                 component={OrdersNavigator} 
                 options={{
-                    tabBarLabel: 'Mis pedidos',
+                    tabBarLabel: 'Mis compras',
                     tabBarIcon: ({ focused, color }) => (
-                        <Ionicons name={focused ? 'file-tray' : 'file-tray-outline'} size={20} color={color} />
+                        <Ionicons name={focused ? 'receipt' : 'receipt-outline'} size={20} color={color} />
                     )
                 }}
             />

@@ -13,7 +13,7 @@ const CartItem = ({ id, categoryId, name, price, image, currency, quantity, stoc
       <View style={styles.detailContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.price}>{`${currency.symbol} ${price}`}</Text>
-        <Text style={styles.qty}>{`qty: ${quantity} stock: ${stock}`}</Text>
+        <Text style={styles.qty}>{`Cantidad: ${quantity}`}</Text>
         <View style={styles.actionContainer}>
           <TouchableOpacity style={styles.increaseButton} onPress={() => {}}>
             <Text style={styles.increaseButtonText}>+</Text>
