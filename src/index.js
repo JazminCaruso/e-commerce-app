@@ -2,6 +2,8 @@ import { useFonts } from 'expo-font';
 import { ActivityIndicator, SafeAreaView, StyleSheet, View, Platform, StatusBar } from 'react-native';
 import { COLORS, FONTS } from './themes/themes';
 import RootNavigator from './navigation/index'
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 export default function App() {
 
@@ -21,9 +23,11 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <RootNavigator />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <RootNavigator />
+      </SafeAreaView>
+    </Provider>
   );
 }
 

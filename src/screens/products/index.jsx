@@ -4,12 +4,14 @@ import { Input } from '../../components/components'
 import { useState } from "react";
 import { COLORS } from "../../themes/colors";
 import { Ionicons } from '@expo/vector-icons'; 
-import PRODUCTS from '../../constants/data/products.json';
+import { useSelector } from "react-redux";
 
 function Products ({ navigation, route }) {
 
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
+
+    const products = useSelector((state) => state.products.data);
 
     const { categoryId, categoryColor } = route.params;
 
@@ -30,7 +32,7 @@ function Products ({ navigation, route }) {
         filteredProductsBySearch(text);
     };
 
-    const filteredProductsByCategory = PRODUCTS.filter(
+    const filteredProductsByCategory = products.filter(
         (product) => product.categoryId === categoryId
     );
 
