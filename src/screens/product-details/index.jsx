@@ -23,7 +23,7 @@ function ProductDetails({ route }) {
                 />
             </View>
             <Text style={[styles.textProduct, { backgroundColor: categoryColor }]}>{product.name}</Text>
-            <Text style={[styles.textPrice, { backgroundColor: categoryColor }]}>Precio: ${product.price}</Text>
+            <Text style={[styles.textPrice, { backgroundColor: categoryColor }]}>Precio: {`${product.currency.symbol} ${product.price}`}</Text>
             <View style={styles.containerButton}>
                 <TouchableOpacity onPress={onAddToCart} style={styles.addCartButton}>
                     <Text style={styles.addCartText}>Agregar al carrito</Text>
