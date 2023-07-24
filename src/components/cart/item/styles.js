@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    height: 160,
+    height: 170,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {
@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     elevation: 3,
     padding: 10,
     marginHorizontal: 15,
-    marginTop: 15,
+    marginVertical: 7,
     justifyContent: 'flex-start',
     alignItems: 'center',
     borderRadius: 5,
@@ -61,7 +61,7 @@ export const styles = StyleSheet.create({
   },
   image: {
     width: 100,
-    height: 100,
+    height: 150,
   },
   imageTablet: {
     width: 200,
@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
     gap: 5,
   },
   name: {
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: FONTS.regular,
   },
   nameTablet: {

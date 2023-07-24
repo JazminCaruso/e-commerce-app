@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     containerImage: {
         width: '100%',
         alignItems: 'center',
+        paddingTop: 20,
     },
     imageProduct: {
         width: '50%',
