@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, Image, useWindowDimensions } from 'react-
 import { styles } from './styles';
 import { COLORS } from '../../../themes/themes';
 
-const CartItem = ({ id, categoryId, name, price, image, currency, quantity, stock, ...props }) => {
+const CartItem = ({ id, name, price, image, currency, quantity, onIncreaseCartItem, onDecreaseCartItem, onRemoveCartItem }) => {
 
   const { width } = useWindowDimensions();
   const isTablet = width >= 650;
@@ -19,13 +19,13 @@ const CartItem = ({ id, categoryId, name, price, image, currency, quantity, stoc
         <Text style={isTablet ? styles.priceTablet : styles.price}>{`${currency.symbol} ${price}`}</Text>
         <Text style={isTablet ? styles.priceTablet : styles.qty}>{`Cantidad: ${quantity}`}</Text>
         <View style={isTablet ? styles.actionContainerTablet : styles.actionContainer}>
-          <TouchableOpacity style={isTablet ? styles.increaseButtonTablet : styles.increaseButton} onPress={() => {}}>
+          <TouchableOpacity style={isTablet ? styles.increaseButtonTablet : styles.increaseButton} onPress={() => onIncreaseCartItem(id)}>
             <Text style={isTablet ? styles.buttonTextTablet : styles.buttonText}>+</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={isTablet ? styles.decreaseButtonTablet : styles.decreaseButton} onPress={() => {}}>
+          <TouchableOpacity style={isTablet ? styles.decreaseButtonTablet : styles.decreaseButton} onPress={() => onDecreaseCartItem(id)}>
             <Text style={isTablet ? styles.buttonTextTablet : styles.buttonText}>-</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => {}} style={isTablet ? styles.deleteButtonTablet : styles.deleteButton}>
+          <TouchableOpacity style={isTablet ? styles.deleteButtonTablet : styles.deleteButton} onPress={() => onRemoveCartItem(id)}>
             <Ionicons name="trash" size={isTablet? 20 : 14} color={COLORS.white} />
           </TouchableOpacity>
         </View>
