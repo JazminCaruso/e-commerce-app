@@ -5,6 +5,7 @@ import cartReducer from "./cart/cartSlice";
 import { categoriesApi } from "./categories/api";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { productsApi } from "./products/api";
+import { ordersApi } from "./orders/api";
 
 export const store = configureStore({
     reducer: {
@@ -13,8 +14,13 @@ export const store = configureStore({
         cart: cartReducer,
         [categoriesApi.reducerPath]: categoriesApi.reducer,
         [productsApi.reducerPath]: productsApi.reducer,
+        [ordersApi.reducerPath]: ordersApi.reducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(categoriesApi.middleware, productsApi.middleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(
+        categoriesApi.middleware, 
+        productsApi.middleware, 
+        ordersApi.middleware
+    ),
 
 });
 

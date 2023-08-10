@@ -31,4 +31,13 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.bold,
         fontSize: 16,
     },
+    emptyCartContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    emptyCartText: {
+        fontSize: 18,
+        fontFamily: FONTS.medium,
+    }
 });
