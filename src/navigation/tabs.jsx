@@ -5,13 +5,15 @@ import OrdersNavigator from "./orders";
 import { FONTS, COLORS } from "../themes/themes";
 import { Ionicons } from "@expo/vector-icons";
 import { useWindowDimensions } from "react-native";
+import { useSelector } from "react-redux";
 
 const BottomTab = createBottomTabNavigator();
 
 const TabsNavigator = () => {
-
+    
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
+    const cartItem = useSelector((state) => state.cart.items);
 
     return (
         <BottomTab.Navigator 
@@ -47,7 +49,7 @@ const TabsNavigator = () => {
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'cart' : 'cart-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
-                    tabBarBadge: 2,
+                    tabBarBadge: cartItem.length,
                     tabBarBadgeStyle: {
                         backgroundColor: COLORS.black,
                         color: COLORS.white,

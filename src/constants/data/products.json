@@ -7,11 +7,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor5.jpg?alt=media&token=c13f9053-5875-481e-b8cb-528822ea5667",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -22,11 +20,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor3.png?alt=media&token=f30fa662-0993-4e09-9c48-e656b98aa646",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -37,11 +33,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor4.jpg?alt=media&token=d06d400e-8d59-4e0c-9f34-599bccf14e3f",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -52,11 +46,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor1.jpg?alt=media&token=b212997a-c1fd-412d-878a-4f61925f0810",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -67,11 +59,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAmor2.jpg?alt=media&token=03bba763-e92e-4d68-9fb7-d2e7a07b3f57",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -82,11 +72,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion3.jpg?alt=media&token=e6582347-febd-4fdb-bff1-3465ab43a061",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -97,11 +85,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion2.jpg?alt=media&token=e8bfd1cf-5e42-4baa-9ae3-2a06268e40df",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -112,11 +98,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion1.jpg?alt=media&token=d65bb447-1ef9-4d1d-b93a-039b992b95b2",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -127,11 +111,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroNutricion4.jpg?alt=media&token=36a15fb6-54b9-4c03-b2b1-64f7b178b283",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -142,11 +124,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda4.jpg?alt=media&token=cd71ac1d-11e5-40e2-b25b-95b9f2a05368",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -157,11 +137,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda3.jpg?alt=media&token=42fb6709-6027-4ab6-9bf6-d668fd3170e2",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -172,11 +150,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda6.jpg?alt=media&token=6565f4fe-19ce-40d6-8922-2df34056afff",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -187,11 +163,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda7.png?alt=media&token=17d00a7e-814b-472c-b2ef-08f91a97afa8",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 5
     },
     {
@@ -202,11 +176,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda1.jpg?alt=media&token=c1a5acaa-2e23-4033-9ae4-cb371609a5ff",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -217,11 +189,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda5.jpg?alt=media&token=02590448-2241-46a8-aec3-46841207b123",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -232,11 +202,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda8.jpg?alt=media&token=cbc8c97f-d759-424b-be44-65afa8f3f2dd",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -247,11 +215,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroAutoayuda2.jpg?alt=media&token=4c53ab23-8d61-4a18-ae1c-dcc38f419887",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -262,11 +228,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil4.jpg?alt=media&token=64e7057f-c2f3-4cf5-b9df-372130291206",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -277,11 +241,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil1.jpg?alt=media&token=0d9e7bbe-4f6e-4653-8d22-8752a402f170",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -292,11 +254,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil3.jpg?alt=media&token=6af22315-2827-44d6-932e-d779b1f68c8d",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -307,11 +267,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroInfantil2.jpg?alt=media&token=7b7f6bae-237c-4acf-b842-8638ff3ffe56",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -322,11 +280,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion1.jpg?alt=media&token=be6d6a51-d009-4d72-a23e-34eb36ee1afe",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -337,11 +293,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion3.jpg?alt=media&token=652a9338-93f5-45b4-84de-4aaa98734020",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     },
     {
@@ -352,11 +306,9 @@
         "image": "https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/categories%2FlibroComputacion2.jpg?alt=media&token=28d92406-997b-4f4d-8bc3-a6795d85cbd0",
         "currency": {
             "symbol": "$",
-            "code": "USD",
-            "name": "US Dollar"
+            "code": "USD"
         },
         "quantity": 1,
-        "rating": 5,
         "stock": 10
     }
 ]
