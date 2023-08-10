@@ -1,19 +1,19 @@
-import { View, Text, TouchableOpacity, FlatList, ImageBackground, useWindowDimensions } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, ImageBackground, useWindowDimensions, ActivityIndicator } from "react-native";
 import { styles } from "./styles";
 import { Input } from '../../components/components'
 import { useState } from "react";
 import { COLORS } from "../../themes/colors";
 import { Ionicons } from '@expo/vector-icons'; 
-import { useSelector } from "react-redux";
+import { useGetProductsByCategoryQuery } from "../../store/products/api";
 
 function Products ({ navigation, route }) {
 
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 
-    const products = useSelector((state) => state.products.data);
-
     const { categoryId, categoryColor } = route.params;
+
+    const { data, error, isLoading } = useGetProductsByCategoryQuery(categoryId);
 
     const [search, setSearch] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
@@ -32,9 +32,7 @@ function Products ({ navigation, route }) {
         filteredProductsBySearch(text);
     };
 
-    const filteredProductsByCategory = products.filter(
-        (product) => product.categoryId === categoryId
-    );
+    const filteredProductsByCategory = data?.filter((product) => product.categoryId === categoryId);
 
     const filteredProductsBySearch = (query) => {
         let updateProductList = [ ... filteredProductsByCategory];
@@ -54,6 +52,11 @@ function Products ({ navigation, route }) {
     const onSelectProduct = ({ productId, productName }) => {
         navigation.navigate('ProductDetails', { productId, categoryColor, productName });
     }
+
+    if (isLoading) return 
+    <View style={styles.containerLoader}>
+      <ActivityIndicator size="large" color={COLORS.primary} />;
+    </View>
  
     return (
         <View style={styles.container}>

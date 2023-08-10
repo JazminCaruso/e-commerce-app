@@ -2,10 +2,14 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONTS } from "../../themes/themes";
 
 export const styles = StyleSheet.create({
+    containerLoader: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     container: {
         flex: 1,
         backgroundColor: COLORS.background,
-        
     },
     containerImage: {
         width: '100%',
