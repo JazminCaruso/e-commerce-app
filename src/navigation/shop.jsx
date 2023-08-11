@@ -4,6 +4,7 @@ import { COLORS } from "../themes/colors";
 import { FONTS } from "../themes/fonts";
 import { TouchableOpacity, useWindowDimensions } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import SettingsNavigator from './settings';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +14,7 @@ function ShopNavigator() {
     return (
         <Stack.Navigator 
             initialRouteName="Categories"
-            screenOptions={{
+            screenOptions={({ navigation }) => ({
                 headerStyle: {
                     backgroundColor: COLORS.secondary,
                 },
@@ -23,7 +24,12 @@ function ShopNavigator() {
                 },
                 animation: 'fade',
                 presentation: 'card',
-            }}
+                headerRight: () => (
+                    <TouchableOpacity onPress={() => navigation.navigate('SettingsStack')}>
+                        <Ionicons name="settings-outline" size={24} />
+                    </TouchableOpacity>
+                ),
+            })}
         >
             <Stack.Screen 
                 name="Categorias" 
@@ -39,7 +45,7 @@ function ShopNavigator() {
                     title: route.params.categoryName,
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Ionicons name="arrow-back" size={30} />
+                            <Ionicons name="arrow-back" size={26} />
                         </TouchableOpacity>
                     ),
                 })}
@@ -54,7 +60,20 @@ function ShopNavigator() {
                     title: 'Libro',
                     headerLeft: () => (
                       <TouchableOpacity onPress={() => navigation.goBack()}>
-                        <Ionicons name="arrow-back" size={30} />
+                        <Ionicons name="arrow-back" size={26} />
+                      </TouchableOpacity>
+                    ),
+                  })}
+            />
+            <Stack.Screen
+                name="SettingsStack"
+                component={SettingsNavigator}
+                options={({ navigation, route }) => ({
+                    title: 'Ajustes',
+                    headerRight: null,
+                    headerLeft: () => (
+                      <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Ionicons name="arrow-back" size={26} />
                       </TouchableOpacity>
                     ),
                   })}

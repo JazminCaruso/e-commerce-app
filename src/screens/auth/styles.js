@@ -48,6 +48,7 @@ export const styles = StyleSheet.create({
     marginBottom: 5,
   },
   link: {},
+  linkContainer: {},
   linkText: {
     fontFamily: FONTS.medium,
     fontSize: 14,

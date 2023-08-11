@@ -3,9 +3,12 @@ import { styles } from './styles';
 import { useState } from 'react';
 import { COLORS } from '../../themes/colors';
 import { useSignInMutation, useSignUpMutation } from '../../store/auth/api';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../store/auth/authSlice';
 
 const Auth = () => {
         
+    const dispatch = useDispatch();
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -19,7 +22,8 @@ const Auth = () => {
     const onHandlerAuth = async () => {
         try {
             if (isLogin) {
-                await signIn({ email, password });
+                const result = await signIn({ email, password });
+                if (result?.data) dispatch(setUser(result.data));
             } else {
                 await signUp({ email, password });
             }
