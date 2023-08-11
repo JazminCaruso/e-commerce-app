@@ -23,6 +23,12 @@
         {
           "initialOrientation": "DEFAULT"
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photoPermission": "The app access your photos to let you share then wuth your friends."
+        }
       ]
     ],
     "android": {
