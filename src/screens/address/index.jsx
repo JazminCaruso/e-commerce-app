@@ -1,11 +1,19 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './styles';
+import LocationSelector from '../../components/locationSelector';
+import { useState } from 'react';
 
 const Address = () => {
 
+  const [location, setLocation] = useState(null);
+  
+  const onLocation = () => {
+    setLocation(location);
+  };
+
   return (
     <View style={styles.container}>
-      <Text>Address</Text>
+      <LocationSelector onLocation={onLocation} />
     </View>
   );
 };

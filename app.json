@@ -29,6 +29,12 @@
         {
           "photoPermission": "The app access your photos to let you share then wuth your friends."
         }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
       ]
     ],
     "android": {
