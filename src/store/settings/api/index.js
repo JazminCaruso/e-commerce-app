@@ -3,7 +3,7 @@ import { URL_BASE_FIREBASE_REALTIME_DATABASE } from '../../../constants/firebase
 
 export const settingsApi = createApi({
     reducerPath: 'settingsApi',
-    baseQuery: fetchBaseQuery({ baseUrl: URL_BASE_FIREBASE_REALTIME_DATABASE}),
+    baseQuery: fetchBaseQuery({ baseUrl: URL_BASE_FIREBASE_REALTIME_DATABASE }),
     tagTypes: ['Settings'],
     endpoints: (builder) => ({
         getProfile: builder.query({
@@ -18,8 +18,18 @@ export const settingsApi = createApi({
                 method: 'PATCH',
                 body: { profileImage: image },
             })
+        }),
+        updateAddress: builder.mutation({
+            query: ({ localId, address, location }) => ({
+                url: `/users/${localId}.json`,
+                method: 'PATCH',
+                body: { 
+                    address,
+                    location
+                },
+            })
         })
     }),
 });
 
-export const { useGetProfileQuery, useUpdateImageProfileMutation } = settingsApi;
+export const { useGetProfileQuery, useUpdateImageProfileMutation, useUpdateAddressMutation } = settingsApi;

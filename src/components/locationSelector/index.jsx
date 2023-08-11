@@ -38,7 +38,7 @@ const LocationSelector = ({ onLocation }) => {
             <MapPreview location={pickedLocation} style={styles.preview}>
                 <Text style={styles.text}>Todavía no se ha seleccionado una ubicación.</Text>
             </MapPreview>
-            <Button title='Obtener ubicación' onPress={onHandlerGetLocation} color={COLORS.primary} />
+            <Button title='Obtener ubicación' onPress={onHandlerGetLocation} color={COLORS.secondary} />
         </View>
     )
 }
