@@ -1,9 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { GOOGLE_API_KEY, URL_BASE_GEOCCODING } from "../../../constants/maps";
+import { GOOGLE_API_KEY, URL_BASE_GEOCODING } from "../../../constants/maps";
 
 export const mapsApi = createApi({
-    reducerPath: "mapsApi",
-    baseQuery: fetchBaseQuery({ baseUrl: URL_BASE_GEOCCODING }),
+    reducerPath: 'mapsApi',
+    baseQuery: fetchBaseQuery({ baseUrl: URL_BASE_GEOCODING }),
     tagTypes: ['Maps'],
     endpoints: (builder) => ({
         getGeocoding: builder.query({
@@ -13,7 +13,7 @@ export const mapsApi = createApi({
                 return response?.results?.[0]?.formatted_address;
             },
             transformErrorResponse: (error) => {
-                if (!error) return [];
+                if (!error) return { error: "Ha ocurrido un error en la solicitud de geocodificación." };
                 return error?.data?.error?.message;
             },
             providesTags: ['Maps'],
@@ -21,4 +21,4 @@ export const mapsApi = createApi({
     }),
 });
 
-export const { useGetCodingQuery } = mapsApi;
+export const { useLazyGetGeocodingQuery } = mapsApi;

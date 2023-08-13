@@ -12,9 +12,9 @@ const Auth = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const headerTitle = isLogin ? 'Login' : 'Register';
-    const buttonTitle = isLogin ? 'Login' : 'Register';
-    const messageText = isLogin ? 'Need an account' : 'Already have an account';
+    const headerTitle = isLogin ? 'Ingresar' : 'Registrarme';
+    const buttonTitle = isLogin ? 'Ingresar' : 'Registrarme';
+    const messageText = isLogin ? 'Necesito una cuenta' : 'Ya tengo una cuenta';
 
     const [signIn] = useSignInMutation();
     const [signUp] = useSignUpMutation();

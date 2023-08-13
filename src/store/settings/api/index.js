@@ -25,7 +25,7 @@ export const settingsApi = createApi({
                 method: 'PATCH',
                 body: { 
                     address,
-                    location
+                    location,
                 },
             })
         })

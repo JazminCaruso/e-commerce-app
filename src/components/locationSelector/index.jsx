@@ -1,4 +1,4 @@
-import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
+import { LocationAccuracy, getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
 import { View, Button, Text, Alert } from 'react-native';
 import { styles } from './styles';
 import { useState } from 'react';
@@ -31,6 +31,7 @@ const LocationSelector = ({ onLocation }) => {
         });
         const { latitude, longitude } = location.coords;
         setPickedLocation({ lat: latitude, lng: longitude });
+        onLocation({ lat: latitude, lng: longitude });
     };
 
     return (

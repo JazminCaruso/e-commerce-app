@@ -4,7 +4,7 @@ import { styles } from "./styles";
 
 const MapPreview = ({ children, location, style }) => {
     const { lat, lng } = location || {};
-    const mapPreviewUrlImage = location ? URL_MAPS({ lat, lng, zoom: 16 }) : "";
+    const mapPreviewUrlImage = location ? URL_MAPS({ lat, lng, zoom: 15 }) : '';
     return (
         <View style={{ ...styles.container, ...style}}>
             {location ?
