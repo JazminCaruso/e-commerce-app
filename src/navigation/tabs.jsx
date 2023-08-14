@@ -22,7 +22,7 @@ const TabsNavigator = () => {
                 headerShown: false,
                 tabBarLabelStyle: {
                     fontFamily: FONTS.regular,
-                    fontSize: isTablet ? 22 : 12,
+                    fontSize: isTablet ? 22 : 14,
                 },
                 tabBarStyle: {
                     backgroundColor: COLORS.white,

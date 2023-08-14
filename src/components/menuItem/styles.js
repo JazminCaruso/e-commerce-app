@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontFamily: FONTS.medium,
-    fontSize: 14,
+    fontSize: 16,
     color: COLORS.text,
   },
 });

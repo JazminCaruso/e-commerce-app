@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
         height: 300,
     },
     textProduct: {
-        fontSize: 25,
+        fontSize: 22,
         fontFamily: FONTS.regular,
         textAlign: 'center',
         padding: 20,
@@ -46,5 +46,7 @@ export const styles = StyleSheet.create({
     addCartText: {
         fontFamily: FONTS.bold,
         fontSize: 20,
+        
+        color: COLORS.white,
     }
 })

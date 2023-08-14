@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         paddingHorizontal: 10,
         color: COLORS.primary,
-        fontSize: 18,
+        fontSize: 16,
         height: 40,
     },
     inputTablet: {

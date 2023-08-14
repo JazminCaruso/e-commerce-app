@@ -74,8 +74,8 @@ export const styles = StyleSheet.create({
     },
     productName: {
         color: COLORS.primary,
-        fontSize: 20,
-        fontFamily: FONTS.italic,
+        fontSize: 18,
+        fontFamily: FONTS.regular,
     },
     productNameTablet: {
         color: COLORS.primary,
@@ -85,7 +85,7 @@ export const styles = StyleSheet.create({
     productPrice: {
         color: COLORS.primary,
         fontWeight: 'bold',
-        fontSize: 15,
+        fontSize: 14,
     },
     productPriceTablet: {
         color: COLORS.primary,

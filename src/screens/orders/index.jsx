@@ -14,7 +14,6 @@ const Orders = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Orders</Text>
             <FlatList
                 data={data}
                 renderItem={renderItem}

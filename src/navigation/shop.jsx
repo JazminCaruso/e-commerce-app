@@ -20,7 +20,7 @@ function ShopNavigator() {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
-                    fontSize: isTablet? 40 : 28,
+                    fontSize: isTablet? 40 : 22,
                 },
                 animation: 'fade',
                 presentation: 'card',
@@ -32,7 +32,7 @@ function ShopNavigator() {
             })}
         >
             <Stack.Screen 
-                name="Categorias" 
+                name="Categorias de libros" 
                 component={Categories}
             />
             <Stack.Screen 
@@ -57,7 +57,7 @@ function ShopNavigator() {
                     headerStyle: {
                       backgroundColor: route.params.categoryColor,
                     },
-                    title: 'Libro',
+                    title: '',
                     headerLeft: () => (
                       <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Ionicons name="arrow-back" size={26} />

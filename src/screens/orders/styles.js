@@ -5,10 +5,6 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.background,
+        paddingVertical: 10,
     },
-    title: {
-        fontSize: 16,
-        textAlign: 'center',
-        paddingTop: 10,
-    }
 });

@@ -8,5 +8,5 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
     marginHorizontal: 15,
     marginVertical: 20,
-  },
+  }
 });

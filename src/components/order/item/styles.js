@@ -17,31 +17,35 @@ export const styles = StyleSheet.create({
     elevation: 3,
     padding: 10,
     marginHorizontal: 15,
-    marginTop: 15,
+    marginVertical: 7,
     justifyContent: 'space-between',
     alignItems: 'center',
     borderRadius: 5,
     flexDirection: 'row',
+    padding: 10,
   },
   orderHeaderContainer: {
     flex: 1,
   },
-    orderItemDate: {
-        fontFamily: FONTS.regular,
-        fontSize: 16,
-        marginHorizontal: 10,
-    },
-    orderBody: {
-        flex: 1,
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-    },
-    orderItemId: {
-        fontFamily: FONTS.regular,
-        fontSize: 14,
-    },
-    orderItemTotal: {
-        fontFamily: FONTS.bold,
-        fontSize: 14,
-    },
+  orderItemDate: {
+      fontFamily: FONTS.regular,
+      fontSize: 16,
+      marginLeft: 30,
+  },
+  orderBody: {
+      flex: 1,
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      marginRight: 15,
+      paddingVertical: 10,
+  },
+  orderItemId: {
+      fontFamily: FONTS.regular,
+      fontSize: 14,
+  },
+  orderItemTotal: {
+      fontFamily: FONTS.bold,
+      fontSize: 15,
+      paddingVertical: 10,
+  },
 });

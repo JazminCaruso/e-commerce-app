@@ -29,14 +29,14 @@ export const styles = StyleSheet.create({
   },
   header: {
     fontFamily: FONTS.medium,
-    fontSize: 16,
+    fontSize: 18,
     textAlign: 'center',
     color: COLORS.text,
-    paddingVertical: 10,
+    paddingVertical: 20,
   },
   label: {
-    fontFamily: FONTS.medium,
-    fontSize: 18,
+    fontFamily: FONTS.bold,
+    fontSize: 16,
   },
   input: {
     fontFamily: FONTS.medium,
@@ -45,13 +45,14 @@ export const styles = StyleSheet.create({
     borderBottomColor: COLORS.tertiary,
     borderBottomWidth: 1,
     width: '90%',
-    marginBottom: 5,
+    marginBottom: 20,
   },
-  link: {},
-  linkContainer: {},
+  linkContainer: {
+    paddingVertical: 10,
+  },
   linkText: {
     fontFamily: FONTS.medium,
-    fontSize: 14,
+    fontSize: 15,
     textAlign: 'center',
     color: COLORS.primary,
   },
@@ -78,7 +79,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: FONTS.bold,
-    fontSize: 14,
+    fontSize: 15,
     textAlign: 'center',
     color: COLORS.white,
     backgroundColor: COLORS.primary,

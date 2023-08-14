@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    height: 170,
+    height: 200,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {

@@ -15,7 +15,7 @@ const OrdersNavigator = () => {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
-                    fontSize: 28,
+                    fontSize: 22,
                 },
                 animation: 'fade',
                 presentation: 'card',

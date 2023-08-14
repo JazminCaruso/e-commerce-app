@@ -14,7 +14,7 @@ const OrderItem = ({ id, total, createAt, items }) => {
         <Text style={styles.orderItemDate}>{formatDate(createAt)}</Text>
       </View>
       <View style={styles.orderBody}>
-        <Text style={styles.orderItemId}>Id: {id}</Text>
+        <Text style={styles.orderItemId}>Nro. de operación: {id}</Text>
         <Text style={styles.orderItemId}>Cantidad de productos: {items.length}</Text>
         <Text style={styles.orderItemTotal}>Total: ${total}</Text>
       </View>

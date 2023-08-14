@@ -12,9 +12,9 @@ const Auth = () => {
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const headerTitle = isLogin ? 'Ingresar' : 'Registrarme';
+    const headerTitle = isLogin ? 'Iniciar sesión' : 'Crear una cuenta';
     const buttonTitle = isLogin ? 'Ingresar' : 'Registrarme';
-    const messageText = isLogin ? 'Necesito una cuenta' : 'Ya tengo una cuenta';
+    const messageText = isLogin ? 'Necesito una cuenta' : 'Soy usuario registrado';
 
     const [signIn] = useSignInMutation();
     const [signUp] = useSignUpMutation();
@@ -58,7 +58,7 @@ const Auth = () => {
                     value={password}
                 />
                 <View style={styles.linkContainer}>
-                    <TouchableOpacity style={styles.link} onPress={() => setIsLogin(!isLogin)}>
+                    <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
                         <Text style={styles.linkText}>{messageText}</Text>
                     </TouchableOpacity>
                 </View>

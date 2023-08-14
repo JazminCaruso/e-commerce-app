@@ -26,12 +26,9 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     categoryName: {
-        fontSize: 28,
+        fontSize: 22,
         color: COLORS.text,
         padding: 20,
-        textShadowColor: 'rgba(0,0,0,0.45)',
-        textShadowOffset: {width: -1, height: 1},
-        textShadowRadius: 6,
         fontFamily:FONTS.bold,
     },
     categoryNameTablet: {

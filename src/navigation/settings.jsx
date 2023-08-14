@@ -16,6 +16,7 @@ const SettingsNavigator = () => {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
+                    fontSize: 22,
                 },
                 animation: 'fade',
                 presentation: 'card',
