@@ -26,6 +26,7 @@ const InputForm = ({
                     { ...props}
                     editable={editable}
                     value={value}
+                    style={styles.input}
                     onChangeText={onChangeText}
                     onFocus={onFocus}
                     onBlur={onBlur}
