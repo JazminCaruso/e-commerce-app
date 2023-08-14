@@ -6,3 +6,4 @@ export { default as OrderItem } from './order/item/index';
 export { default as MenuItem} from './menuItem/index';
 export { default as ImageSelector } from './imageSelector/index';
 export { default as LocationSelector } from './locationSelector/index';
+export { default as InputForm } from './inputForm/index';
