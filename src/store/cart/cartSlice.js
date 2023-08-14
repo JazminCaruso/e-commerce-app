@@ -12,20 +12,20 @@ const cartSlice = createSlice({
     reducers: {
         addToCart: (state, action) => {
             const itemInCart = state.items.find((item) => item.id === action.payload.id);
+            if ( itemInCart &&
+              state.items.find((item) => item.id === action.payload.id)?.quantity === itemInCart?.stock
+            ) {
+              return;
+            }
+            if (itemInCart?.stock > itemInCart?.quantity) {
+              itemInCart.quantity += 1;
+              state.total = sumTotal(state.items);
+            }
             if (!itemInCart) {
-                state.items.push({ ... action.payload})
+              state.items.push(action.payload);
+              state.total = sumTotal(state.items);
             }
-            else {
-                if (itemInCart.stock > itemInCart.quantity) {
-                    itemInCart.quantity += 1;
-                    state.total += sumTotal(state.items);
-                }
-                else {
-                    return;
-                }
-            }
-
-        },
+          },
         increaseItemQuantity: (state, action) => {
             const itemInCart = state.items.find((item) => item.id === action.payload.id);
             if (itemInCart && itemInCart.stock > itemInCart.quantity) {
