@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Address, Profile, Settings } from '../screens/screens';
 import { COLORS, FONTS } from "../themes/themes";
 import { TouchableOpacity } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import { Address, Profile, Settings, CreateAddress } from '../screens/screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,20 +29,9 @@ const SettingsNavigator = () => {
             })}
         >
             <Stack.Screen name="Settings" component={Settings} />
-            <Stack.Screen 
-                name="Address" 
-                component={Address} 
-                options={{
-                    title: 'Ubicación'
-                }}
-            />
-            <Stack.Screen 
-                name="Profile" 
-                component={Profile} 
-                options={{
-                    title: 'Perfil'
-                }}
-            />
+            <Stack.Screen name="Profile" component={Profile} options={{ title: 'Perfil' }} />
+            <Stack.Screen name="CreateAddress" component={CreateAddress} options={{ title: 'Seleccionar ubicación' }} />
+            <Stack.Screen name="Address" component={Address} options={{ title: 'Ubicación' }} />
         </Stack.Navigator>
     );
 }

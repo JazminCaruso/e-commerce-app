@@ -1,38 +1,56 @@
-import { Button, View } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
+import { useCallback, useState } from 'react';
+import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native';
+
 import { styles } from './styles';
-import LocationSelector from '../../components/locationSelector';
-import { useState } from 'react';
-import { useUpdateAddressMutation } from '../../store/settings/api';
-import { useSelector } from 'react-redux';
-import { COLORS } from '../../themes/colors';
-import { useLazyGetGeocodingQuery } from '../../store/maps/api';
-import { insertPlace } from '../../db';
+import { selectPlaces } from '../../db/index';
 
 const Address = ({ navigation }) => {
-
-  const localId = useSelector((state) => state.auth.user.localId);
-  const mapImageUrl = useSelector((state) => state.address.mapImageUrl);
-  const [location, setLocation] = useState(null);
-  const [updateAddress] = useUpdateAddressMutation();
-  const [getGeolocation] = useLazyGetGeocodingQuery();
-
-  const onLocation = async ({ lat, lng }) => {
-    setLocation({lat, lng});
+  const [places, setPlaces] = useState([]);
+  const handlePress = () => {
+    navigation.navigate('CreateAddress');
   };
 
-  const onHandlerUpdateLocation = async () => {
-    const { lat, lng } = location;
-    const addressName = await getGeolocation({ lat, lng });
-    const result = await insertPlace({ address: addressName.data, image: mapImageUrl, coords: location})
-    updateAddress({ localId, address: addressName.data, location });
-    console.warn({ result });
-    navigation.navigate('Settings');
-  };
+  useFocusEffect(
+    useCallback(() => {
+      const getPlaces = async () => {
+        const places = await selectPlaces();
+        setPlaces(places);
+      };
+      getPlaces();
+
+      return () => {
+        setPlaces([]);
+      };
+    }, [])
+  );
 
   return (
     <View style={styles.container}>
-      <LocationSelector onLocation={onLocation} />
-      <Button title='Confirmar' onPress={onHandlerUpdateLocation} color={COLORS.primary}/>
+      <FlatList
+        data={places}
+        renderItem={({ item }) => {
+          const { lat, lng } = JSON.parse(item.coords);
+          return (
+            <View style={styles.itemContainer}>
+              <View style={styles.mapImageContainer}>
+                <Image source={{ uri: item.image }} style={styles.mapImage} />
+              </View>
+              <View style={styles.itemDetailsContainer}>
+                <Text style={styles.itemAddress}>{item.address}</Text>
+                <Text style={styles.itemCoords}>{`Latitud: ${lat}`}</Text>
+                <Text style={styles.itemCoords}>{`Longitud: ${lng}`}</Text>
+              </View>
+            </View>
+          );
+        }}
+        keyExtractor={(item) => item.id.toString()}
+      />
+      <TouchableOpacity style={styles.floatingButton} onPress={handlePress}>
+        <View style={styles.floatingButtonTextContainer}>
+          <Text style={styles.floatingButtonText}>+</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

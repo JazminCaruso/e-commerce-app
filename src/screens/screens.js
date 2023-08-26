@@ -7,3 +7,4 @@ export { default as Auth } from './auth/index';
 export { default as Settings } from './settings/index'; 
 export { default as Address } from './address/index';
 export { default as Profile } from './profile/index';
+export { default as CreateAddress } from './address/create/index';
