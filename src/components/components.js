@@ -7,4 +7,3 @@ export { default as MenuItem} from './menuItem/index';
 export { default as ImageSelector } from './imageSelector/index';
 export { default as LocationSelector } from './locationSelector/index';
 export { default as InputForm } from './inputForm/index';
-export { default as Maps } from './maps/index'

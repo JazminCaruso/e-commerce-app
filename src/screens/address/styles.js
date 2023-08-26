@@ -36,11 +36,15 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.medium,
     color: COLORS.white,
   },
+  addresListContainer: {
+    flex: 1,
+    marginVertical: 10,
+  },
   itemContainer: {
     flexDirection: 'row',
     padding: 20,
     marginHorizontal: 20,
-    marginTop: 15,
+    marginVertical: 10,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {

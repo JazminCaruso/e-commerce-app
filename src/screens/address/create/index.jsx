@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { View, Button } from 'react-native';
 import { useSelector } from 'react-redux';
 import { styles } from './styles';
@@ -29,6 +29,7 @@ const CreateAddress = ({ navigation }) => {
     updateAddress({ localId, address: addressName.data, location });
     navigation.goBack();
   };
+
 
   return (
     <View style={styles.container}>

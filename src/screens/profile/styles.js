@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
-
-import { COLORS } from '../../themes/themes';
+import { COLORS, FONTS } from '../../themes/themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -16,5 +15,21 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 20,
+  },
+  nameContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginHorizontal: 20,
+  },
+  nameInput: {
+    fontFamily: FONTS.regular,
+    fontSize: 18,
+  },
+  nameText: {
+    fontFamily: FONTS.bold,
+    fontSize: 17,
+  },
+  buttonContainer: {
+    margin: 20,
   }
 });

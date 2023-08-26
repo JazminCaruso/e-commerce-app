@@ -45,6 +45,7 @@ const Address = ({ navigation }) => {
           );
         }}
         keyExtractor={(item) => item.id.toString()}
+        style={styles.addresListContainer}
       />
       <TouchableOpacity style={styles.floatingButton} onPress={handlePress}>
         <View style={styles.floatingButtonTextContainer}>
