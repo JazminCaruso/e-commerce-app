@@ -1,12 +1,13 @@
 import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { styles } from './styles';
-import { useReducer, useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import { COLORS } from '../../themes/colors';
 import { useSignInMutation, useSignUpMutation } from '../../store/auth/api';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/auth/authSlice';
 import InputForm from '../../components/inputForm';
 import { UPDATE_FORM, onInputChange } from '../../utils/form';
+import { useSaveUserIdMutation } from '../../store/users/api';
 
 const initialState = {
     email: { value: '', error: '', touched: false, hasError: true },
@@ -45,12 +46,17 @@ const Auth = () => {
 
     const [signIn] = useSignInMutation();
     const [signUp] = useSignUpMutation();
+    const [saveId] = useSaveUserIdMutation();
 
     const onHandlerAuth = async () => {
         try {
             if (isLogin) {
                 const result = await signIn({ email: formState.email.value , password: formState.password.value });
-                if (result?.data) dispatch(setUser(result.data));
+                if (result?.data) {
+                    dispatch(setUser(result.data));
+                    console.warn(result.data.localId);
+                    if (result.data.localId) await saveId(result.data.localId);
+                }
             } else {
                 await signUp({ email: formState.email.value , password: formState.password.value });
             }
