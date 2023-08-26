@@ -2,7 +2,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import productsReducer from "./products/productsSlice";
 import categoriesReducer from "./categories/categoriesSlice";
 import cartReducer from "./cart/cartSlice";
-import authReducer from "./auth/authSlice"
+import authReducer from "./auth/authSlice";
+import addressReducer from "./address/addressSlice";
 import { categoriesApi } from "./categories/api";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { productsApi } from "./products/api";
@@ -17,6 +18,7 @@ export const store = configureStore({
         categories: categoriesReducer,
         cart: cartReducer,
         auth: authReducer,
+        address: addressReducer,
         [categoriesApi.reducerPath]: categoriesApi.reducer,
         [productsApi.reducerPath]: productsApi.reducer,
         [ordersApi.reducerPath]: ordersApi.reducer,

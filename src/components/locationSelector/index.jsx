@@ -1,12 +1,16 @@
-import { LocationAccuracy, getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
+import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
 import { View, Button, Text, Alert } from 'react-native';
 import { styles } from './styles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { COLORS } from '../../themes/colors';
 import MapPreview from '../mapPreview';
+import { URL_MAPS } from '../../constants/maps';
+import { useDispatch } from 'react-redux';
+import { saveMapImageUrl } from '../../store/address/addressSlice';
 
 const LocationSelector = ({ onLocation }) => {
 
+    const dispatch = useDispatch();
     const [pickedLocation, setPickedLocation] = useState(null);
 
     const verifyPermissions = async () => {
@@ -22,6 +26,8 @@ const LocationSelector = ({ onLocation }) => {
         return true;
     }
 
+    const mapPreviewUrlImage = pickedLocation ? URL_MAPS({ lat: pickedLocation.lat, lng: pickedLocation.lng, zoom: 15 }) : '';
+
     const onHandlerGetLocation = async () => {
         const isLocationPermission = await verifyPermissions();
         if (!isLocationPermission) return;
@@ -34,9 +40,15 @@ const LocationSelector = ({ onLocation }) => {
         onLocation({ lat: latitude, lng: longitude });
     };
 
+    useEffect(() => {
+        if (pickedLocation) {
+            dispatch(saveMapImageUrl(mapPreviewUrlImage));
+        }
+    }, [pickedLocation]);
+
     return (
         <View style={styles.container}>
-            <MapPreview location={pickedLocation} style={styles.preview}>
+            <MapPreview location={pickedLocation} mapImage={mapPreviewUrlImage} style={styles.preview}>
                 <Text style={styles.text}>Todavía no se ha seleccionado una ubicación.</Text>
             </MapPreview>
             <Button title='Obtener ubicación' onPress={onHandlerGetLocation} color={COLORS.secondary} />
