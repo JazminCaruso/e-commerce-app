@@ -5,12 +5,15 @@ import { FONTS } from "../themes/fonts";
 import { TouchableOpacity, useWindowDimensions } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import SettingsNavigator from './settings';
+import { useDispatch } from "react-redux";
+import { logout } from "../store/auth/authSlice";
 
 const Stack = createNativeStackNavigator();
 
 function ShopNavigator() {
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
+    const dispatch = useDispatch();
     return (
         <Stack.Navigator 
             initialRouteName="Categories"

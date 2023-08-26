@@ -12,4 +12,7 @@ export const styles = StyleSheet.create({
   settingList: {
     flexGrow: 1,
   },
+  buttonLogout: {
+    marginBottom: 20,
+  },
 });
