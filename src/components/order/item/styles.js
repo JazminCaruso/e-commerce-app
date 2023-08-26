@@ -5,7 +5,7 @@ import { FONTS } from '../../../themes/fonts';
 export const styles = StyleSheet.create({
   orderItemContainer: {
     flex: 1,
-    height: 145,
+    height: 120,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {

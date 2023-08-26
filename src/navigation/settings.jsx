@@ -29,9 +29,9 @@ const SettingsNavigator = () => {
             })}
         >
             <Stack.Screen name="Settings" component={Settings} />
-            <Stack.Screen name="Profile" component={Profile} options={{ title: 'Perfil' }} />
+            <Stack.Screen name="Profile" component={Profile} options={{ title: 'Mis datos' }} />
             <Stack.Screen name="CreateAddress" component={CreateAddress} options={{ title: 'Seleccionar ubicación' }} />
-            <Stack.Screen name="Address" component={Address} options={{ title: 'Ubicación' }} />
+            <Stack.Screen name="Address" component={Address} options={{ title: 'Mis direcciones' }} />
         </Stack.Navigator>
     );
 }

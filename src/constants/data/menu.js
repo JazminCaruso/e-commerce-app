@@ -9,7 +9,7 @@ export const MENUS = [
       id: '2',
       icon: 'ios-location-sharp',
       route: 'Address',
-      title: 'Ubicación',
+      title: 'Dirección',
     },
   ];
   

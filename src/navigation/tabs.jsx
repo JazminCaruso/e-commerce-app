@@ -28,7 +28,7 @@ const TabsNavigator = () => {
                     backgroundColor: COLORS.white,
                 },
                 tabBarActiveTintColor: COLORS.primary,
-                tabBarInactiveTintColor: '#cccccc',
+                tabBarInactiveTintColor: COLORS.tertiary,
             }}
         >
             <BottomTab.Screen 

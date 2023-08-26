@@ -80,10 +80,13 @@ const Cart = ({ navigation }) => {
                 keyExtractor={(item) => item.id.toString()}
                 style={styles.listContainer}
             />
+            <View style={styles.totalContainer}>
+                <Text style={styles.totalText}>Total compra</Text>
+                <Text style={styles.priceText}>${total}</Text>
+            </View>
             <View style={styles.footerContainer}>
                 <TouchableOpacity onPress={onCreateOrder} style={styles.checkoutButton}>
-                        <Text style={styles.totalText}>Total compra</Text>
-                        <Text style={styles.priceText}>${total}</Text>
+                        <Text style={styles.checkoutText}>COMPRAR</Text>
                 </TouchableOpacity>
             </View>
         </View>

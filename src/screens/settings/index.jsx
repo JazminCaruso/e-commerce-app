@@ -23,7 +23,7 @@ const Settings = ({ navigation }) => {
         contentContainerStyle={styles.settingList}
       />
       <View style={styles.buttonLogout}>
-        <Button title="Cerrar sesión" onPress={() => dispatch(logout())} color={COLORS.secondary} />
+        <Button title="Cerrar sesión" onPress={() => dispatch(logout())} color={COLORS.primary} />
       </View>
     </View>
   );

@@ -27,15 +27,8 @@ const CreateAddress = ({ navigation }) => {
       image: mapImageUrl,
     });
     updateAddress({ localId, address: addressName.data, location });
-    console.warn({ result });
     navigation.goBack();
   };
-
-  useEffect(() => {
-    if (location) {
-      navigation.navigate('Settings');
-    }
-  }, [location]);
 
   return (
     <View style={styles.container}>

@@ -18,13 +18,22 @@ export const styles = StyleSheet.create({
         padding: 15,
         borderRadius: 5,
     },
-    checkoutButton: {
+    totalContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: COLORS.white,
+        padding: 15,
+    },
+    checkoutButton: {
         alignItems: 'center',
     },
     totalText: {
         fontFamily: FONTS.medium,
+        fontSize: 18,
+    },
+    checkoutText: {
+        fontFamily: FONTS.bold,
         fontSize: 18,
     },
     priceText: {

@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { styles } from './styles';
 import { useReducer, useState } from 'react';
 import { COLORS } from '../../themes/colors';
@@ -65,48 +65,55 @@ const Auth = () => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.content}>
-                <Text style={styles.header}>{headerTitle}</Text>
-                <InputForm
-                    placeholder='email@domain.com'
-                    placeholderTextColor={COLORS.tertiary}
-                    autoCapitalize='none'
-                    autoCorrect={false}
-                    onChangeText={(text) => onHandlerInputChange({ value: text, name: 'email' })}
-                    value={formState.email.value}
-                    label="Email"
-                    error={formState.email.error}
-                    hasError={formState.email.hasError}
-                    touched={formState.email.touched}
-                />
-                <InputForm
-                    placeholder='*******'
-                    placeholderTextColor={COLORS.tertiary}
-                    autoCapitalize='none'
-                    autoCorrect={false}
-                    secureTextEntry
-                    onChangeText={(text) => onHandlerInputChange({ value: text, name: 'password' })}
-                    value={formState.password.value}
-                    label="Contraseña"
-                    error={formState.password.error}
-                    hasError={formState.password.hasError}
-                    touched={formState.password.touched}
-                />
-                <View>
-                    <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
-                        <Text style={styles.linkText}>{messageText}</Text>
-                    </TouchableOpacity>
+            <ImageBackground
+                    source={{ 
+                        uri: 'https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/backgroundlogin.jpg?alt=media&token=7944ff9d-eaff-42f0-aae9-1e4dafe00b11'}}
+                        style={styles.imageBackground}
+                        resizeMode='cover'
+            >
+                <View style={styles.content}>
+                    <Text style={styles.header}>{headerTitle}</Text>
+                    <InputForm
+                        placeholder='email@domain.com'
+                        placeholderTextColor={COLORS.tertiary}
+                        autoCapitalize='none'
+                        autoCorrect={false}
+                        onChangeText={(text) => onHandlerInputChange({ value: text, name: 'email' })}
+                        value={formState.email.value}
+                        label="Email"
+                        error={formState.email.error}
+                        hasError={formState.email.hasError}
+                        touched={formState.email.touched}
+                    />
+                    <InputForm
+                        placeholder='*******'
+                        placeholderTextColor={COLORS.tertiary}
+                        autoCapitalize='none'
+                        autoCorrect={false}
+                        secureTextEntry
+                        onChangeText={(text) => onHandlerInputChange({ value: text, name: 'password' })}
+                        value={formState.password.value}
+                        label="Contraseña"
+                        error={formState.password.error}
+                        hasError={formState.password.hasError}
+                        touched={formState.password.touched}
+                    />
+                    <View>
+                        <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
+                            <Text style={styles.linkText}>{messageText}</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <TouchableOpacity
+                            disabled={!formState.isFormValid}
+                            style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
+                            onPress={onHandlerAuth}
+                        >
+                            <Text style={styles.buttonText}>{buttonTitle}</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity
-                        disabled={!formState.isFormValid}
-                        style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
-                        onPress={onHandlerAuth}
-                    >
-                        <Text style={styles.buttonText}>{buttonTitle}</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+            </ImageBackground>
         </View>
     );
 };
