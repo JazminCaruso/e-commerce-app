@@ -12,6 +12,8 @@ const Cart = ({ navigation }) => {
     const isTablet = width >= 650;
 
     const dispatch = useDispatch();
+    const localId = useSelector((state) => state.auth.user.localId);
+    const email = useSelector((state) => state.auth.user.email);
     const cart = useSelector((state) => state.cart.items);
     const total = useSelector((state) => state.cart.total);
 
@@ -35,30 +37,18 @@ const Cart = ({ navigation }) => {
             items: cart,
             total,
             user: {
-                id: 1,
-                name: 'Jazmin',
-                address: '123 street',
-                phone: '1234567',
-                mail: 'jaz@gmail.com'
-            },
-            payment: {
-                method: 'VISA',
-            },
-            delivery: {
-                method: 'UPS',
-                trackingNumber: Math.floor(Math.random()*1000),
+                id: localId,
+                email: email,
             },
             createAt: Date.now(),
-            finishedAt: '',
         };
         try {
-            await createOrder(newOrder);
+            await createOrder( newOrder );
             dispatch(clearCart());
             navigation.navigate('OrdersTab');
         } catch (e) {
             console.warn({ error, e });
         } 
-        
     };
 
     if (cart.length === 0) {

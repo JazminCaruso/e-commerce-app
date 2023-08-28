@@ -1,7 +1,6 @@
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useState } from 'react';
 import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native';
-
 import { styles } from './styles';
 import { selectPlaces } from '../../db/index';
 

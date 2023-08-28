@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 const Profile = ({ navigation }) => {
 
   const localId = useSelector((state) => state.auth.user.localId);
-  console.warn(localId);
+  const email = useSelector((state) => state.auth.user.email);
   const [uploadImageProfile, { data, error, isLoading }] = useUpdateImageProfileMutation();
   const [updateDataAccount] = useUpdateAccountMutation();
   const {data: userData, isLoading: isLoadingUserData, refetch: refetchUserData} = useGetProfileQuery({ localId });
@@ -29,7 +29,7 @@ const Profile = ({ navigation }) => {
   };
 
   const onHandlerData = async ( ) => {
-    await updateDataAccount({ localId, name, surname });
+    await updateDataAccount({ localId, name, surname, email });
     setName(name);
     setSurname(surname);
     refetchUserData();
