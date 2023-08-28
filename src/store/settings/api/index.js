@@ -19,16 +19,6 @@ export const settingsApi = createApi({
                 body: { profileImage: image },
             })
         }),
-        updateDataProfile: builder.mutation({
-            query: ({ localId, name, surname }) => ({
-                url: `/users/${localId}.json`,
-                method: 'PATCH',
-                body: { 
-                    name,
-                    surname  
-                },
-            })
-        }),
         updateAddress: builder.mutation({
             query: ({ localId, address, location }) => ({
                 url: `/users/${localId}.json`,
@@ -38,6 +28,16 @@ export const settingsApi = createApi({
                     location,
                 },
             })
+        }),
+        updateAccount: builder.mutation({
+            query:({ localId, name, surname }) => ({
+                url: `/users/${localId}.json`,
+                method: 'PATCH',
+                body: {
+                    name: name,
+                    surname: surname
+                }
+            })
         })
     }),
 });
@@ -46,5 +46,6 @@ export const {
     useGetProfileQuery, 
     useUpdateImageProfileMutation, 
     useUpdateDataProfileMutation,
-    useUpdateAddressMutation 
+    useUpdateAddressMutation,
+    useUpdateAccountMutation, 
 } = settingsApi;

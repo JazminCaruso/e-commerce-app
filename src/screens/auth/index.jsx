@@ -1,13 +1,12 @@
-import { View, Text, TouchableOpacity, ImageBackground, useWindowDimensions } from 'react-native';
+import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { styles } from './styles';
-import React, { useReducer, useState } from 'react';
+import { useReducer, useState } from 'react';
 import { COLORS } from '../../themes/colors';
 import { useSignInMutation, useSignUpMutation } from '../../store/auth/api';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/auth/authSlice';
 import InputForm from '../../components/inputForm';
 import { UPDATE_FORM, onInputChange } from '../../utils/form';
-import { useSaveUserIdMutation } from '../../store/users/api';
 
 const initialState = {
     email: { value: '', error: '', touched: false, hasError: true },
@@ -36,9 +35,6 @@ const formReducer = (state, action) => {
 }
 
 const Auth = () => {
-
-    const { width } = useWindowDimensions();
-    const isTablet = (width >= 650);
         
     const dispatch = useDispatch();
     const [formState, dispatchFormState] = useReducer(formReducer, initialState);
@@ -49,17 +45,12 @@ const Auth = () => {
 
     const [signIn] = useSignInMutation();
     const [signUp] = useSignUpMutation();
-    const [saveId] = useSaveUserIdMutation();
 
     const onHandlerAuth = async () => {
         try {
             if (isLogin) {
                 const result = await signIn({ email: formState.email.value , password: formState.password.value });
-                if (result?.data) {
-                    dispatch(setUser(result.data));
-                    console.warn(result.data.localId);
-                    if (result.data.localId) await saveId(result.data.localId);
-                }
+                if (result?.data) dispatch(setUser(result.data));
             } else {
                 await signUp({ email: formState.email.value , password: formState.password.value });
             }
@@ -81,7 +72,7 @@ const Auth = () => {
                         resizeMode='cover'
             >
                 <View style={styles.content}>
-                    <Text style={isTablet ? styles.headerTablet : styles.headerTablet}>{headerTitle}</Text>
+                    <Text style={styles.header}>{headerTitle}</Text>
                     <InputForm
                         placeholder='email@domain.com'
                         placeholderTextColor={COLORS.tertiary}
@@ -95,7 +86,7 @@ const Auth = () => {
                         touched={formState.email.touched}
                     />
                     <InputForm
-                        placeholder='******'
+                        placeholder='*******'
                         placeholderTextColor={COLORS.tertiary}
                         autoCapitalize='none'
                         autoCorrect={false}
@@ -109,7 +100,7 @@ const Auth = () => {
                     />
                     <View>
                         <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
-                            <Text style={isTablet ? styles.linkTextTablet : styles.linkText}>{messageText}</Text>
+                            <Text style={styles.linkText}>{messageText}</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.buttonContainer}>
@@ -118,7 +109,7 @@ const Auth = () => {
                             style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
                             onPress={onHandlerAuth}
                         >
-                            <Text style={isTablet ? styles.buttonTextTablet : styles.buttonText}>{buttonTitle}</Text>
+                            <Text style={styles.buttonText}>{buttonTitle}</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

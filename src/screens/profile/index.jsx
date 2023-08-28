@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import { styles } from './styles';
 import { ImageSelector } from '../../components/components';
 import { useSelector } from 'react-redux';
-import { useGetProfileQuery, useUpdateImageProfileMutation, useUpdateDataProfileMutation } from '../../store/settings/api';
+import { useGetProfileQuery, useUpdateImageProfileMutation, useUpdateAccountMutation } from '../../store/settings/api';
 import { COLORS } from '../../themes/colors';
 import { useEffect } from 'react';
 
-const Profile = () => {
+const Profile = ({ navigation }) => {
 
   const localId = useSelector((state) => state.auth.user.localId);
   console.warn(localId);
   const [uploadImageProfile, { data, error, isLoading }] = useUpdateImageProfileMutation();
-  const [updateDataProfile] = useUpdateDataProfileMutation(); 
+  const [updateDataAccount] = useUpdateAccountMutation();
   const {data: userData, isLoading: isLoadingUserData, refetch: refetchUserData} = useGetProfileQuery({ localId });
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
@@ -28,11 +28,12 @@ const Profile = () => {
     await uploadImageProfile({ localId, image: `data:image/jpeg;base64,${base64}` })
   };
 
-  const onSaveName = async () => {
-    await updateDataProfile({ localId, name, surname });
+  const onHandlerData = async ( ) => {
+    await updateDataAccount({ localId, name, surname });
     setName(name);
     setSurname(surname);
     refetchUserData();
+    navigation.navigate('Settings');
   };
 
   return (
@@ -64,7 +65,7 @@ const Profile = () => {
         />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Guardar" onPress={onSaveName} color={COLORS.primary}/>
+        <Button title="Guardar" onPress={onHandlerData} color={COLORS.primary}/>
       </View>
     </View>
   );
