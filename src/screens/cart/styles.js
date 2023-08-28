@@ -32,13 +32,25 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.medium,
         fontSize: 18,
     },
+    totalTextTablet: {
+        fontFamily: FONTS.medium,
+        fontSize: 24,
+    },
     checkoutText: {
         fontFamily: FONTS.bold,
         fontSize: 18,
     },
+    checkoutTextTablet: {
+        fontFamily: FONTS.bold,
+        fontSize: 26,
+    },
     priceText: {
         fontFamily: FONTS.bold,
         fontSize: 16,
+    },
+    priceTextTablet: {
+        fontFamily: FONTS.bold,
+        fontSize: 23,
     },
     emptyCartContainer: {
         flex: 1,
@@ -47,6 +59,10 @@ export const styles = StyleSheet.create({
     },
     emptyCartText: {
         fontSize: 18,
+        fontFamily: FONTS.medium,
+    },
+    emptyCartTextTablet: {
+        fontSize: 26,
         fontFamily: FONTS.medium,
     }
 });

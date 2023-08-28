@@ -1,10 +1,12 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { View, FlatList, useWindowDimensions } from "react-native";
 import { styles } from './styles';
 import { useGetOrdersQuery } from "../../store/orders/api";
 import { OrderItem } from "../../components/components";
 
 
 const Orders = () => {
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
 
     const { data, error, isLoading } = useGetOrdersQuery();
     
@@ -13,11 +15,12 @@ const Orders = () => {
     const keyExtractor = (item) => item.id.toString();
 
     return (
-        <View style={styles.container}>
+        <View style={isTablet ? styles.containerTablet : styles.container}>
             <FlatList
                 data={data}
                 renderItem={renderItem}
                 keyExtractor={keyExtractor}
+                numColumns={ isTablet? 3 : 1}
             />
         </View>
     );

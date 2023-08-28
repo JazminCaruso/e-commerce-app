@@ -1,4 +1,4 @@
-import { View, FlatList, TouchableOpacity, Text } from "react-native";
+import { View, FlatList, TouchableOpacity, Text, useWindowDimensions } from "react-native";
 import { styles } from './styles';
 import { CartItem } from "../../components/components";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +7,9 @@ import { useCreateOrderMutation } from "../../store/orders/api";
 
 
 const Cart = ({ navigation }) => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
 
     const dispatch = useDispatch();
     const cart = useSelector((state) => state.cart.items);
@@ -61,7 +64,7 @@ const Cart = ({ navigation }) => {
     if (cart.length === 0) {
         return (
             <View style={styles.emptyCartContainer}>
-                <Text style={styles.emptyCartText}>El carrito está vacío</Text>
+                <Text style={isTablet ? styles.emptyCartTextTablet : styles.emptyCartText}>El carrito está vacío</Text>
             </View>
         )
     }
@@ -81,12 +84,12 @@ const Cart = ({ navigation }) => {
                 style={styles.listContainer}
             />
             <View style={styles.totalContainer}>
-                <Text style={styles.totalText}>Total compra</Text>
-                <Text style={styles.priceText}>${total}</Text>
+                <Text style={isTablet ? styles.totalTextTablet : styles.totalText}>Total compra</Text>
+                <Text style={isTablet ? styles.priceTextTablet : styles.priceText}>${total}</Text>
             </View>
             <View style={styles.footerContainer}>
                 <TouchableOpacity onPress={onCreateOrder} style={styles.checkoutButton}>
-                        <Text style={styles.checkoutText}>COMPRAR</Text>
+                        <Text style={isTablet ? styles.checkoutTextTablet : styles.checkoutText}>COMPRAR</Text>
                 </TouchableOpacity>
             </View>
         </View>

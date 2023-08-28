@@ -7,4 +7,10 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.background,
         paddingVertical: 10,
     },
+    containerTablet: {
+        flex: 1,
+        backgroundColor: COLORS.background,
+        paddingVertical: 10,
+        flexDirection: 'row',
+    },
 });

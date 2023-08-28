@@ -20,14 +20,30 @@ export const styles = StyleSheet.create({
         width: '50%',
         height: 300,
     },
+    imageProductTablet: {
+        width: '100%',
+        height: 350,
+    },
     textProduct: {
         fontSize: 22,
         fontFamily: FONTS.regular,
         textAlign: 'center',
         padding: 20,
     },
+    textProductTablet: {
+        fontSize: 28,
+        fontFamily: FONTS.regular,
+        textAlign: 'center',
+        padding: 20,
+    },
     textPrice: {
         fontSize: 18,
+        fontFamily: FONTS.bold,
+        textAlign: 'center',
+        paddingBottom: 20,
+    },
+    textPriceTablet: {
+        fontSize: 26,
         fontFamily: FONTS.bold,
         textAlign: 'center',
         paddingBottom: 20,
@@ -46,7 +62,11 @@ export const styles = StyleSheet.create({
     addCartText: {
         fontFamily: FONTS.bold,
         fontSize: 20,
-        
+        color: COLORS.white,
+    },
+    addCartTextTablet: {
+        fontFamily: FONTS.bold,
+        fontSize: 28,
         color: COLORS.white,
     }
 })

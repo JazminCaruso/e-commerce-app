@@ -22,8 +22,8 @@ export const styles = StyleSheet.create({
     },
     imageBackgroundTablet: {
         width: '120%',
-        height: 200,
-        justifyContent: 'flex-start',
+        height: 130,
+        justifyContent: 'flex-start'
     },
     categoryName: {
         fontSize: 22,
@@ -32,12 +32,10 @@ export const styles = StyleSheet.create({
         fontFamily:FONTS.bold,
     },
     categoryNameTablet: {
-        fontSize: 38,
+        fontSize: 30,
         color: COLORS.text,
+        marginLeft: 50,
         padding: 40,
-        textShadowColor: 'rgba(0,0,0,0.45)',
-        textShadowOffset: {width: -1, height: 1},
-        textShadowRadius: 6,
         fontFamily:FONTS.bold,
     }
 });

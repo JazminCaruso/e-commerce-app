@@ -80,7 +80,7 @@ function Products ({ navigation, route }) {
                 )}
             </View>
             <FlatList
-                contentContainerStyle={styles.productsContainer}
+                contentContainerStyle={isTablet ? styles.productsContainerTablet : styles.productsContainer}
                 data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => onSelectProduct({ productId: item.id, productName: item.name })} style={isTablet? styles.productContainerTablet : styles.productContainer}>

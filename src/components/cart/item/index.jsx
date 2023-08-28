@@ -12,7 +12,7 @@ const CartItem = ({ id, name, price, image, currency, quantity, onIncreaseCartIt
   return (
     <View style={isTablet ? styles.containerTablet : styles.container}>
       <View style={isTablet ? styles.imageContainerTablet : styles.imageContainer}>
-        <Image source={{ uri: image }} style={isTablet ? styles.imageTablet : styles.image} />
+        <Image source={{ uri: image }} style={isTablet ? styles.imageTablet : styles.image} resizeMode='contain' />
       </View>
       <View style={isTablet ? styles.detailContainerTablet : styles.detailContainer}>
         <Text style={isTablet ? styles.nameTablet : styles.name}>{name}</Text>

@@ -1,12 +1,15 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { COLORS, FONTS } from "../themes/themes";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, useWindowDimensions } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { Address, Profile, Settings, CreateAddress } from '../screens/screens';
 
 const Stack = createNativeStackNavigator();
 
 const SettingsNavigator = () => {
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
+
     return (
         <Stack.Navigator
             initialRouteName="Settings"
@@ -16,7 +19,7 @@ const SettingsNavigator = () => {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
-                    fontSize: 22,
+                    fontSize: isTablet? 34 : 22,
                 },
                 animation: 'fade',
                 presentation: 'card',

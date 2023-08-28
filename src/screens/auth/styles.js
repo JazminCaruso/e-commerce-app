@@ -37,9 +37,23 @@ export const styles = StyleSheet.create({
     color: COLORS.text,
     paddingBottom: 20,
   },
+  headerTablet: {
+    fontFamily: FONTS.bold,
+    fontSize: 24,
+    textAlign: 'center',
+    color: COLORS.text,
+    paddingBottom: 20,
+  },
   linkText: {
     fontFamily: FONTS.medium,
     fontSize: 16,
+    textAlign: 'center',
+    color: COLORS.primary,
+    marginTop: 10,
+  },
+  linkTextTablet: {
+    fontFamily: FONTS.medium,
+    fontSize: 20,
     textAlign: 'center',
     color: COLORS.primary,
     marginTop: 10,
@@ -69,5 +83,18 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
     paddingHorizontal: 50,
     paddingVertical: 10,
+  },
+  buttonTextTablet: {
+    fontFamily: FONTS.bold,
+    fontSize: 20,
+    textAlign: 'center',
+    color: COLORS.white,
+    backgroundColor: COLORS.primary,
+    paddingHorizontal: 50,
+    paddingVertical: 10,
+  },
+  inputTablet: {
+    fontSize: 44,
+    color: COLORS.primary
   },
 });

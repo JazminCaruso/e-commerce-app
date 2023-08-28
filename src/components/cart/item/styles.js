@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
   containerTablet: {
     flex: 1,
     flexDirection: 'row',
-    height: 260,
+    height: 230,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {
@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 25,
   },
   imageContainerTablet: {
-    maxWidth: 220,
+    maxWidth: 100,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.background,

@@ -15,4 +15,8 @@ export const styles = StyleSheet.create({
   buttonLogout: {
     marginBottom: 20,
   },
+  buttonLogoutTablet: {
+    marginBottom: 20,
+    width: 500,
+  },
 });

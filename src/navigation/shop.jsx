@@ -6,7 +6,6 @@ import { TouchableOpacity, useWindowDimensions } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import SettingsNavigator from './settings';
 import { useDispatch } from "react-redux";
-import { logout } from "../store/auth/authSlice";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,13 +22,13 @@ function ShopNavigator() {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
-                    fontSize: isTablet? 40 : 22,
+                    fontSize: isTablet? 34 : 22,
                 },
                 animation: 'fade',
                 presentation: 'card',
                 headerRight: () => (
                     <TouchableOpacity onPress={() => navigation.navigate('SettingsStack')}>
-                        <Ionicons name="settings-outline" size={24} />
+                        <Ionicons name="settings-outline" size={ isTablet ? 32 : 24} />
                     </TouchableOpacity>
                 ),
             })}
@@ -48,7 +47,7 @@ function ShopNavigator() {
                     title: route.params.categoryName,
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Ionicons name="arrow-back" size={26} />
+                            <Ionicons name="arrow-back" size={ isTablet ? 32 : 24} />
                         </TouchableOpacity>
                     ),
                 })}
@@ -63,7 +62,7 @@ function ShopNavigator() {
                     title: '',
                     headerLeft: () => (
                       <TouchableOpacity onPress={() => navigation.goBack()}>
-                        <Ionicons name="arrow-back" size={26} />
+                        <Ionicons name="arrow-back" size={ isTablet ? 32 : 24} />
                       </TouchableOpacity>
                     ),
                   })}

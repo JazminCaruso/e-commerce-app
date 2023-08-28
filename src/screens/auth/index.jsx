@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, ImageBackground, useWindowDimensions } from 'react-native';
 import { styles } from './styles';
 import React, { useReducer, useState } from 'react';
 import { COLORS } from '../../themes/colors';
@@ -36,6 +36,9 @@ const formReducer = (state, action) => {
 }
 
 const Auth = () => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = (width >= 650);
         
     const dispatch = useDispatch();
     const [formState, dispatchFormState] = useReducer(formReducer, initialState);
@@ -78,7 +81,7 @@ const Auth = () => {
                         resizeMode='cover'
             >
                 <View style={styles.content}>
-                    <Text style={styles.header}>{headerTitle}</Text>
+                    <Text style={isTablet ? styles.headerTablet : styles.headerTablet}>{headerTitle}</Text>
                     <InputForm
                         placeholder='email@domain.com'
                         placeholderTextColor={COLORS.tertiary}
@@ -92,7 +95,7 @@ const Auth = () => {
                         touched={formState.email.touched}
                     />
                     <InputForm
-                        placeholder='*******'
+                        placeholder='******'
                         placeholderTextColor={COLORS.tertiary}
                         autoCapitalize='none'
                         autoCorrect={false}
@@ -106,7 +109,7 @@ const Auth = () => {
                     />
                     <View>
                         <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
-                            <Text style={styles.linkText}>{messageText}</Text>
+                            <Text style={isTablet ? styles.linkTextTablet : styles.linkText}>{messageText}</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.buttonContainer}>
@@ -115,7 +118,7 @@ const Auth = () => {
                             style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
                             onPress={onHandlerAuth}
                         >
-                            <Text style={styles.buttonText}>{buttonTitle}</Text>
+                            <Text style={isTablet ? styles.buttonTextTablet : styles.buttonText}>{buttonTitle}</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

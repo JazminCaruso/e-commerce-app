@@ -44,18 +44,23 @@ export const styles = StyleSheet.create({
         gap: 10,
         paddingVertical: 30,
         paddingHorizontal: 10,
-        
     },
-    productContainer: {
-        backgroundColor: COLORS.background,
-        borderRadius: 10,
-        width: '45%',
-        marginHorizontal: 10,
+    productsContainerTablet: {
+        gap: 10,
+        paddingVertical: 30,
+        paddingHorizontal: 10,
+        marginLeft: 30,
     },
     productContainerTablet: {
         backgroundColor: COLORS.background,
         borderRadius: 10,
         width: '30%',
+        marginHorizontal: 10,
+    },
+    productContainer: {
+        backgroundColor: COLORS.background,
+        borderRadius: 10,
+        width: '45%',
         marginHorizontal: 10,
     },
     productImage: {
