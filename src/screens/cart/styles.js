@@ -64,5 +64,56 @@ export const styles = StyleSheet.create({
     emptyCartTextTablet: {
         fontSize: 26,
         fontFamily: FONTS.medium,
-    }
+    },
+    modalContainer: {
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 60,
+        paddingVertical: 20,
+    },
+    resumenText: {
+        fontFamily: FONTS.bold,
+        fontSize: 18,
+    },
+    dataResumenText: {
+        fontFamily: FONTS.regular,
+        fontSize: 16,
+    },
+    emailResumenText: {
+        fontFamily: FONTS.regular,
+        fontSize: 16,
+        margin: 20,
+        textAlign: 'center'
+    },
+    modalButtonContainer: {
+        flexDirection: 'row',
+        marginHorizontal: 10
+    },
+    modalButtonConfirm: {
+        margin: 20,
+        backgroundColor: COLORS.primary,
+        paddingHorizontal: 30,
+        paddingVertical: 10,
+        borderRadius: 10,
+    },
+    modalButtonCancel: {
+        margin: 20,
+        backgroundColor: COLORS.secondary,
+        paddingHorizontal: 30,
+        paddingVertical: 10,
+        borderRadius: 10,
+    },
+    buttonText: {
+        fontFamily: FONTS.bold,
+        fontSize: 18,
+    },
+    buttonTextCancel: {
+        fontFamily: FONTS.regular,
+        fontSize: 18,
+    },
+    explorarText: {
+        fontFamily: FONTS.regular,
+        fontSize: 18,
+        color: COLORS.white,
+    },
 });

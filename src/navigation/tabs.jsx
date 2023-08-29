@@ -35,7 +35,7 @@ const TabsNavigator = () => {
                 name="ShopTab" 
                 component={ShopNavigator} 
                 options={{
-                    tabBarLabel: 'Tienda',
+                    tabBarLabel: 'Inicio',
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'home' : 'home-outline'} size={isTablet ? 26 : 20} color={color} />
                     )

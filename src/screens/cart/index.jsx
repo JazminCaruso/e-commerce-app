@@ -1,9 +1,10 @@
-import { View, FlatList, TouchableOpacity, Text, useWindowDimensions } from "react-native";
+import { View, FlatList, TouchableOpacity, Text, Modal, useWindowDimensions } from "react-native";
 import { styles } from './styles';
 import { CartItem } from "../../components/components";
 import { useDispatch, useSelector } from "react-redux";
 import { increaseItemQuantity, decreaseItemQuantity, removeItemFromCart, clearCart } from "../../store/cart/cartSlice";
 import { useCreateOrderMutation } from "../../store/orders/api";
+import { useState } from "react";
 
 
 const Cart = ({ navigation }) => {
@@ -16,7 +17,7 @@ const Cart = ({ navigation }) => {
     const email = useSelector((state) => state.auth.user.email);
     const cart = useSelector((state) => state.cart.items);
     const total = useSelector((state) => state.cart.total);
-
+    const [isVisible, setIsVisible] = useState(false);
     const [createOrder, { data, isError, error, isLoading }] = useCreateOrderMutation();
 
     const onIncreaseCartItem = (id) => {
@@ -44,17 +45,33 @@ const Cart = ({ navigation }) => {
         };
         try {
             await createOrder( newOrder );
-            dispatch(clearCart());
-            navigation.navigate('OrdersTab');
+            setIsVisible(true);
         } catch (e) {
-            console.warn({ error, e });
+            console.log({ error, e });
         } 
     };
+
+    const buy = () => {
+        dispatch(clearCart());
+        setIsVisible(false);
+        navigation.navigate('Categorias de libros');
+    }
+
+    const cancel = () => {
+        setIsVisible(false);
+    }
+
+    const viewProducts = () => {
+        navigation.navigate('Categorias de libros');
+    }
 
     if (cart.length === 0) {
         return (
             <View style={styles.emptyCartContainer}>
                 <Text style={isTablet ? styles.emptyCartTextTablet : styles.emptyCartText}>El carrito está vacío</Text>
+                <TouchableOpacity onPress={viewProducts} style={styles.modalButtonConfirm}>
+                        <Text style={styles.explorarText}>Explorar productos</Text>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -82,6 +99,24 @@ const Cart = ({ navigation }) => {
                         <Text style={isTablet ? styles.checkoutTextTablet : styles.checkoutText}>COMPRAR</Text>
                 </TouchableOpacity>
             </View>
+            <Modal visible={isVisible} animationType="slide">
+                <View style={styles.modalContainer}>
+                    <Text style={styles.resumenText}>Resumen de su pedido:</Text>
+                    <Text style={styles.dataResumenText}>{`Número de orden: ${Math.floor(Math.random()*1000)}`}</Text>
+                    <Text style={styles.dataResumenText}>{`Cantidad de productos: ${cart.length}`}</Text>
+                    <Text style={styles.dataResumenText}>{`Precio total: ${total}`}</Text>
+                    <Text style={styles.emailResumenText}>{`Si confirma, el pedido será realizado y el comprobante se enviará a ${email}`}</Text>
+                    <View  style={styles.modalButtonContainer}>
+                        <TouchableOpacity onPress={buy} style={styles.modalButtonConfirm}>
+                                <Text style={styles.buttonText}>Confirmar</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={cancel} style={styles.modalButtonCancel}>
+                                <Text style={styles.buttonTextCancel}>Cancelar</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </Modal>
+            
         </View>
     );
 };
