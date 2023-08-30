@@ -1,16 +1,30 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes/colors";
+import { COLORS, FONTS } from "../../themes/themes";
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.background,
         paddingVertical: 10,
+        alignItems: 'center'
     },
     containerTablet: {
         flex: 1,
         backgroundColor: COLORS.background,
         paddingVertical: 10,
         flexDirection: 'row',
+    },
+    emptyOrderContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    emptyOrderText: {
+        fontSize: 18,
+        fontFamily: FONTS.medium,
+    },
+    emptyOrderTextTablet: {
+        fontSize: 26,
+        fontFamily: FONTS.medium,
     },
 });

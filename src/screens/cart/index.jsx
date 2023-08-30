@@ -32,29 +32,29 @@ const Cart = ({ navigation }) => {
         dispatch(removeItemFromCart({ id }));
     };
 
-    const onCreateOrder = async () => {
+    const onCreateOrder = () => {
+        setIsVisible(true);
+    };
+
+    const buy = async () => {
         const newOrder = {
             id: Math.floor(Math.random()*1000),
             items: cart,
             total,
             user: {
-                id: localId,
+                localId: localId,
                 email: email,
             },
             createAt: Date.now(),
         };
         try {
             await createOrder( newOrder );
-            setIsVisible(true);
+            setIsVisible(false);
+            dispatch(clearCart());
+            navigation.navigate('Mis compras');
         } catch (e) {
             console.log({ error, e });
         } 
-    };
-
-    const buy = () => {
-        dispatch(clearCart());
-        setIsVisible(false);
-        navigation.navigate('Categorias de libros');
     }
 
     const cancel = () => {
@@ -103,7 +103,6 @@ const Cart = ({ navigation }) => {
                 <View style={styles.modalContainer}>
                     <Text style={styles.resumenText}>Resumen de su pedido:</Text>
                     <Text style={styles.dataResumenText}>{`Número de orden: ${Math.floor(Math.random()*1000)}`}</Text>
-                    <Text style={styles.dataResumenText}>{`Cantidad de productos: ${cart.length}`}</Text>
                     <Text style={styles.dataResumenText}>{`Precio total: ${total}`}</Text>
                     <Text style={styles.emailResumenText}>{`Si confirma, el pedido será realizado y el comprobante se enviará a ${email}`}</Text>
                     <View  style={styles.modalButtonContainer}>

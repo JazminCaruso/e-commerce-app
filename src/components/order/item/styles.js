@@ -18,11 +18,12 @@ export const styles = StyleSheet.create({
     padding: 10,
     marginHorizontal: 15,
     marginVertical: 7,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
     flexDirection: 'row',
     padding: 10,
+    width: 320,
   },
   orderItemContainerTablet: {
     justifyContent: 'center',
@@ -40,34 +41,24 @@ export const styles = StyleSheet.create({
     margin: 10,
     padding: 20,
   },
-  orderHeaderContainer: {
+  orderContainer: {
     flex: 1,
+    
+    alignItems: 'center'
   },
   orderItemDate: {
       fontFamily: FONTS.regular,
       fontSize: 16,
-      marginLeft: 30,
   },
   orderItemDateTablet: {
     fontFamily: FONTS.regular,
     fontSize: 20,
     marginBottom: 10,
   },
-  orderBody: {
-      flex: 1,
-      flexWrap: 'wrap',
-      justifyContent: 'space-between',
-      marginRight: 15,
-      paddingVertical: 10,
-  },
-  orderBodyTablet: {
-    flex: 1,
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
   orderItemId: {
       fontFamily: FONTS.regular,
       fontSize: 14,
+      paddingVertical: 10,
   },
   orderItemIdTablet: {
     fontFamily: FONTS.regular,
@@ -76,7 +67,6 @@ export const styles = StyleSheet.create({
   orderItemTotal: {
       fontFamily: FONTS.bold,
       fontSize: 15,
-      paddingVertical: 10,
   },
   orderItemTotalTablet: {
     fontFamily: FONTS.bold,
