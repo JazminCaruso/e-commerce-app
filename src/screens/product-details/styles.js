@@ -10,19 +10,41 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.background,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
     },
     containerImage: {
-        width: '100%',
+        width: 320,
         alignItems: 'center',
         paddingTop: 20,
+        backgroundColor: COLORS.white,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
     },
     imageProduct: {
-        width: '50%',
+        width: '60%',
         height: 300,
     },
     imageProductTablet: {
         width: '100%',
         height: 350,
+    },
+    containerText: {
+        backgroundColor: COLORS.white,
+        width: 320,
     },
     textProduct: {
         fontSize: 22,
@@ -49,7 +71,7 @@ export const styles = StyleSheet.create({
         paddingBottom: 20,
     },
     containerButton: {
-        margin: 10,
+        margin: 20,
         alignItems: 'center'
     },
     addFavButton: {
@@ -57,7 +79,7 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 25,
+        marginVertical: 25,
     },
     addCartButton: {
         width: '90%',

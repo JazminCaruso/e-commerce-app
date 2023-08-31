@@ -39,22 +39,23 @@ function ProductDetails({ route }) {
 
     return (
         <View style={styles.container}>
+            <TouchableOpacity onPress={toggleFav} style={styles.addFavButton}>
+                <Ionicons 
+                    name={isFav ? 'star' : 'star-outline'}
+                    size={isTablet ? 28 : 24} 
+                    color={COLORS.text} 
+                />
+            </TouchableOpacity>
             <View style={styles.containerImage}>
-                <TouchableOpacity onPress={toggleFav} style={styles.addFavButton}>
-                    <Ionicons 
-                        name={isFav ? 'star' : 'star-outline'}
-                        size={isTablet ? 28 : 24} 
-                        color={COLORS.text} 
-                    />
-                </TouchableOpacity>
                 <Image 
                     source={{ uri: product.image }} 
                     style={isTablet ? styles.imageProductTablet : styles.imageProduct} 
                     resizeMode={isTablet ? 'repeat' : 'cover'}
                 />
+
+                <Text style={isTablet ? styles.textProductTablet : styles.textProduct}>{product.name}</Text>
+                <Text style={isTablet ? styles.textPriceTablet : styles.textPrice}>Precio: {`${product.currency.symbol} ${product.price}`}</Text>
             </View>
-            <Text style={isTablet ? styles.textProductTablet : styles.textProduct}>{product.name}</Text>
-            <Text style={isTablet ? styles.textPriceTablet : styles.textPrice}>Precio: {`${product.currency.symbol} ${product.price}`}</Text>
             <View style={styles.containerButton}>
                 <TouchableOpacity onPress={onAddToCart} style={styles.addCartButton}>
                     <Text style={isTablet ? styles.addCartTextTablet : styles.addCartText}>Agregar al carrito</Text>
