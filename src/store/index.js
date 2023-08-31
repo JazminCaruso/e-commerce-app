@@ -11,6 +11,7 @@ import { ordersApi } from "./orders/api";
 import { authApi } from "./auth/api";
 import { settingsApi } from "./settings/api";
 import { mapsApi } from "./maps/api";
+import favReducer from "./favorites/favSlice";
 
 export const store = configureStore({
     reducer: {
@@ -19,6 +20,7 @@ export const store = configureStore({
         cart: cartReducer,
         auth: authReducer,
         address: addressReducer,
+        fav: favReducer,
         [categoriesApi.reducerPath]: categoriesApi.reducer,
         [productsApi.reducerPath]: productsApi.reducer,
         [ordersApi.reducerPath]: ordersApi.reducer,

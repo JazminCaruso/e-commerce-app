@@ -50,11 +50,19 @@ export const styles = StyleSheet.create({
     },
     containerButton: {
         margin: 10,
+        alignItems: 'center'
+    },
+    addFavButton: {
+        width: '90%',
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 25,
     },
     addCartButton: {
-        width: '100%',
+        width: '90%',
         backgroundColor: COLORS.primary,
-        padding: 15,
+        padding: 10,
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',

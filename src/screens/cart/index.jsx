@@ -87,7 +87,7 @@ const Cart = ({ navigation }) => {
                         onRemoveCartItem={onRemoveCartItem}
                     />
                 }
-                keyExtractor={(item) => item.id.toString()}
+                keyExtractor={(item) => (item.id ? item.id.toString() : '')}
                 style={styles.listContainer}
             />
             <View style={styles.totalContainer}>

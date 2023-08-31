@@ -4,13 +4,12 @@ import { useGetOrdersQuery } from "../../store/orders/api";
 import { OrderItem } from "../../components/components";
 import { useSelector } from "react-redux";
 
-
 const Orders = () => {
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 
     const localId = useSelector((state) => state.auth.user.localId);
-    const { data, error, isLoading } = useGetOrdersQuery(localId);
+    const { data, error, isLoading } = useGetOrdersQuery();
     const filteredOrders = data?.filter(order => order.user && order.user.localId === localId)
     
     const renderItem = ({ item }) => <OrderItem {...item} />;

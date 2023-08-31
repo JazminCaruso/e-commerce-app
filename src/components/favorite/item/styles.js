@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    height: 220,
+    height: 160,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {
@@ -60,8 +60,8 @@ export const styles = StyleSheet.create({
     marginHorizontal: 40,
   },
   image: {
-    width: 100,
-    height: 150,
+    width: 90,
+    height: 120,
   },
   imageTablet: {
     width: 200,
@@ -91,16 +91,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: FONTS.bold,
   },
-  qty: {
-    fontSize: 15,
-    fontFamily: FONTS.regular,
-  },
-  qtyTablet: {
-    fontSize: 15,
-    fontFamily: FONTS.regular,
-  },
   actionContainer: {
-    gap: 20,
     flexDirection: 'row',
     marginTop: 10,
   },
@@ -109,62 +100,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 10,
   },
-  increaseButton: {
-    width: 35,
-    height: 35,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: COLORS.primary,
-    borderRadius: 20,
-  },
-  decreaseButton: {
-    width: 35,
-    height: 35,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: COLORS.secondary,
-    borderRadius: 20,
-  },
-  increaseButtonTablet: {
-    width: 40,
-    height: 40,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: COLORS.primary,
-    borderRadius: 20,
-  },
-  decreaseButtonTablet: {
-    width: 40,
-    height: 40,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: COLORS.secondary,
-    borderRadius: 20,
-  },
-  buttonText: {
-    color: COLORS.white,
-    fontFamily: FONTS.bold,
-    fontSize: 24,
-  },
-  buttonTextTablet: {
-    color: COLORS.white,
-    fontFamily: FONTS.bold,
-    fontSize: 24,
-  },
-  deleteButton: {
-    width: 35,
-    height: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#cccccc',
-    borderRadius: 20,
-  },
-  deleteButtonTablet: {
-    width: 40,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#cccccc',
-    borderRadius: 20,
-  },
 });
+
+

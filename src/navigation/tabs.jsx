@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ShopNavigator from './shop'
 import CartNavigator from "./cart";
 import OrdersNavigator from "./orders";
+import FavoritesNavigator from "./favorites";
 import { FONTS, COLORS } from "../themes/themes";
 import { Ionicons } from "@expo/vector-icons";
 import { useWindowDimensions } from "react-native";
@@ -42,6 +43,16 @@ const TabsNavigator = () => {
                 }}
             />
             <BottomTab.Screen 
+                name="FavoritesTab" 
+                component={FavoritesNavigator} 
+                options={{
+                    tabBarLabel: 'Favoritos',
+                    tabBarIcon: ({ focused, color }) => (
+                        <Ionicons name={focused ? 'star' : 'star-outline'} size={isTablet ? 26 : 20} color={color} />
+                    )
+                }}
+            />
+            <BottomTab.Screen 
                 name="CartTab" 
                 component={CartNavigator} 
                 options={{
@@ -51,7 +62,7 @@ const TabsNavigator = () => {
                     ),
                     tabBarBadge: cartItem.length,
                     tabBarBadgeStyle: {
-                        backgroundColor: COLORS.black,
+                        backgroundColor: COLORS.secondary,
                         color: COLORS.white,
                         fontFamily: FONTS.regular,
                         fontSize: 12,

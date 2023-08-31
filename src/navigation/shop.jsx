@@ -57,7 +57,7 @@ function ShopNavigator() {
                 component={ProductDetails}
                 options={({ navigation, route }) => ({
                     headerStyle: {
-                      backgroundColor: route.params.categoryColor,
+                      backgroundColor: COLORS.tertiary,
                     },
                     title: '',
                     headerLeft: () => (

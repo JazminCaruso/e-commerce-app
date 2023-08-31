@@ -1,18 +1,18 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useWindowDimensions } from "react-native";
-import Cart from "../screens/cart";
+import Favorites from "../screens/favorites";
 import { COLORS } from "../themes/colors";
 import { FONTS } from "../themes/fonts";
 
 const Stack = createNativeStackNavigator();
 
-const CartNavigator = () => {
+const FavoritesNavigator = () => {
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
-    
-    return (
+
+    return(
         <Stack.Navigator 
-            initialRouteName="Cart"
+            initialRouteName="Favorites"
             screenOptions={{
                 headerStyle: {
                     backgroundColor: COLORS.secondary,
@@ -25,9 +25,9 @@ const CartNavigator = () => {
                 presentation: 'card',
             }}
         >
-            <Stack.Screen name="Mi carrito" component={Cart} />
+            <Stack.Screen name="Mis favoritos" component={Favorites}/>
         </Stack.Navigator>
     );
 };
 
-export default CartNavigator;
+export default FavoritesNavigator;
