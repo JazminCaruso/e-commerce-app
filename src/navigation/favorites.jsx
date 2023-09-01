@@ -25,7 +25,7 @@ const FavoritesNavigator = () => {
                 presentation: 'card',
             }}
         >
-            <Stack.Screen name="Mis favoritos" component={Favorites}/>
+            <Stack.Screen name="Favorites" component={Favorites} options={{ title: 'Mis favoritos' }}/>
         </Stack.Navigator>
     );
 };

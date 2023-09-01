@@ -12,7 +12,15 @@ const Favorites = ({ navigation }) => {
 
     const onSelectProduct = (productId, categoryColor) => {
         navigation.navigate('ProductDetails', { productId, categoryColor });
-      };
+    };
+
+    if (favs.length === 0) {
+        return (
+            <View style={styles.emptyFavsContainer}>
+                <Text style={isTablet ? styles.emptyCartFavsTablet : styles.emptyFavsText}>No tienes productos en favoritos</Text>
+            </View>
+        )
+    }
 
     return (
         <View>

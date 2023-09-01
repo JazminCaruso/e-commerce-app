@@ -34,8 +34,9 @@ function ShopNavigator() {
             })}
         >
             <Stack.Screen 
-                name="Categorias de libros" 
+                name="Categories" 
                 component={Categories}
+                options={{ title: 'Categorias de libros' }}
             />
             <Stack.Screen 
                 name="Products" 
@@ -65,7 +66,7 @@ function ShopNavigator() {
                         <Ionicons name="arrow-back" size={ isTablet ? 32 : 24} />
                       </TouchableOpacity>
                     ),
-                  })}
+                })}
             />
             <Stack.Screen
                 name="SettingsStack"

@@ -25,7 +25,7 @@ const CartNavigator = () => {
                 presentation: 'card',
             }}
         >
-            <Stack.Screen name="Mi carrito" component={Cart} />
+            <Stack.Screen name="Cart" component={Cart} options={{ title: 'Mi carrito' }}/>
         </Stack.Navigator>
     );
 };

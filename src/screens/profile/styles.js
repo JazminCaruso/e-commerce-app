@@ -4,7 +4,6 @@ import { COLORS, FONTS } from '../../themes/themes';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
   },
   header: {
     justifyContent: 'center',

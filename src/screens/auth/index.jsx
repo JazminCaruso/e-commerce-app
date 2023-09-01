@@ -53,6 +53,7 @@ const Auth = () => {
                 if (result?.data) dispatch(setUser(result.data));
             } else {
                 await signUp({ email: formState.email.value , password: formState.password.value });
+                setIsLogin(true);
             }
         } catch (error) {
             console.error(error);

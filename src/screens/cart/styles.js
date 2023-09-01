@@ -5,7 +5,6 @@ import { FONTS } from "../../themes/fonts";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.background,
     },
     listContainer: {
         flex: 1,

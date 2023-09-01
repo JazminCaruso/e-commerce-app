@@ -51,7 +51,7 @@ const Cart = ({ navigation }) => {
             await createOrder( newOrder );
             setIsVisible(false);
             dispatch(clearCart());
-            navigation.navigate('Mis compras');
+            navigation.navigate('OrdersTab');
         } catch (e) {
             console.log({ error, e });
         } 
@@ -62,7 +62,7 @@ const Cart = ({ navigation }) => {
     }
 
     const viewProducts = () => {
-        navigation.navigate('Categorias de libros');
+        navigation.navigate('ShopTab');
     }
 
     if (cart.length === 0) {

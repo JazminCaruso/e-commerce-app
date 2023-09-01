@@ -25,7 +25,7 @@ const OrdersNavigator = () => {
                 presentation: 'card',
             }}
         >
-            <Stack.Screen name="Mis compras" component={Orders}/>
+            <Stack.Screen name="Orders" component={Orders} options={{ title: 'Mis compras' }}/>
         </Stack.Navigator>
     );
 };

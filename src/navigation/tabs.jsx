@@ -73,7 +73,7 @@ const TabsNavigator = () => {
                 name="OrdersTab" 
                 component={OrdersNavigator} 
                 options={{
-                    tabBarLabel: 'Mis compras',
+                    tabBarLabel: 'Compras',
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'receipt' : 'receipt-outline'} size={isTablet ? 26 : 20} color={color} />
                     )
