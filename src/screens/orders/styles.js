@@ -1,11 +1,11 @@
-import { StyleSheet } from "react-native";
-import { COLORS, FONTS } from "../../themes/themes";
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTS } from '../../themes/themes';
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingVertical: 10,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     containerTablet: {
         flex: 1,

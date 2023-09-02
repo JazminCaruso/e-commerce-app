@@ -1,18 +1,17 @@
-import { View, FlatList, Text, useWindowDimensions } from "react-native";
-import { OrderItem } from "../../components/components";
-import { useGetOrdersQuery } from "../../store/orders/api";
-import { useSelector } from "react-redux";
+import { View, FlatList, Text, useWindowDimensions } from 'react-native';
+import { OrderItem } from '../../components/components';
+import { useGetOrdersQuery } from '../../store/orders/api';
+import { useSelector } from 'react-redux';
 import { styles } from './styles';
 
 const Orders = () => {
-
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 
     const localId = useSelector((state) => state.auth.user.localId);
     const { data } = useGetOrdersQuery();
-    const filteredOrders = data?.filter(order => order.user && order.user.localId === localId)
-    
+    const filteredOrders = data?.filter((order) => order.user && order.user.localId === localId);
+
     const renderItem = ({ item }) => <OrderItem {...item} />;
     const keyExtractor = (item) => item.id.toString();
 

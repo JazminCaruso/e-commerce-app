@@ -4,15 +4,16 @@ import { Auth } from '../screens/screens';
 const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
-  return (
-    <Stack.Navigator
-      initialRouteName="Auth"
-      screenOptions={() => ({
-        headerShown: false,
-      })}>
-      <Stack.Screen name="Auth" component={Auth} />
-    </Stack.Navigator>
-  );
+    return (
+        <Stack.Navigator
+            initialRouteName="Auth"
+            screenOptions={() => ({
+                headerShown: false,
+            })}
+        >
+            <Stack.Screen name="Auth" component={Auth} />
+        </Stack.Navigator>
+    );
 };
 
 export default AuthNavigator;

@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { FONTS } from '../../themes/themes'
+import { StyleSheet } from 'react-native';
+import { FONTS } from '../../themes/themes';
 
 export const styles = StyleSheet.create({
     listContainer: {
@@ -19,4 +19,3 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.medium,
     },
 });
-

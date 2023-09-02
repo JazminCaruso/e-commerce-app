@@ -1,12 +1,12 @@
-import { View, TextInput, Text } from "react-native";
-import Label from "../label";
-import { styles } from "./styles";
+import { View, TextInput, Text } from 'react-native';
+import Label from '../label';
+import { styles } from './styles';
 
 const InputForm = ({
-    editable, 
-    children, 
-    value, 
-    style, 
+    editable,
+    children,
+    value,
+    style,
     onChangeText,
     onFocus,
     onBlur,
@@ -19,12 +19,11 @@ const InputForm = ({
     touched,
     ...props
 }) => {
-
     return (
         <View style={styles.container}>
-            <Label { ...props}>
-                <TextInput 
-                    { ...props}
+            <Label {...props}>
+                <TextInput
+                    {...props}
                     editable={editable}
                     value={value}
                     style={styles.input}
@@ -43,7 +42,7 @@ const InputForm = ({
                 </View>
             ) : null}
         </View>
-    )
-}
+    );
+};
 
 export default InputForm;

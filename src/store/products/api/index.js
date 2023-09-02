@@ -1,5 +1,5 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { URL_BASE_FIREBASE_REALTIME_DATABASE } from "../../../constants/firebase";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
+import { URL_BASE_FIREBASE_REALTIME_DATABASE } from '../../../constants/firebase';
 
 export const productsApi = createApi({
     reducerPath: 'productsApi',
@@ -8,18 +8,18 @@ export const productsApi = createApi({
         getProductsByCategory: builder.query({
             query: (categoryId) => `/products.json?orderBy="categoryId"&equalTo=${categoryId}`,
             transformResponse: (response) =>
-            Object.keys(response).map((key) => ({
-                id: key,
-                ...response[key],
-            })),
+                Object.keys(response).map((key) => ({
+                    id: key,
+                    ...response[key],
+                })),
         }),
         getProductById: builder.query({
             query: (productId) => `/products.json?orderBy="id"&equalTo=${productId}`,
             transformResponse: (response) =>
-            Object.keys(response).map((key) => ({
-                id: key,
-                ...response[key],
-            })),
+                Object.keys(response).map((key) => ({
+                    id: key,
+                    ...response[key],
+                })),
         }),
     }),
 });

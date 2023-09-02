@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import PRODUCTS from '../../constants/data/products.json'
+import { createSlice } from '@reduxjs/toolkit';
+import PRODUCTS from '../../constants/data/products.json';
 
 const initialState = {
     data: PRODUCTS,
@@ -12,4 +12,3 @@ const productsSlice = createSlice({
 });
 
 export default productsSlice.reducer;
-

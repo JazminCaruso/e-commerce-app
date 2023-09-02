@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     items: [],
@@ -10,12 +10,11 @@ const favSlice = createSlice({
     reducers: {
         addToFav: (state, action) => {
             const itemInFav = state.items.find((item) => item.id === action.payload.id);
-            if ( itemInFav
-            ) {
-              return;
+            if (itemInFav) {
+                return;
             }
             if (!itemInFav) {
-              state.items.push(action.payload);
+                state.items.push(action.payload);
             }
         },
         removeItemFromFav: (state, action) => {
@@ -27,4 +26,3 @@ const favSlice = createSlice({
 export const { addToFav, removeItemFromFav } = favSlice.actions;
 
 export default favSlice.reducer;
-

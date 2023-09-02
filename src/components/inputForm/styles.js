@@ -1,9 +1,9 @@
-import { StyleSheet } from "react-native";
-import { COLORS, FONTS } from '../../themes/themes'
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTS } from '../../themes/themes';
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
     },
     input: {
         fontFamily: FONTS.medium,
@@ -25,5 +25,5 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.regular,
         fontSize: 18,
         color: COLORS.error,
-    }
-})
+    },
+});

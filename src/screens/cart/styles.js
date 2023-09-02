@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes/colors";
-import { FONTS } from "../../themes/fonts";
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../../themes/colors';
+import { FONTS } from '../../themes/fonts';
 
 export const styles = StyleSheet.create({
     container: {
@@ -66,8 +66,8 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.medium,
     },
     modalContainer: {
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         marginTop: 60,
         paddingVertical: 20,
     },
@@ -91,17 +91,17 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.regular,
         fontSize: 16,
         margin: 20,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     emailResumenTextTablet: {
         fontFamily: FONTS.regular,
         fontSize: 20,
         margin: 20,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     modalButtonContainer: {
         flexDirection: 'row',
-        marginHorizontal: 10
+        marginHorizontal: 10,
     },
     modalButtonConfirm: {
         margin: 20,

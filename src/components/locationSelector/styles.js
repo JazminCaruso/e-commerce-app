@@ -1,13 +1,13 @@
-import { StyleSheet } from "react-native";
-import { COLORS } from "../../themes/colors";
-import { FONTS } from "../../themes/fonts";
+import { StyleSheet } from 'react-native';
+import { COLORS } from '../../themes/colors';
+import { FONTS } from '../../themes/fonts';
 
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
     containerTablet: {
-        alignItems: 'center'
+        alignItems: 'center',
     },
     preview: {
         width: '100%',
@@ -64,4 +64,4 @@ export const styles = StyleSheet.create({
         margin: 20,
         width: 400,
     },
-})
+});

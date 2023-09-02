@@ -1,12 +1,11 @@
-import { View, TouchableOpacity, Alert, Image, useWindowDimensions } from "react-native";
+import { View, TouchableOpacity, Alert, Image, useWindowDimensions } from 'react-native';
 import { requestMediaLibraryPermissionsAsync, launchImageLibraryAsync } from 'expo-image-picker';
-import { useState } from "react";
+import { useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS } from "../../themes/colors";
-import { styles } from "./styles";
+import { COLORS } from '../../themes/colors';
+import { styles } from './styles';
 
 const ImageSelector = ({ profileImage, onSelect }) => {
-
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 
@@ -18,7 +17,7 @@ const ImageSelector = ({ profileImage, onSelect }) => {
             Alert.alert(
                 'Permiso denegado',
                 'Se necesita permiso para que la aplicación pueda funcionar',
-                [{ text: 'Ok' }, ]
+                [{ text: 'Ok' }]
             );
             return false;
         }
@@ -28,32 +27,32 @@ const ImageSelector = ({ profileImage, onSelect }) => {
     const onHandlerTakePhoto = async () => {
         const isMediaPermission = await verifyPermissions();
         if (!isMediaPermission) return;
-        const result  = await launchImageLibraryAsync ({
+        const result = await launchImageLibraryAsync({
             mediaTypes: 'Images',
             allowsEditing: true,
             aspect: [1, 1],
             quality: 0.5,
             base64: true,
-        })
+        });
         await onSelect({ uri: result.assets[0].uri, base64: result.assets[0].base64 });
         setImage(result.assets[0].uri);
     };
 
     return (
         <View style={isTablet ? styles.containerTablet : styles.container}>
-            <TouchableOpacity onPress={onHandlerTakePhoto} style={styles.content} >
+            <TouchableOpacity onPress={onHandlerTakePhoto} style={styles.content}>
                 {image || profileImage ? (
-                    <Image 
-                        source={{ uri: image || profileImage }} 
-                        style={styles.image} 
-                        resizeMode="contain" 
+                    <Image
+                        source={{ uri: image || profileImage }}
+                        style={styles.image}
+                        resizeMode="contain"
                     />
                 ) : (
                     <Ionicons name="ios-camera" size={isTablet ? 32 : 24} color={COLORS.primary} />
                 )}
             </TouchableOpacity>
         </View>
-    )
-}
+    );
+};
 
 export default ImageSelector;

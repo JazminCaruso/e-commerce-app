@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { COLORS, FONTS } from "../../themes/themes";
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTS } from '../../themes/themes';
 
 export const styles = StyleSheet.create({
     containerLoader: {
@@ -82,7 +82,7 @@ export const styles = StyleSheet.create({
     },
     containerButton: {
         margin: 20,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     addFavButton: {
         width: '90%',
@@ -125,5 +125,5 @@ export const styles = StyleSheet.create({
         fontSize: 28,
         color: COLORS.white,
         paddingHorizontal: 40,
-    }
-})
+    },
+});

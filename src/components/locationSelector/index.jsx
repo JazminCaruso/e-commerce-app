@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { styles } from './styles';
 
 const LocationSelector = ({ onLocation }) => {
-
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 
@@ -21,14 +20,16 @@ const LocationSelector = ({ onLocation }) => {
             Alert.alert(
                 'Permiso denegado',
                 'Es necesario dar permiso para poder utilizar el servicio de ubicación',
-                [{ text: 'Ok' }, ]
+                [{ text: 'Ok' }]
             );
             return false;
         }
         return true;
-    }
+    };
 
-    const mapPreviewUrlImage = pickedLocation ? URL_MAPS({ lat: pickedLocation.lat, lng: pickedLocation.lng, zoom: 15 }) : '';
+    const mapPreviewUrlImage = pickedLocation
+        ? URL_MAPS({ lat: pickedLocation.lat, lng: pickedLocation.lng, zoom: 15 })
+        : '';
 
     const onHandlerGetLocation = async () => {
         const isLocationPermission = await verifyPermissions();
@@ -50,14 +51,22 @@ const LocationSelector = ({ onLocation }) => {
 
     return (
         <View style={isTablet ? styles.containerTablet : styles.container}>
-            <MapPreview location={pickedLocation} mapImage={mapPreviewUrlImage} style={isTablet ? styles.previewTablet : styles.preview}>
-                <Text style={isTablet ? styles.textTablet : styles.text}>Todavía no se ha seleccionado una ubicación.</Text>
+            <MapPreview
+                location={pickedLocation}
+                mapImage={mapPreviewUrlImage}
+                style={isTablet ? styles.previewTablet : styles.preview}
+            >
+                <Text style={isTablet ? styles.textTablet : styles.text}>
+                    Todavía no se ha seleccionado una ubicación.
+                </Text>
             </MapPreview>
             <TouchableOpacity onPress={onHandlerGetLocation}>
-                <Text style={isTablet? styles.buttonTextTablet : styles.buttonText}>Obtener ubicación</Text>
+                <Text style={isTablet ? styles.buttonTextTablet : styles.buttonText}>
+                    Obtener ubicación
+                </Text>
             </TouchableOpacity>
         </View>
-    )
-}
+    );
+};
 
 export default LocationSelector;

@@ -4,10 +4,9 @@ import { useEffect, useState } from 'react';
 export default function useOrientation() {
     const [screenOrientation, setScreenOrientation] = useState(
         ScreenOrientation.Orientation.PORTRAIT_UP
-    )
+    );
 
     useEffect(() => {
-
         const orientationChange = (currentOrientation) => {
             const orientationValue = currentOrientation.orientationInfo.orientation;
             setScreenOrientation(orientationValue);
@@ -18,15 +17,15 @@ export default function useOrientation() {
             setScreenOrientation(currentOrientation);
         };
 
-        const screenOrientationListener = ScreenOrientation.addOrientationChangeListener(orientationChange);
-    
+        const screenOrientationListener =
+            ScreenOrientation.addOrientationChangeListener(orientationChange);
+
         initScreenOrientation();
 
         return () => {
             ScreenOrientation.removeOrientationChangeListener(screenOrientationListener);
         };
-
-    }, [])
+    }, []);
 
     return screenOrientation === 3 || screenOrientation === 4 ? 'LANDSCAPE' : 'PORTRAIT';
 }

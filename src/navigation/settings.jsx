@@ -1,8 +1,8 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Address, Profile, Settings, CreateAddress } from '../screens/screens';
-import { TouchableOpacity, useWindowDimensions } from "react-native";
+import { TouchableOpacity, useWindowDimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS, FONTS } from "../themes/themes";
+import { COLORS, FONTS } from '../themes/themes';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,24 +19,32 @@ const SettingsNavigator = () => {
                 },
                 headerTitleStyle: {
                     fontFamily: FONTS.bold,
-                    fontSize: isTablet? 34 : 22,
+                    fontSize: isTablet ? 34 : 22,
                 },
                 animation: 'fade',
                 presentation: 'card',
                 title: 'Configuración',
                 headerLeft: () => (
                     <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Ionicons name="arrow-back" size={26} />
+                        <Ionicons name="arrow-back" size={26} />
                     </TouchableOpacity>
                 ),
             })}
         >
             <Stack.Screen name="Settings" component={Settings} />
             <Stack.Screen name="Profile" component={Profile} options={{ title: 'Mis datos' }} />
-            <Stack.Screen name="CreateAddress" component={CreateAddress} options={{ title: 'Añadir ubicación' }} />
-            <Stack.Screen name="Address" component={Address} options={{ title: 'Mis direcciones' }} />
+            <Stack.Screen
+                name="CreateAddress"
+                component={CreateAddress}
+                options={{ title: 'Añadir ubicación' }}
+            />
+            <Stack.Screen
+                name="Address"
+                component={Address}
+                options={{ title: 'Mis direcciones' }}
+            />
         </Stack.Navigator>
     );
-}
+};
 
 export default SettingsNavigator;

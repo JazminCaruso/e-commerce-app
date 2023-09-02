@@ -8,4 +8,4 @@ export { default as Orders } from './orders/index';
 export { default as Products } from './products/index';
 export { default as ProductDetails } from './product-details/index';
 export { default as Profile } from './profile/index';
-export { default as Settings } from './settings/index'; 
+export { default as Settings } from './settings/index';

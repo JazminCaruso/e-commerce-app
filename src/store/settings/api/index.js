@@ -17,35 +17,31 @@ export const settingsApi = createApi({
                 url: `/users/${localId}.json`,
                 method: 'PATCH',
                 body: { profileImage: image },
-            })
+            }),
         }),
         updateAddress: builder.mutation({
             query: ({ localId, address, location }) => ({
                 url: `/users/${localId}.json`,
                 method: 'PATCH',
-                body: { 
+                body: {
                     address,
                     location,
                 },
-            })
+            }),
         }),
         updateAccount: builder.mutation({
-            query:({ localId, name, surname, email }) => ({
+            query: ({ localId, name, surname, email }) => ({
                 url: `/users/${localId}.json`,
                 method: 'PATCH',
                 body: {
                     name: name,
                     surname: surname,
                     email: email,
-                }
-            })
+                },
+            }),
         }),
     }),
 });
 
-export const { 
-    useGetProfileQuery, 
-    useUpdateImageProfileMutation, 
-    useUpdateAddressMutation,
-    useUpdateAccountMutation,
-} = settingsApi;
+export const { useGetProfileQuery, useUpdateImageProfileMutation, useUpdateAddressMutation, useUpdateAccountMutation } =
+    settingsApi;

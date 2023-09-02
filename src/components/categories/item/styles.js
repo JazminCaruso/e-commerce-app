@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { COLORS, FONTS } from "../../../themes/themes";
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTS } from '../../../themes/themes';
 
 export const styles = StyleSheet.create({
     container: {
@@ -18,24 +18,24 @@ export const styles = StyleSheet.create({
     imageBackground: {
         width: '120%',
         height: 100,
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
     },
     imageBackgroundTablet: {
         width: '120%',
         height: 130,
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
     },
     categoryName: {
         fontSize: 22,
         color: COLORS.text,
         padding: 20,
-        fontFamily:FONTS.bold,
+        fontFamily: FONTS.bold,
     },
     categoryNameTablet: {
         fontSize: 30,
         color: COLORS.text,
         marginLeft: 50,
         padding: 40,
-        fontFamily:FONTS.bold,
-    }
+        fontFamily: FONTS.bold,
+    },
 });

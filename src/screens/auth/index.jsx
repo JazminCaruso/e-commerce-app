@@ -12,7 +12,7 @@ const initialState = {
     email: { value: '', error: '', touched: false, hasError: true },
     password: { value: '', error: '', touched: false, hasError: true },
     isFormValid: false,
-}
+};
 
 const formReducer = (state, action) => {
     switch (action.type) {
@@ -32,10 +32,9 @@ const formReducer = (state, action) => {
         default:
             return state;
     }
-}
+};
 
 const Auth = () => {
-        
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 
@@ -52,10 +51,13 @@ const Auth = () => {
     const onHandlerAuth = async () => {
         try {
             if (isLogin) {
-                const result = await signIn({ email: formState.email.value , password: formState.password.value });
+                const result = await signIn({
+                    email: formState.email.value,
+                    password: formState.password.value,
+                });
                 if (result?.data) dispatch(setUser(result.data));
             } else {
-                await signUp({ email: formState.email.value , password: formState.password.value });
+                await signUp({ email: formState.email.value, password: formState.password.value });
                 setIsLogin(true);
             }
         } catch (error) {
@@ -70,19 +72,24 @@ const Auth = () => {
     return (
         <View style={styles.container}>
             <ImageBackground
-                    source={{ 
-                        uri: 'https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/backgroundlogin.jpg?alt=media&token=7944ff9d-eaff-42f0-aae9-1e4dafe00b11'}}
-                        style={styles.imageBackground}
-                        resizeMode='cover'
+                source={{
+                    uri: 'https://firebasestorage.googleapis.com/v0/b/e-commercelibros.appspot.com/o/backgroundlogin.jpg?alt=media&token=7944ff9d-eaff-42f0-aae9-1e4dafe00b11',
+                }}
+                style={styles.imageBackground}
+                resizeMode="cover"
             >
-                <View style={isTablet? styles.contentTablet : styles.content}>
-                    <Text style={isTablet? styles.headerTablet : styles.header}>{headerTitle}</Text>
+                <View style={isTablet ? styles.contentTablet : styles.content}>
+                    <Text style={isTablet ? styles.headerTablet : styles.header}>
+                        {headerTitle}
+                    </Text>
                     <InputForm
-                        placeholder='email@domain.com'
+                        placeholder="email@domain.com"
                         placeholderTextColor={COLORS.tertiary}
-                        autoCapitalize='none'
+                        autoCapitalize="none"
                         autoCorrect={false}
-                        onChangeText={(text) => onHandlerInputChange({ value: text, name: 'email' })}
+                        onChangeText={(text) =>
+                            onHandlerInputChange({ value: text, name: 'email' })
+                        }
                         value={formState.email.value}
                         label="Email"
                         labelStyle={isTablet ? styles.labelTablet : ''}
@@ -91,12 +98,14 @@ const Auth = () => {
                         touched={formState.email.touched}
                     />
                     <InputForm
-                        placeholder='*******'
+                        placeholder="*******"
                         placeholderTextColor={COLORS.tertiary}
-                        autoCapitalize='none'
+                        autoCapitalize="none"
                         autoCorrect={false}
                         secureTextEntry
-                        onChangeText={(text) => onHandlerInputChange({ value: text, name: 'password' })}
+                        onChangeText={(text) =>
+                            onHandlerInputChange({ value: text, name: 'password' })
+                        }
                         value={formState.password.value}
                         label="Contraseña"
                         labelStyle={isTablet ? styles.labelTablet : ''}
@@ -106,20 +115,25 @@ const Auth = () => {
                     />
                     <View>
                         <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
-                            <Text style={isTablet? styles.linkTextTablet : styles.linkText}>{messageText}</Text>
+                            <Text style={isTablet ? styles.linkTextTablet : styles.linkText}>
+                                {messageText}
+                            </Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.buttonContainer}>
-                        <TouchableOpacity disabled={!formState.isFormValid} onPress={onHandlerAuth} >
-                            <Text style={
-                                !formState.isFormValid && isTablet
-                                    ? styles.buttonTextDisabledTablet 
-                                    : !formState.isFormValid && !isTablet
-                                    ? styles.buttonTextDisabled 
-                                    : isTablet
-                                    ? styles.buttonTextTablet 
-                                    : styles.buttonText 
-                                }>{buttonTitle}
+                        <TouchableOpacity disabled={!formState.isFormValid} onPress={onHandlerAuth}>
+                            <Text
+                                style={
+                                    !formState.isFormValid && isTablet
+                                        ? styles.buttonTextDisabledTablet
+                                        : !formState.isFormValid && !isTablet
+                                        ? styles.buttonTextDisabled
+                                        : isTablet
+                                        ? styles.buttonTextTablet
+                                        : styles.buttonText
+                                }
+                            >
+                                {buttonTitle}
                             </Text>
                         </TouchableOpacity>
                     </View>

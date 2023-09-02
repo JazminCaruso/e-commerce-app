@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { COLORS, FONTS } from "../../themes/themes";
+import { StyleSheet } from 'react-native';
+import { COLORS, FONTS } from '../../themes/themes';
 
 export const styles = StyleSheet.create({
     containerLoader: {
@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
         paddingVertical: 30,
         paddingHorizontal: 10,
         marginLeft: 30,
-    },    
+    },
     productContainerTablet: {
         backgroundColor: COLORS.background,
         borderRadius: 10,
@@ -89,9 +89,9 @@ export const styles = StyleSheet.create({
         fontSize: 22,
     },
     clearIcon: {
-        position:'absolute',
+        position: 'absolute',
         zIndex: 2,
         right: 25,
-        paddingTop:30,
+        paddingTop: 30,
     },
-})
+});
