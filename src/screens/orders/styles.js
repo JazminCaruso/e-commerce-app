@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         flexDirection: 'row',
+        justifyContent: 'center',
     },
     emptyOrderContainer: {
         flex: 1,

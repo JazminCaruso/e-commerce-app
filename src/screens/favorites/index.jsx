@@ -6,6 +6,7 @@ import { styles } from './styles';
 const Favorites = ({ navigation }) => {
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
+    const isTabletB = width >= 800;
 
     const favs = useSelector((state) => state.fav.items);
 
@@ -34,7 +35,7 @@ const Favorites = ({ navigation }) => {
                     />
                 )}
                 keyExtractor={(item) => item.id.toString()}
-                numColumns={isTablet ? 2 : 1}
+                numColumns={isTabletB ? 2 : 1}
                 style={styles.listContainer}
             />
         </View>

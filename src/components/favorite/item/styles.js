@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         borderRadius: 5,
-        width: 600,
+        width: 400,
     },
     imageContainer: {
         maxWidth: 120,
@@ -83,7 +83,7 @@ export const styles = StyleSheet.create({
     nameTablet: {
         fontSize: 22,
         fontFamily: FONTS.regular,
-        width: 400,
+        width: 220,
     },
     price: {
         fontSize: 16,

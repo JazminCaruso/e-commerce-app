@@ -7,6 +7,7 @@ import { styles } from './styles';
 const Orders = () => {
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
+    const isTabletB = width >= 800;
 
     const localId = useSelector((state) => state.auth.user.localId);
     const { data } = useGetOrdersQuery();
@@ -26,7 +27,7 @@ const Orders = () => {
                     data={filteredOrders}
                     renderItem={renderItem}
                     keyExtractor={keyExtractor}
-                    numColumns={isTablet ? 3 : 1}
+                    numColumns={isTabletB ? 3 : 1}
                 />
             )}
         </View>
