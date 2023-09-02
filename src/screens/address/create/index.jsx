@@ -1,12 +1,11 @@
-import { useState } from 'react';
 import { View, Text, TouchableOpacity, useWindowDimensions } from 'react-native';
-import { useSelector } from 'react-redux';
-import { styles } from './styles';
 import { LocationSelector } from '../../../components/components';
 import { insertPlace } from '../../../db';
 import { useLazyGetGeocodingQuery } from '../../../store/maps/api';
 import { useUpdateAddressMutation } from '../../../store/settings/api';
-import { COLORS } from '../../../themes/themes';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { styles } from './styles';
 
 const CreateAddress = ({ navigation }) => {
 

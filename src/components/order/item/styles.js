@@ -43,7 +43,6 @@ export const styles = StyleSheet.create({
   },
   orderContainer: {
     flex: 1,
-    
     alignItems: 'center'
   },
   orderItemDate: {

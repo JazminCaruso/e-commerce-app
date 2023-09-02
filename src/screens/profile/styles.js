@@ -26,14 +26,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 20,
   },
-  nameInput: {
-    fontFamily: FONTS.regular,
-    fontSize: 18,
-  },
-  nameInputTablet: {
-    fontFamily: FONTS.regular,
-    fontSize: 23,
-  },
   nameText: {
     fontFamily: FONTS.bold,
     fontSize: 17,
@@ -42,8 +34,13 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.bold,
     fontSize: 22,
   },
-  buttonContainer: {
-    margin: 20,
+  nameInput: {
+    fontFamily: FONTS.regular,
+    fontSize: 18,
+  },
+  nameInputTablet: {
+    fontFamily: FONTS.regular,
+    fontSize: 23,
   },
   buttonText: {
     fontFamily: FONTS.bold,
@@ -54,7 +51,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 50,
     paddingVertical: 10,
     borderRadius: 5,
-    marginBottom: 20,
+    margin: 20,
   },
   buttonTextTablet: {
     fontFamily: FONTS.bold,

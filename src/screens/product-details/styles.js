@@ -56,10 +56,6 @@ export const styles = StyleSheet.create({
         width: '100%',
         height: 350,
     },
-    containerText: {
-        backgroundColor: COLORS.white,
-        width: 320,
-    },
     textProduct: {
         fontSize: 22,
         fontFamily: FONTS.regular,

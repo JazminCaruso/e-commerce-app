@@ -1,9 +1,9 @@
 import { View, TouchableOpacity, Alert, Image, useWindowDimensions } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
-import { styles } from "./styles";
-import { COLORS } from "../../themes/colors";
 import { requestMediaLibraryPermissionsAsync, launchImageLibraryAsync } from 'expo-image-picker';
 import { useState } from "react";
+import { Ionicons } from '@expo/vector-icons';
+import { COLORS } from "../../themes/colors";
+import { styles } from "./styles";
 
 const ImageSelector = ({ profileImage, onSelect }) => {
 

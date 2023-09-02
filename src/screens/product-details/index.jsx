@@ -1,11 +1,11 @@
 import { View, Image, Text, TouchableOpacity, ActivityIndicator, useWindowDimensions } from "react-native";
-import { styles } from "./styles";
-import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../store/cart/cartSlice";
 import { addToFav, removeItemFromFav } from "../../store/favorites/favSlice";
 import { useGetProductByIdQuery } from "../../store/products/api";
-import { COLORS } from "../../themes/colors";
+import { useDispatch, useSelector } from "react-redux";
 import { Ionicons } from '@expo/vector-icons';
+import { COLORS } from "../../themes/themes";
+import { styles } from "./styles";
 
 function ProductDetails({ route }) {
 
@@ -13,7 +13,7 @@ function ProductDetails({ route }) {
     const isTablet = width >= 650;
 
     const dispatch = useDispatch();
-    const { productId, categoryColor } = route.params;
+    const { productId } = route.params;
     const { data: productsData, isLoading } = useGetProductByIdQuery(productId);
     const product = productsData?.find((product) => product.id === productId);
 

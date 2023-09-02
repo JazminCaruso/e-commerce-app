@@ -96,7 +96,7 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.regular,
   },
   qtyTablet: {
-    fontSize: 15,
+    fontSize: 21,
     fontFamily: FONTS.regular,
   },
   actionContainer: {
@@ -117,20 +117,20 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
     borderRadius: 20,
   },
-  decreaseButton: {
-    width: 35,
-    height: 35,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: COLORS.secondary,
-    borderRadius: 20,
-  },
   increaseButtonTablet: {
     width: 40,
     height: 40,
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: COLORS.primary,
+    borderRadius: 20,
+  },
+  decreaseButton: {
+    width: 35,
+    height: 35,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: COLORS.secondary,
     borderRadius: 20,
   },
   decreaseButtonTablet: {

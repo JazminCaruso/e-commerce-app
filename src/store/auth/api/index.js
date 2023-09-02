@@ -1,4 +1,3 @@
-
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 import { FIREBASE_AUTH_BASE_URL, FIREBASE_AUTH_SIGN_IN_API_URL, FIREBASE_AUTH_SIGN_UP_API_URL } from '../../../constants/firebase/index';
 

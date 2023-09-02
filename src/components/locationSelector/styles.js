@@ -7,12 +7,22 @@ export const styles = StyleSheet.create({
         flex: 1,
     },
     containerTablet: {
-        flex: 1,
         alignItems: 'center'
     },
     preview: {
         width: '100%',
         height: 220,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderColor: COLORS.primary,
+        borderWidth: 1,
+        borderRadius: 5,
+        marginVertical: 15,
+        backgroundColor: COLORS.white,
+    },
+    previewTablet: {
+        width: '100%',
+        height: 400,
         justifyContent: 'center',
         alignItems: 'center',
         borderColor: COLORS.primary,
@@ -30,11 +40,6 @@ export const styles = StyleSheet.create({
         color: COLORS.primary,
         fontSize: 22,
         fontFamily: FONTS.medium,
-    },
-    location: {
-        color: COLORS.primary,
-        fontSize: 14,
-        fontFamily: FONTS.bold,
     },
     buttonText: {
         fontFamily: FONTS.bold,

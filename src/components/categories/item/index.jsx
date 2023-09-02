@@ -1,10 +1,12 @@
 import { TouchableHighlight, ImageBackground, Text, useWindowDimensions } from "react-native";
-import { styles } from "./styles";
 import { COLORS } from "../../../themes/colors";
+import { styles } from "./styles";
 
 const CategoryItem = ({ id, name, backgroundColor, backgroundImage, onSelectCategory, style}) => {
+
     const { width } = useWindowDimensions();
     const isTablet = (width >= 650);
+    
     return (
         <TouchableHighlight 
             onPress={() => onSelectCategory(id)} 

@@ -95,15 +95,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 5,
   },
-  buttonTextDisabled: {
-    fontFamily: FONTS.bold,
-    fontSize: 16,
-    textAlign: 'center',
-    color: COLORS.white,
-    backgroundColor: COLORS.tertiary,
-    paddingHorizontal: 50,
-    paddingVertical: 10,
-  },
   buttonTextTablet: {
     fontFamily: FONTS.bold,
     fontSize: 23,
@@ -114,7 +105,16 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 5,
   },
-  buttonTextTabletDisabled: {
+  buttonTextDisabled: {
+    fontFamily: FONTS.bold,
+    fontSize: 16,
+    textAlign: 'center',
+    color: COLORS.white,
+    backgroundColor: COLORS.tertiary,
+    paddingHorizontal: 50,
+    paddingVertical: 10,
+  },
+  buttonTextDisabledTablet: {
     fontFamily: FONTS.bold,
     fontSize: 23,
     textAlign: 'center',

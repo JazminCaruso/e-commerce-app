@@ -1,17 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productsReducer from "./products/productsSlice";
-import categoriesReducer from "./categories/categoriesSlice";
-import cartReducer from "./cart/cartSlice";
-import authReducer from "./auth/authSlice";
 import addressReducer from "./address/addressSlice";
-import { categoriesApi } from "./categories/api";
-import { setupListeners } from "@reduxjs/toolkit/dist/query";
-import { productsApi } from "./products/api";
-import { ordersApi } from "./orders/api";
-import { authApi } from "./auth/api";
-import { settingsApi } from "./settings/api";
-import { mapsApi } from "./maps/api";
+import authReducer from "./auth/authSlice";
+import cartReducer from "./cart/cartSlice";
+import categoriesReducer from "./categories/categoriesSlice";
 import favReducer from "./favorites/favSlice";
+import productsReducer from "./products/productsSlice";
+import { authApi } from "./auth/api";
+import { categoriesApi } from "./categories/api";
+import { mapsApi } from "./maps/api";
+import { ordersApi } from "./orders/api";
+import { productsApi } from "./products/api";
+import { settingsApi } from "./settings/api";
+import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
 export const store = configureStore({
     reducer: {

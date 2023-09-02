@@ -93,15 +93,6 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: FONTS.bold,
   },
-  actionContainer: {
-    flexDirection: 'row',
-    marginTop: 10,
-  },
-  actionContainerTablet: {
-    gap: 30,
-    flexDirection: 'row',
-    marginTop: 10,
-  },
 });
 
 

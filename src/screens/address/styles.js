@@ -6,6 +6,65 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  addresListContainer: {
+    flex: 1,
+    marginVertical: 10,
+  },
+  itemContainer: {
+    flexDirection: 'row',
+    padding: 20,
+    marginHorizontal: 20,
+    marginVertical: 10,
+    backgroundColor: COLORS.white,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    borderRadius: 10,
+    elevation: 3,
+    gap: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  mapImageContainer: {
+    backgroundColor: COLORS.primary,
+  },
+  mapImage: {
+    width: 80,
+    height: 80,
+  },
+  mapImageTablet: {
+    width: 250,
+    height: 150,
+  },
+  itemDetailsContainer: {
+    flex: 1,
+    gap: 10,
+  },
+  itemDetailsContainerTablet: {
+    flex: 1,
+    gap: 10,
+    marginHorizontal: 20,
+  },
+  itemAddress: {
+    fontFamily: FONTS.medium,
+    fontSize: 14,
+  },
+  itemAddressTablet: {
+    fontFamily: FONTS.medium,
+    fontSize: 20,
+  },
+  itemCoords: {
+    fontFamily: FONTS.medium,
+    fontSize: 12,
+  },
+  itemCoordsTablet: {
+    fontFamily: FONTS.medium,
+    fontSize: 18,
+  },
   floatingButton: {
     position: 'absolute',
     bottom: 20,
@@ -56,47 +115,5 @@ export const styles = StyleSheet.create({
     fontSize: 36,
     fontFamily: FONTS.medium,
     color: COLORS.white,
-  },
-  addresListContainer: {
-    flex: 1,
-    marginVertical: 10,
-  },
-  itemContainer: {
-    flexDirection: 'row',
-    padding: 20,
-    marginHorizontal: 20,
-    marginVertical: 10,
-    backgroundColor: COLORS.white,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    borderRadius: 10,
-    elevation: 3,
-    gap: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  mapImageContainer: {
-    backgroundColor: COLORS.primary,
-  },
-  mapImage: {
-    width: 80,
-    height: 80,
-  },
-  itemDetailsContainer: {
-    flex: 1,
-    gap: 10,
-  },
-  itemAddress: {
-    fontFamily: FONTS.medium,
-    fontSize: 14,
-  },
-  itemCoords: {
-    fontFamily: FONTS.medium,
-    fontSize: 12,
   },
 });

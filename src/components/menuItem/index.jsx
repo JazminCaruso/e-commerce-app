@@ -1,8 +1,7 @@
-import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity, Text, View, useWindowDimensions } from 'react-native';
-
-import { styles } from './styles';
+import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from '../../themes/themes';
+import { styles } from './styles';
 
 const MenuItem = ({ icon, title, route, onSelect }) => {
 

@@ -1,10 +1,10 @@
 import { View, Text, TouchableOpacity, FlatList, ImageBackground, useWindowDimensions, ActivityIndicator } from "react-native";
-import { styles } from "./styles";
 import { Input } from '../../components/components'
-import { useState } from "react";
-import { COLORS } from "../../themes/colors";
-import { Ionicons } from '@expo/vector-icons'; 
 import { useGetProductsByCategoryQuery } from "../../store/products/api";
+import { useState } from "react";
+import { Ionicons } from '@expo/vector-icons'; 
+import { COLORS } from "../../themes/themes";
+import { styles } from "./styles";
 
 function Products ({ navigation, route }) {
 
@@ -12,9 +12,7 @@ function Products ({ navigation, route }) {
     const isTablet = width >= 650;
 
     const { categoryId, categoryColor } = route.params;
-
-    const { data, error, isLoading } = useGetProductsByCategoryQuery(categoryId);
-
+    const { data, isLoading } = useGetProductsByCategoryQuery(categoryId);
     const [search, setSearch] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [borderColor, setBorderColor] = useState("#acacac")

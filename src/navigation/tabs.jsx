@@ -1,12 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import ShopNavigator from './shop'
 import CartNavigator from "./cart";
-import OrdersNavigator from "./orders";
 import FavoritesNavigator from "./favorites";
-import { FONTS, COLORS } from "../themes/themes";
-import { Ionicons } from "@expo/vector-icons";
+import OrdersNavigator from "./orders";
+import ShopNavigator from './shop'
 import { useWindowDimensions } from "react-native";
 import { useSelector } from "react-redux";
+import { Ionicons } from "@expo/vector-icons";
+import { FONTS, COLORS } from "../themes/themes";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -41,8 +41,8 @@ const TabsNavigator = () => {
                         <Ionicons name={focused ? 'home' : 'home-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
                     tabBarStyle: {
-                        paddingBottom: 10,
-                        paddingTop: 10,
+                        paddingTop: isTablet ? 10 : 0,
+                        paddingBottom: isTablet ? 10 : 0,
                     },
                 }}
             />
@@ -55,8 +55,8 @@ const TabsNavigator = () => {
                         <Ionicons name={focused ? 'star' : 'star-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
                     tabBarStyle: {
-                        paddingBottom: 10,
-                        paddingTop: 10,
+                        paddingTop: isTablet ? 10 : 0,
+                        paddingBottom: isTablet ? 10 : 0,
                     },
                 }}
             />
@@ -69,8 +69,8 @@ const TabsNavigator = () => {
                         <Ionicons name={focused ? 'cart' : 'cart-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
                     tabBarStyle: {
-                        paddingBottom: 10,
-                        paddingTop: 10,
+                        paddingTop: isTablet ? 10 : 0,
+                        paddingBottom: isTablet ? 10 : 0,
                     },
                     tabBarBadge: cartItem.length,
                     tabBarBadgeStyle: {
@@ -90,8 +90,8 @@ const TabsNavigator = () => {
                         <Ionicons name={focused ? 'receipt' : 'receipt-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
                     tabBarStyle: {
-                        paddingBottom: 10,
-                        paddingTop: 10,
+                        paddingTop: isTablet ? 10 : 0,
+                        paddingBottom: isTablet ? 10 : 0,
                     },
                 }}
             />

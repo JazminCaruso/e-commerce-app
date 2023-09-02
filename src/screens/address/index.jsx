@@ -1,8 +1,8 @@
+import { View, Text, TouchableOpacity, Image, FlatList, useWindowDimensions } from 'react-native';
+import { selectPlaces } from '../../db/index';
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useState } from 'react';
-import { View, Text, TouchableOpacity, Image, FlatList, useWindowDimensions } from 'react-native';
 import { styles } from './styles';
-import { selectPlaces } from '../../db/index';
 
 const Address = ({ navigation }) => {
 
@@ -21,7 +21,6 @@ const Address = ({ navigation }) => {
         setPlaces(places);
       };
       getPlaces();
-
       return () => {
         setPlaces([]);
       };
@@ -37,12 +36,12 @@ const Address = ({ navigation }) => {
           return (
             <View style={styles.itemContainer}>
               <View style={styles.mapImageContainer}>
-                <Image source={{ uri: item.image }} style={styles.mapImage} />
+                <Image source={{ uri: item.image }} style={isTablet ? styles.mapImageTablet : styles.mapImage} />
               </View>
-              <View style={styles.itemDetailsContainer}>
-                <Text style={styles.itemAddress}>{item.address}</Text>
-                <Text style={styles.itemCoords}>{`Latitud: ${lat}`}</Text>
-                <Text style={styles.itemCoords}>{`Longitud: ${lng}`}</Text>
+              <View style={isTablet ? styles.itemDetailsContainerTablet : styles.itemDetailsContainer}>
+                <Text style={isTablet ? styles.itemAddressTablet : styles.itemAddress}>{item.address}</Text>
+                <Text style={isTablet ? styles.itemCoordsTablet : styles.itemCoords}>{`Latitud: ${lat}`}</Text>
+                <Text style={isTablet ? styles.itemCoordsTablet : styles.itemCoords}>{`Longitud: ${lng}`}</Text>
               </View>
             </View>
           );

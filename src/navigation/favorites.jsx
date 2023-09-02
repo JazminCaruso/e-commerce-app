@@ -1,8 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useWindowDimensions } from "react-native";
 import Favorites from "../screens/favorites";
-import { COLORS } from "../themes/colors";
-import { FONTS } from "../themes/fonts";
+import { useWindowDimensions } from "react-native";
+import { COLORS, FONTS } from "../themes/themes";
 
 const Stack = createNativeStackNavigator();
 

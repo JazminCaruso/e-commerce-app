@@ -17,8 +17,5 @@ export const styles = StyleSheet.create({
   itemContainer: {
     gap: 10,
   },
-  categoryItemLandscape: {
-    height: 20,
-  },
 });
 

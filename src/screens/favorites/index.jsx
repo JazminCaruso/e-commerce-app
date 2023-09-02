@@ -1,10 +1,10 @@
 import { View, FlatList, Text, useWindowDimensions } from "react-native";
-import { styles } from './styles';
 import { FavoriteItem } from '../../components/components';
 import { useSelector } from "react-redux";
-import { ProductDetails } from "../product-details/index"
+import { styles } from './styles';
 
 const Favorites = ({ navigation }) => {
+    
     const { width } = useWindowDimensions();
     const isTablet = width >= 650;
 

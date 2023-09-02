@@ -19,27 +19,6 @@ export const styles = StyleSheet.create({
         paddingTop: 30,
         paddingHorizontal: 20,
     },
-    listProducts: {
-        flex: 1,
-    },
-    notFound: {
-        flex: 1,
-        alignItems: 'center',
-    },
-    notFoundText: {
-        color: COLORS.primary,
-        fontSize: 16,
-    },
-    notFoundTextTablet: {
-        color: COLORS.primary,
-        fontSize: 22,
-    },
-    clearIcon: {
-        position:'absolute',
-        zIndex: 2,
-        right: 25,
-        paddingTop:30,
-    },
     productsContainer: {
         gap: 10,
         paddingVertical: 30,
@@ -50,7 +29,7 @@ export const styles = StyleSheet.create({
         paddingVertical: 30,
         paddingHorizontal: 10,
         marginLeft: 30,
-    },
+    },    
     productContainerTablet: {
         backgroundColor: COLORS.background,
         borderRadius: 10,
@@ -96,5 +75,23 @@ export const styles = StyleSheet.create({
         color: COLORS.primary,
         fontWeight: 'bold',
         fontSize: 18,
+    },
+    notFound: {
+        flex: 1,
+        alignItems: 'center',
+    },
+    notFoundText: {
+        color: COLORS.primary,
+        fontSize: 16,
+    },
+    notFoundTextTablet: {
+        color: COLORS.primary,
+        fontSize: 22,
+    },
+    clearIcon: {
+        position:'absolute',
+        zIndex: 2,
+        right: 25,
+        paddingTop:30,
     },
 })

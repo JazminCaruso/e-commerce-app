@@ -1,10 +1,10 @@
-import { useFonts } from 'expo-font';
-import { ActivityIndicator, SafeAreaView, StyleSheet, View, Platform, StatusBar } from 'react-native';
-import { COLORS, FONTS } from './themes/themes';
+import { ActivityIndicator, StyleSheet, View, Platform, StatusBar } from 'react-native';
 import RootNavigator from './navigation/index'
-import { Provider } from 'react-redux';
-import { store } from './store';
 import { init } from './db';
+import { store } from './store';
+import { Provider } from 'react-redux';
+import { useFonts } from 'expo-font';
+import { COLORS, FONTS } from './themes/themes';
 
 init()
   .then(() => {

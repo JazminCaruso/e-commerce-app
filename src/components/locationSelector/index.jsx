@@ -1,12 +1,11 @@
+import { View, Text, Alert, TouchableOpacity, useWindowDimensions } from 'react-native';
 import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
-import { View, Button, Text, Alert, TouchableOpacity, useWindowDimensions } from 'react-native';
-import { styles } from './styles';
-import { useEffect, useState } from 'react';
-import { COLORS } from '../../themes/colors';
 import MapPreview from '../mapPreview';
+import { saveMapImageUrl } from '../../store/address/addressSlice';
 import { URL_MAPS } from '../../constants/maps';
 import { useDispatch } from 'react-redux';
-import { saveMapImageUrl } from '../../store/address/addressSlice';
+import { useEffect, useState } from 'react';
+import { styles } from './styles';
 
 const LocationSelector = ({ onLocation }) => {
 
@@ -51,7 +50,7 @@ const LocationSelector = ({ onLocation }) => {
 
     return (
         <View style={isTablet ? styles.containerTablet : styles.container}>
-            <MapPreview location={pickedLocation} mapImage={mapPreviewUrlImage} style={styles.preview}>
+            <MapPreview location={pickedLocation} mapImage={mapPreviewUrlImage} style={isTablet ? styles.previewTablet : styles.preview}>
                 <Text style={isTablet ? styles.textTablet : styles.text}>Todavía no se ha seleccionado una ubicación.</Text>
             </MapPreview>
             <TouchableOpacity onPress={onHandlerGetLocation}>

@@ -1,11 +1,10 @@
 import { ActivityIndicator, View, TextInput, Button, Text, TouchableOpacity, useWindowDimensions } from 'react-native';
-import React, { useState } from 'react';
-import { styles } from './styles';
 import { ImageSelector } from '../../components/components';
-import { useSelector } from 'react-redux';
 import { useGetProfileQuery, useUpdateImageProfileMutation, useUpdateAccountMutation } from '../../store/settings/api';
-import { COLORS } from '../../themes/colors';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { COLORS } from '../../themes/themes';
+import { styles } from './styles';
 
 const Profile = ({ navigation }) => {
 
@@ -14,7 +13,7 @@ const Profile = ({ navigation }) => {
 
   const localId = useSelector((state) => state.auth.user.localId);
   const email = useSelector((state) => state.auth.user.email);
-  const [uploadImageProfile, { data, error, isLoading }] = useUpdateImageProfileMutation();
+  const [uploadImageProfile, { isLoading }] = useUpdateImageProfileMutation();
   const [updateDataAccount] = useUpdateAccountMutation();
   const {data: userData, isLoading: isLoadingUserData, refetch: refetchUserData} = useGetProfileQuery({ localId });
   const [name, setName] = useState('');
@@ -27,7 +26,7 @@ const Profile = ({ navigation }) => {
     }
   }, [userData]);
 
-  const onHandlerImage = async ({ uri, base64 }) => {
+  const onHandlerImage = async ({ base64 }) => {
     await uploadImageProfile({ localId, image: `data:image/jpeg;base64,${base64}` })
   };
 

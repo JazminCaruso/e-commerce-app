@@ -1,10 +1,10 @@
 import { View, FlatList, TouchableOpacity, Text, Modal, useWindowDimensions } from "react-native";
-import { styles } from './styles';
 import { CartItem } from "../../components/components";
-import { useDispatch, useSelector } from "react-redux";
 import { increaseItemQuantity, decreaseItemQuantity, removeItemFromCart, clearCart } from "../../store/cart/cartSlice";
 import { useCreateOrderMutation } from "../../store/orders/api";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { styles } from './styles';
 
 
 const Cart = ({ navigation }) => {
@@ -13,12 +13,12 @@ const Cart = ({ navigation }) => {
     const isTablet = width >= 650;
 
     const dispatch = useDispatch();
-    const localId = useSelector((state) => state.auth.user.localId);
-    const email = useSelector((state) => state.auth.user.email);
     const cart = useSelector((state) => state.cart.items);
+    const email = useSelector((state) => state.auth.user.email);
+    const localId = useSelector((state) => state.auth.user.localId);
     const total = useSelector((state) => state.cart.total);
     const [isVisible, setIsVisible] = useState(false);
-    const [createOrder, { data, isError, error, isLoading }] = useCreateOrderMutation();
+    const [createOrder, { error }] = useCreateOrderMutation();
 
     const onIncreaseCartItem = (id) => {
         dispatch(increaseItemQuantity({ id }));

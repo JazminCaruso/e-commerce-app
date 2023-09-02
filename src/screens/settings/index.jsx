@@ -1,10 +1,9 @@
-import { View, FlatList, Button, TouchableOpacity, Text, useWindowDimensions } from 'react-native';
-import { styles } from './styles';
+import { View, FlatList, TouchableOpacity, Text, useWindowDimensions } from 'react-native';
 import { MENUS } from '../../constants/data/menu';
 import { MenuItem } from '../../components/components'
-import { useDispatch } from 'react-redux';
 import { logout } from '../../store/auth/authSlice';
-import { COLORS } from '../../themes/colors';
+import { useDispatch } from 'react-redux';
+import { styles } from './styles';
 
 const Settings = ({ navigation }) => {
 
@@ -14,9 +13,10 @@ const Settings = ({ navigation }) => {
   const onSelect = ({ route }) => {
     navigation.navigate(route);
   };
+
+  const dispatch = useDispatch();
   const renderItem = ({item}) => <MenuItem { ...item } onSelect={onSelect} />
   const keyExtractor = (item) => item.id;
-  const dispatch = useDispatch();
   
   return (
     <View style={styles.container}>
@@ -24,7 +24,7 @@ const Settings = ({ navigation }) => {
         data={MENUS}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
-        contentContainerStyle={isTablet ? styles.settingListTablet : styles.settingList}
+        contentContainerStyle={styles.settingList}
       />
       <TouchableOpacity onPress={() => dispatch(logout())}>
           <Text style={isTablet? styles.buttonTextTablet : styles.buttonText}>Cerrar sesión</Text>

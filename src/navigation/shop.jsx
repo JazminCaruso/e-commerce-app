@@ -1,11 +1,10 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Categories, Products, ProductDetails } from '../screens/screens';
-import { COLORS } from "../themes/colors";
-import { FONTS } from "../themes/fonts";
-import { TouchableOpacity, useWindowDimensions } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
 import SettingsNavigator from './settings';
+import { Categories, Products, ProductDetails } from '../screens/screens';
+import { TouchableOpacity, useWindowDimensions } from "react-native";
 import { useDispatch } from "react-redux";
+import { Ionicons } from '@expo/vector-icons';
+import { COLORS, FONTS } from "../themes/themes";
 
 const Stack = createNativeStackNavigator();
 

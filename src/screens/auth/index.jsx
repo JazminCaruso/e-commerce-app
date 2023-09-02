@@ -1,12 +1,12 @@
 import { View, Text, TouchableOpacity, ImageBackground, useWindowDimensions } from 'react-native';
-import { styles } from './styles';
-import { useReducer, useState } from 'react';
-import { COLORS } from '../../themes/colors';
-import { useSignInMutation, useSignUpMutation } from '../../store/auth/api';
-import { useDispatch } from 'react-redux';
-import { setUser } from '../../store/auth/authSlice';
 import InputForm from '../../components/inputForm';
+import { setUser } from '../../store/auth/authSlice';
+import { useSignInMutation, useSignUpMutation } from '../../store/auth/api';
 import { UPDATE_FORM, onInputChange } from '../../utils/form';
+import { useReducer, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { COLORS } from '../../themes/themes';
+import { styles } from './styles';
 
 const initialState = {
     email: { value: '', error: '', touched: false, hasError: true },
@@ -113,7 +113,7 @@ const Auth = () => {
                         <TouchableOpacity disabled={!formState.isFormValid} onPress={onHandlerAuth} >
                             <Text style={
                                 !formState.isFormValid && isTablet
-                                    ? styles.buttonTextTabletDisabled 
+                                    ? styles.buttonTextDisabledTablet 
                                     : !formState.isFormValid && !isTablet
                                     ? styles.buttonTextDisabled 
                                     : isTablet
