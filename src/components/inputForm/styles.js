@@ -20,5 +20,10 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.regular,
         fontSize: 14,
         color: COLORS.error,
+    },
+    errorTextTablet: {
+        fontFamily: FONTS.regular,
+        fontSize: 18,
+        color: COLORS.error,
     }
 })

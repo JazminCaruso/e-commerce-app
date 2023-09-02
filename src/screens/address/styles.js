@@ -21,7 +21,24 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
-
+    elevation: 3,
+  },
+  floatingButtonTablet: {
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
+    width: 45,
+    height: 60,
+    width: 60,
+    borderRadius: 30,
+    backgroundColor: COLORS.primary,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
     elevation: 3,
   },
   floatingButtonTextContainer: {
@@ -32,6 +49,11 @@ export const styles = StyleSheet.create({
   },
   floatingButtonText: {
     fontSize: 25,
+    fontFamily: FONTS.medium,
+    color: COLORS.white,
+  },
+  floatingButtonTextTablet: {
+    fontSize: 36,
     fontFamily: FONTS.medium,
     color: COLORS.white,
   },

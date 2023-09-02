@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
   containerTablet: {
     width: 800,
     marginTop: 15,
-    borderRadius: 10,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {

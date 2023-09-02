@@ -17,7 +17,7 @@ const Favorites = ({ navigation }) => {
     if (favs.length === 0) {
         return (
             <View style={styles.emptyFavsContainer}>
-                <Text style={isTablet ? styles.emptyCartFavsTablet : styles.emptyFavsText}>No tienes productos en favoritos</Text>
+                <Text style={isTablet ? styles.emptyFavsTextTablet : styles.emptyFavsText}>No tienes productos en favoritos</Text>
             </View>
         )
     }
@@ -35,7 +35,8 @@ const Favorites = ({ navigation }) => {
                     /> 
                 )}
                 keyExtractor={(item) => item.id.toString()}
-                numColumns={isTablet ? 3 : 1}
+                numColumns={isTablet ? 2 : 1}
+                style={styles.listContainer}
             />
         </View>
     );

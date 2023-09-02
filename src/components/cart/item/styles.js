@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.background,
     borderRadius: 5,
-    marginHorizontal: 40,
+    marginHorizontal: 60,
   },
   image: {
     width: 100,

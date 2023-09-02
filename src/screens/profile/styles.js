@@ -5,6 +5,12 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  containerTablet: {
+    flex: 1,
+    alignItems: 'center',
+    gap:10,
+    paddingTop: 30,
+  },
   header: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -24,11 +30,42 @@ export const styles = StyleSheet.create({
     fontFamily: FONTS.regular,
     fontSize: 18,
   },
+  nameInputTablet: {
+    fontFamily: FONTS.regular,
+    fontSize: 23,
+  },
   nameText: {
     fontFamily: FONTS.bold,
     fontSize: 17,
   },
+  nameTextTablet: {
+    fontFamily: FONTS.bold,
+    fontSize: 22,
+  },
   buttonContainer: {
     margin: 20,
-  }
+  },
+  buttonText: {
+    fontFamily: FONTS.bold,
+    fontSize: 16,
+    textAlign: 'center',
+    color: COLORS.white,
+    backgroundColor: COLORS.primary,
+    paddingHorizontal: 50,
+    paddingVertical: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+  },
+  buttonTextTablet: {
+    fontFamily: FONTS.bold,
+    fontSize: 23,
+    textAlign: 'center',
+    color: COLORS.white,
+    backgroundColor: COLORS.primary,
+    paddingHorizontal: 50,
+    paddingVertical: 10,
+    borderRadius: 5,
+    margin: 20,
+    width: 400,
+  },
 });

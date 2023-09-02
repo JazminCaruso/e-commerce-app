@@ -20,8 +20,22 @@ export const styles = StyleSheet.create({
         shadowRadius: 2.22,
         elevation: 3,
     },
-    containerImage: {
+    containerImageText: {
         width: 320,
+        alignItems: 'center',
+        paddingTop: 20,
+        backgroundColor: COLORS.white,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 3,
+    },
+    containerImageTextTablet: {
+        width: 800,
         alignItems: 'center',
         paddingTop: 20,
         backgroundColor: COLORS.white,
@@ -81,6 +95,13 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         marginVertical: 25,
     },
+    addFavButtonTablet: {
+        width: '90%',
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginVertical: 15,
+    },
     addCartButton: {
         width: '90%',
         backgroundColor: COLORS.primary,
@@ -88,6 +109,15 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    addCartButtonTablet: {
+        width: '100%',
+        backgroundColor: COLORS.primary,
+        padding: 10,
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginHorizontal: 20,
     },
     addCartText: {
         fontFamily: FONTS.bold,
@@ -98,5 +128,6 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.bold,
         fontSize: 28,
         color: COLORS.white,
+        paddingHorizontal: 40,
     }
 })

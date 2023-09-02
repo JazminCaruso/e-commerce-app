@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
     },
     listContainer: {
         flex: 1,
-        marginVertical: 10,
+        marginTop: 10,
+        marginBottom: 20,
     },
     footerContainer: {
         backgroundColor: COLORS.primary,
@@ -74,13 +75,27 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.bold,
         fontSize: 18,
     },
+    resumenTextTablet: {
+        fontFamily: FONTS.bold,
+        fontSize: 22,
+    },
     dataResumenText: {
         fontFamily: FONTS.regular,
         fontSize: 16,
     },
+    dataResumenTextTablet: {
+        fontFamily: FONTS.regular,
+        fontSize: 20,
+    },
     emailResumenText: {
         fontFamily: FONTS.regular,
         fontSize: 16,
+        margin: 20,
+        textAlign: 'center'
+    },
+    emailResumenTextTablet: {
+        fontFamily: FONTS.regular,
+        fontSize: 20,
         margin: 20,
         textAlign: 'center'
     },
@@ -106,13 +121,26 @@ export const styles = StyleSheet.create({
         fontFamily: FONTS.bold,
         fontSize: 18,
     },
+    buttonTextTablet: {
+        fontFamily: FONTS.bold,
+        fontSize: 22,
+    },
     buttonTextCancel: {
         fontFamily: FONTS.regular,
         fontSize: 18,
     },
+    buttonTextCancelTablet: {
+        fontFamily: FONTS.regular,
+        fontSize: 22,
+    },
     explorarText: {
         fontFamily: FONTS.regular,
         fontSize: 18,
+        color: COLORS.white,
+    },
+    explorarTextTablet: {
+        fontFamily: FONTS.regular,
+        fontSize: 26,
         color: COLORS.white,
     },
 });

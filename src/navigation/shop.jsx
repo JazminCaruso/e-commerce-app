@@ -36,7 +36,7 @@ function ShopNavigator() {
             <Stack.Screen 
                 name="Categories" 
                 component={Categories}
-                options={{ title: 'Categorias de libros' }}
+                options={{ title: 'Mercado Libro' }}
             />
             <Stack.Screen 
                 name="Products" 

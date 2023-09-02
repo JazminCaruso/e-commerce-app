@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, Alert, Image } from "react-native";
+import { View, TouchableOpacity, Alert, Image, useWindowDimensions } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { styles } from "./styles";
 import { COLORS } from "../../themes/colors";
@@ -6,6 +6,9 @@ import { requestMediaLibraryPermissionsAsync, launchImageLibraryAsync } from 'ex
 import { useState } from "react";
 
 const ImageSelector = ({ profileImage, onSelect }) => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
 
     const [image, setImage] = useState(null);
 
@@ -37,7 +40,7 @@ const ImageSelector = ({ profileImage, onSelect }) => {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={isTablet ? styles.containerTablet : styles.container}>
             <TouchableOpacity onPress={onHandlerTakePhoto} style={styles.content} >
                 {image || profileImage ? (
                     <Image 
@@ -46,7 +49,7 @@ const ImageSelector = ({ profileImage, onSelect }) => {
                         resizeMode="contain" 
                     />
                 ) : (
-                    <Ionicons name="ios-camera" size={24} color={COLORS.primary} />
+                    <Ionicons name="ios-camera" size={isTablet ? 32 : 24} color={COLORS.primary} />
                 )}
             </TouchableOpacity>
         </View>

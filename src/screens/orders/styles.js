@@ -9,8 +9,7 @@ export const styles = StyleSheet.create({
     },
     containerTablet: {
         flex: 1,
-        backgroundColor: COLORS.background,
-        paddingVertical: 10,
+        padding: 10,
         flexDirection: 'row',
     },
     emptyOrderContainer: {

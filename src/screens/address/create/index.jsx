@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Button } from 'react-native';
+import { View, Text, TouchableOpacity, useWindowDimensions } from 'react-native';
 import { useSelector } from 'react-redux';
 import { styles } from './styles';
 import { LocationSelector } from '../../../components/components';
@@ -9,6 +9,10 @@ import { useUpdateAddressMutation } from '../../../store/settings/api';
 import { COLORS } from '../../../themes/themes';
 
 const CreateAddress = ({ navigation }) => {
+
+  const { width } = useWindowDimensions();
+  const isTablet = width >= 650;
+
   const localId = useSelector((state) => state.auth.user.localId);
   const mapImageUrl = useSelector((state) => state.address.mapImageUrl);
   const [location, setLocation] = useState(null);
@@ -34,8 +38,10 @@ const CreateAddress = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <LocationSelector onLocation={onLocation} />
-      <View style={styles.buttonContainer}>
-        <Button title="Confirmar" onPress={onHandlerUpdateLocation} color={COLORS.primary} />
+      <View style={isTablet ? styles.containerButtonTablet : ''}>
+        <TouchableOpacity onPress={onHandlerUpdateLocation}>
+            <Text style={isTablet? styles.buttonTextTablet : styles.buttonText}>Confirmar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

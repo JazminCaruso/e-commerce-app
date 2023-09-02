@@ -39,7 +39,11 @@ const TabsNavigator = () => {
                     tabBarLabel: 'Inicio',
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'home' : 'home-outline'} size={isTablet ? 26 : 20} color={color} />
-                    )
+                    ),
+                    tabBarStyle: {
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    },
                 }}
             />
             <BottomTab.Screen 
@@ -49,7 +53,11 @@ const TabsNavigator = () => {
                     tabBarLabel: 'Favoritos',
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'star' : 'star-outline'} size={isTablet ? 26 : 20} color={color} />
-                    )
+                    ),
+                    tabBarStyle: {
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    },
                 }}
             />
             <BottomTab.Screen 
@@ -60,6 +68,10 @@ const TabsNavigator = () => {
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'cart' : 'cart-outline'} size={isTablet ? 26 : 20} color={color} />
                     ),
+                    tabBarStyle: {
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    },
                     tabBarBadge: cartItem.length,
                     tabBarBadgeStyle: {
                         backgroundColor: COLORS.secondary,
@@ -76,7 +88,11 @@ const TabsNavigator = () => {
                     tabBarLabel: 'Compras',
                     tabBarIcon: ({ focused, color }) => (
                         <Ionicons name={focused ? 'receipt' : 'receipt-outline'} size={isTablet ? 26 : 20} color={color} />
-                    )
+                    ),
+                    tabBarStyle: {
+                        paddingBottom: 10,
+                        paddingTop: 10,
+                    },
                 }}
             />
         </BottomTab.Navigator>

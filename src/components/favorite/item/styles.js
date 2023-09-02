@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
   containerTablet: {
     flex: 1,
     flexDirection: 'row',
-    height: 230,
+    height: 180,
     backgroundColor: COLORS.white,
     shadowColor: '#000',
     shadowOffset: {
@@ -42,6 +42,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     borderRadius: 5,
+    width: 600,
   },
   imageContainer: {
     maxWidth: 120,
@@ -57,15 +58,15 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.background,
     borderRadius: 5,
-    marginHorizontal: 40,
+    marginHorizontal: 30,
   },
   image: {
     width: 90,
     height: 120,
   },
   imageTablet: {
-    width: 200,
-    height: 200,
+    width: 100,
+    height: 150,
   },
   detailContainer: {
     maxWidth: 180,
@@ -82,6 +83,7 @@ export const styles = StyleSheet.create({
   nameTablet: {
     fontSize: 22,
     fontFamily: FONTS.regular,
+    width: 400,
   },
   price: {
     fontSize: 16,

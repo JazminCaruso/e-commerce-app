@@ -70,7 +70,7 @@ const Cart = ({ navigation }) => {
             <View style={styles.emptyCartContainer}>
                 <Text style={isTablet ? styles.emptyCartTextTablet : styles.emptyCartText}>El carrito está vacío</Text>
                 <TouchableOpacity onPress={viewProducts} style={styles.modalButtonConfirm}>
-                        <Text style={styles.explorarText}>Explorar productos</Text>
+                        <Text style={isTablet ? styles.explorarTextTablet : styles.explorarText}>Explorar productos</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -101,16 +101,16 @@ const Cart = ({ navigation }) => {
             </View>
             <Modal visible={isVisible} animationType="slide">
                 <View style={styles.modalContainer}>
-                    <Text style={styles.resumenText}>Resumen de su pedido:</Text>
-                    <Text style={styles.dataResumenText}>{`Número de orden: ${Math.floor(Math.random()*1000)}`}</Text>
-                    <Text style={styles.dataResumenText}>{`Precio total: ${total}`}</Text>
-                    <Text style={styles.emailResumenText}>{`Si confirma, el pedido será realizado y el comprobante se enviará a ${email}`}</Text>
+                    <Text style={isTablet ? styles.resumenTextTablet: styles.resumenText}>Resumen de su pedido:</Text>
+                    <Text style={isTablet ? styles.dataResumenTextTablet : styles.dataResumenText}>{`Número de orden: ${Math.floor(Math.random()*1000)}`}</Text>
+                    <Text style={isTablet ? styles.dataResumenTextTablet : styles.dataResumenText}>{`Precio total: ${total}`}</Text>
+                    <Text style={isTablet ? styles.emailResumenTextTablet : styles.emailResumenText}>{`Si confirma, el pedido será realizado y el comprobante se enviará a ${email}`}</Text>
                     <View  style={styles.modalButtonContainer}>
                         <TouchableOpacity onPress={buy} style={styles.modalButtonConfirm}>
-                                <Text style={styles.buttonText}>Confirmar</Text>
+                                <Text style={isTablet ? styles.buttonTextTablet : styles.buttonText}>Confirmar</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={cancel} style={styles.modalButtonCancel}>
-                                <Text style={styles.buttonTextCancel}>Cancelar</Text>
+                                <Text style={isTablet ? styles.buttonTextCancelTablet : styles.buttonTextCancel}>Cancelar</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

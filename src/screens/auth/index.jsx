@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, ImageBackground, useWindowDimensions } from 'react-native';
 import { styles } from './styles';
 import { useReducer, useState } from 'react';
 import { COLORS } from '../../themes/colors';
@@ -36,6 +36,9 @@ const formReducer = (state, action) => {
 
 const Auth = () => {
         
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
+
     const dispatch = useDispatch();
     const [formState, dispatchFormState] = useReducer(formReducer, initialState);
     const [isLogin, setIsLogin] = useState(true);
@@ -72,8 +75,8 @@ const Auth = () => {
                         style={styles.imageBackground}
                         resizeMode='cover'
             >
-                <View style={styles.content}>
-                    <Text style={styles.header}>{headerTitle}</Text>
+                <View style={isTablet? styles.contentTablet : styles.content}>
+                    <Text style={isTablet? styles.headerTablet : styles.header}>{headerTitle}</Text>
                     <InputForm
                         placeholder='email@domain.com'
                         placeholderTextColor={COLORS.tertiary}
@@ -82,6 +85,7 @@ const Auth = () => {
                         onChangeText={(text) => onHandlerInputChange({ value: text, name: 'email' })}
                         value={formState.email.value}
                         label="Email"
+                        labelStyle={isTablet ? styles.labelTablet : ''}
                         error={formState.email.error}
                         hasError={formState.email.hasError}
                         touched={formState.email.touched}
@@ -95,22 +99,28 @@ const Auth = () => {
                         onChangeText={(text) => onHandlerInputChange({ value: text, name: 'password' })}
                         value={formState.password.value}
                         label="Contraseña"
+                        labelStyle={isTablet ? styles.labelTablet : ''}
                         error={formState.password.error}
                         hasError={formState.password.hasError}
                         touched={formState.password.touched}
                     />
                     <View>
                         <TouchableOpacity onPress={() => setIsLogin(!isLogin)}>
-                            <Text style={styles.linkText}>{messageText}</Text>
+                            <Text style={isTablet? styles.linkTextTablet : styles.linkText}>{messageText}</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.buttonContainer}>
-                        <TouchableOpacity
-                            disabled={!formState.isFormValid}
-                            style={!formState.isFormValid ? styles.buttonDisabled : styles.button}
-                            onPress={onHandlerAuth}
-                        >
-                            <Text style={styles.buttonText}>{buttonTitle}</Text>
+                        <TouchableOpacity disabled={!formState.isFormValid} onPress={onHandlerAuth} >
+                            <Text style={
+                                !formState.isFormValid && isTablet
+                                    ? styles.buttonTextTabletDisabled 
+                                    : !formState.isFormValid && !isTablet
+                                    ? styles.buttonTextDisabled 
+                                    : isTablet
+                                    ? styles.buttonTextTablet 
+                                    : styles.buttonText 
+                                }>{buttonTitle}
+                            </Text>
                         </TouchableOpacity>
                     </View>
                 </View>

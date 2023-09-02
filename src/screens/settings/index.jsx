@@ -1,4 +1,4 @@
-import { View, FlatList, Button, useWindowDimensions } from 'react-native';
+import { View, FlatList, Button, TouchableOpacity, Text, useWindowDimensions } from 'react-native';
 import { styles } from './styles';
 import { MENUS } from '../../constants/data/menu';
 import { MenuItem } from '../../components/components'
@@ -26,9 +26,9 @@ const Settings = ({ navigation }) => {
         keyExtractor={keyExtractor}
         contentContainerStyle={isTablet ? styles.settingListTablet : styles.settingList}
       />
-      <View style={isTablet ? styles.buttonLogoutTablet : styles.buttonLogout}>
-        <Button title="Cerrar sesión" onPress={() => dispatch(logout())} color={COLORS.secondary} />
-      </View>
+      <TouchableOpacity onPress={() => dispatch(logout())}>
+          <Text style={isTablet? styles.buttonTextTablet : styles.buttonText}>Cerrar sesión</Text>
+      </TouchableOpacity>
     </View>
   );
 };

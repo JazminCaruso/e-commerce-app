@@ -1,5 +1,5 @@
 import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from 'expo-location';
-import { View, Button, Text, Alert } from 'react-native';
+import { View, Button, Text, Alert, TouchableOpacity, useWindowDimensions } from 'react-native';
 import { styles } from './styles';
 import { useEffect, useState } from 'react';
 import { COLORS } from '../../themes/colors';
@@ -9,6 +9,9 @@ import { useDispatch } from 'react-redux';
 import { saveMapImageUrl } from '../../store/address/addressSlice';
 
 const LocationSelector = ({ onLocation }) => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
 
     const dispatch = useDispatch();
     const [pickedLocation, setPickedLocation] = useState(null);
@@ -47,11 +50,13 @@ const LocationSelector = ({ onLocation }) => {
     }, [pickedLocation]);
 
     return (
-        <View style={styles.container}>
+        <View style={isTablet ? styles.containerTablet : styles.container}>
             <MapPreview location={pickedLocation} mapImage={mapPreviewUrlImage} style={styles.preview}>
-                <Text style={styles.text}>Todavía no se ha seleccionado una ubicación.</Text>
+                <Text style={isTablet ? styles.textTablet : styles.text}>Todavía no se ha seleccionado una ubicación.</Text>
             </MapPreview>
-            <Button title='Obtener ubicación' onPress={onHandlerGetLocation} color={COLORS.secondary} />
+            <TouchableOpacity onPress={onHandlerGetLocation}>
+                <Text style={isTablet? styles.buttonTextTablet : styles.buttonText}>Obtener ubicación</Text>
+            </TouchableOpacity>
         </View>
     )
 }

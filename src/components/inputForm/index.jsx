@@ -1,4 +1,4 @@
-import { View, TextInput, Text } from "react-native";
+import { View, TextInput, Text, useWindowDimensions } from "react-native";
 import { styles } from "./styles";
 import Label from "../label";
 
@@ -19,6 +19,10 @@ const InputForm = ({
     touched,
     ...props
 }) => {
+
+    const { width } = useWindowDimensions();
+    const isTablet = width >= 650;
+
     return (
         <View style={styles.container}>
             <Label { ...props}>
@@ -38,7 +42,7 @@ const InputForm = ({
             </Label>
             {hasError && touched ? (
                 <View style={styles.errorContainer}>
-                    <Text style={styles.errorText}>{error}</Text>
+                    <Text style={isTablet ? styles.errorTextTablet : styles.errorText}>{error}</Text>
                 </View>
             ) : null}
         </View>

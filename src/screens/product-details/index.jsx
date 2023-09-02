@@ -39,25 +39,24 @@ function ProductDetails({ route }) {
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={toggleFav} style={styles.addFavButton}>
+            <TouchableOpacity onPress={toggleFav} style={isTablet ? styles.addFavButtonTablet : styles.addFavButton}>
                 <Ionicons 
                     name={isFav ? 'star' : 'star-outline'}
                     size={isTablet ? 28 : 24} 
                     color={COLORS.text} 
                 />
             </TouchableOpacity>
-            <View style={styles.containerImage}>
+            <View style={isTablet ? styles.containerImageTextTablet : styles.containerImageText}>
                 <Image 
                     source={{ uri: product.image }} 
                     style={isTablet ? styles.imageProductTablet : styles.imageProduct} 
-                    resizeMode={isTablet ? 'repeat' : 'cover'}
+                    resizeMode={isTablet ? 'contain' : 'cover'}
                 />
-
                 <Text style={isTablet ? styles.textProductTablet : styles.textProduct}>{product.name}</Text>
                 <Text style={isTablet ? styles.textPriceTablet : styles.textPrice}>Precio: {`${product.currency.symbol} ${product.price}`}</Text>
             </View>
             <View style={styles.containerButton}>
-                <TouchableOpacity onPress={onAddToCart} style={styles.addCartButton}>
+                <TouchableOpacity onPress={onAddToCart} style={isTablet ? styles.addCartButtonTablet : styles.addCartButton}>
                     <Text style={isTablet ? styles.addCartTextTablet : styles.addCartText}>Agregar al carrito</Text>
                 </TouchableOpacity>
             </View>

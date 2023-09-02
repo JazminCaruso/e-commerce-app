@@ -1,10 +1,14 @@
 import { useFocusEffect } from '@react-navigation/native';
 import { useCallback, useState } from 'react';
-import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, Image, FlatList, useWindowDimensions } from 'react-native';
 import { styles } from './styles';
 import { selectPlaces } from '../../db/index';
 
 const Address = ({ navigation }) => {
+
+  const { width } = useWindowDimensions();
+  const isTablet = width >= 650;
+
   const [places, setPlaces] = useState([]);
   const handlePress = () => {
     navigation.navigate('CreateAddress');
@@ -46,9 +50,9 @@ const Address = ({ navigation }) => {
         keyExtractor={(item) => item.id.toString()}
         style={styles.addresListContainer}
       />
-      <TouchableOpacity style={styles.floatingButton} onPress={handlePress}>
+      <TouchableOpacity style={isTablet ? styles.floatingButtonTablet : styles.floatingButton} onPress={handlePress}>
         <View style={styles.floatingButtonTextContainer}>
-          <Text style={styles.floatingButtonText}>+</Text>
+          <Text style={isTablet ? styles.floatingButtonTextTablet : styles.floatingButtonText}>+</Text>
         </View>
       </TouchableOpacity>
     </View>

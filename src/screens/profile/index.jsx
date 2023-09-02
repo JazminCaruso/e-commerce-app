@@ -1,4 +1,4 @@
-import { ActivityIndicator, View, TextInput, Button, Text } from 'react-native';
+import { ActivityIndicator, View, TextInput, Button, Text, TouchableOpacity, useWindowDimensions } from 'react-native';
 import React, { useState } from 'react';
 import { styles } from './styles';
 import { ImageSelector } from '../../components/components';
@@ -8,6 +8,9 @@ import { COLORS } from '../../themes/colors';
 import { useEffect } from 'react';
 
 const Profile = ({ navigation }) => {
+
+  const { width } = useWindowDimensions();
+  const isTablet = width >= 650;
 
   const localId = useSelector((state) => state.auth.user.localId);
   const email = useSelector((state) => state.auth.user.email);
@@ -37,7 +40,7 @@ const Profile = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={isTablet ? styles.containerTablet : styles.container}>
       <View style={styles.header}>
         <ImageSelector profileImage={userData?.profileImage} onSelect={onHandlerImage} /> 
         {isLoading && (
@@ -47,26 +50,26 @@ const Profile = ({ navigation }) => {
         )}
       </View>
       <View style={styles.nameContainer}>
-        <Text style={styles.nameText}>Nombre: </Text>
+        <Text style={isTablet ? styles.nameTextTablet : styles.nameText}>Nombre: </Text>
         <TextInput
-          style={styles.nameInput}
+          style={isTablet ? styles.nameInputTablet : styles.nameInput}
           placeholder="introducir nombre"
           value={name}
           onChangeText={(text) => setName(text)}
         />
       </View>
       <View style={styles.nameContainer}>
-        <Text style={styles.nameText}>Apellido: </Text>
+        <Text style={isTablet ? styles.nameTextTablet : styles.nameText}>Apellido: </Text>
         <TextInput
-          style={styles.nameInput}
+          style={isTablet ? styles.nameInputTablet : styles.nameInput}
           placeholder="introducir apellido"
           value={surname}
           onChangeText={(text) => setSurname(text)}
         />
       </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Guardar" onPress={onHandlerData} color={COLORS.primary}/>
-      </View>
+      <TouchableOpacity onPress={onHandlerData}>
+          <Text style={isTablet? styles.buttonTextTablet : styles.buttonText}>Guardar</Text>
+      </TouchableOpacity>
     </View>
   );
 };
