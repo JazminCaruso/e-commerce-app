@@ -15,13 +15,13 @@ Mercado Libro es una aplicación de venta de libros físicos en línea que ofrec
 - **Lista de Favoritos**: Agrega libros a tu lista de favoritos para una compra futura.
 - **Carrito de Compras**: Agrega libros a tu carrito y completa la compra cuando estés listo.
 - **Soporte para Múltiples Plataformas**: Disfruta de la aplicación en iOS y Android.
-- **Orientación Personalizada**: La aplicación está diseñada para funcionar en modo retrato para una experiencia de usuario óptima.
-- **Compatibilidad con Tabletas**: Disfruta de una experiencia de usuario optimizada en tabletas.
+- **Orientación**: La aplicación está diseñada para funcionar en modo retrato.
+- **Compatibilidad con Tablets**: Disfruta de una experiencia de usuario optimizada en tabletas.
 
 ## Permisos
 
 - **iOS**: Requiere permisos para acceder a la cámara y la ubicación.
-- **Android**: Requiere permisos para grabación de audio, acceso a la cámara y la ubicación.
+- **Android**: Requiere permisos para acceder a la cámara y la ubicación.
 
 ## Configuración de Desarrollo y Ejecución
 
@@ -29,7 +29,7 @@ Mercado Libro es una aplicación de venta de libros físicos en línea que ofrec
 2. Instala las dependencias: `npm install`
 3. Inicia la aplicación: `npm start`
 
-## Configuración de API Key de Ubicación
+### Configuración de API Key de Ubicación
 
 Para que la función de ubicación funcione correctamente en esta aplicación, necesitas agregar una API key de Google Maps en el archivo `src/constants/maps/index.js`. Ahí debes buscar la variable `GOOGLE_API_KEY` y completarla con la API key.
 
