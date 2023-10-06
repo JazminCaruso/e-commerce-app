@@ -4,8 +4,11 @@
 
 **Plataformas Compatibles**: iOS y Android
 
+[Prototipo de la App](https://drive.google.com/file/d/1Ene_QcbE4va3x3NEKKgSpVS_Nxnjv5WY/view)
+
 ## Descripción
 
+Aplicación fictisia creada durante el curso de Desarrollo de Aplicaciones.
 Mercado Libro es una aplicación de venta de libros físicos en línea que ofrece una variada gama de categorías, desde libros de amor hasta libros de nutrición e infantiles. Con Mercado Libro, puedes explorar, comprar y gestionar tus libros favoritos de una manera rápida y sencilla.
 
 ## Características Clave
